@@ -19,22 +19,23 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="多态多态的概念 多态性，是面向对象中最重要的概念，在java中的体现，对象的多态性：父类的引用指向子类的对象（向上转型），是可以直接应用抽象类和接口中上 多态的存在要有3个必要条件：继承，方法重写，父类引用指向子类对象 父类引用指向子类对象后，用该父类引用调用子类重写的方法，，也叫做向上转型，此时多态就出现了  便于理解：首先多态是需要继承，方法重写，父类引用子类对象调用子类重写的方法来支持的 拿">
+    <meta name="description" content="多态多态的概念 多态性，是面向对象中最重要的概念，在java中的体现，对象的多态性：父类的引用指向子类的对象（向上转型），是可以直接应用抽象类和接口中上 Java引用变量有两个类型：编译时类型和运行时类型。编译时类型声明该变量时使用的类型决定，运行时类型由实际赋给该变量的对象决定。简称：编译时，看左边；运行时，看右边  向上转型 子类可看作是特殊的父类，所以父类类型的引用可以指向子类的对象：向上转">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java的多态">
+<meta property="og:title" content="Java多态">
 <meta property="og:url" content="https://xfy-z.github.io/2022/04/01/Java%E5%A4%9A%E6%80%81/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="多态多态的概念 多态性，是面向对象中最重要的概念，在java中的体现，对象的多态性：父类的引用指向子类的对象（向上转型），是可以直接应用抽象类和接口中上 多态的存在要有3个必要条件：继承，方法重写，父类引用指向子类对象 父类引用指向子类对象后，用该父类引用调用子类重写的方法，，也叫做向上转型，此时多态就出现了  便于理解：首先多态是需要继承，方法重写，父类引用子类对象调用子类重写的方法来支持的 拿">
+<meta property="og:description" content="多态多态的概念 多态性，是面向对象中最重要的概念，在java中的体现，对象的多态性：父类的引用指向子类的对象（向上转型），是可以直接应用抽象类和接口中上 Java引用变量有两个类型：编译时类型和运行时类型。编译时类型声明该变量时使用的类型决定，运行时类型由实际赋给该变量的对象决定。简称：编译时，看左边；运行时，看右边  向上转型 子类可看作是特殊的父类，所以父类类型的引用可以指向子类的对象：向上转">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-04-01T05:52:43.266Z">
-<meta property="article:modified_time" content="2022-04-01T05:59:35.824Z">
+<meta property="article:published_time" content="2022-04-01T06:37:20.000Z">
+<meta property="article:modified_time" content="2022-04-01T06:55:52.437Z">
 <meta property="article:author" content="XFY-Z">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Java的多态 · XFY-Z</title>
+    <title>Java多态 · XFY-Z</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -259,7 +260,7 @@
                 <a href="/">XFY-Z</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">Java的多态</a>
+                <a href="#" class="post-name">Java多态</a>
             </div>
         </div>
     
@@ -305,7 +306,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                Java的多态
+                Java多态
             <!-- 404 -->
             
         </h1>
@@ -322,9 +323,17 @@
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+    
+</div>
+
+                
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">651</span>Reading time: <span class="post-count reading-time">2 min</span></span>
+                        <span>Word count: <span class="post-count word-count">2.3k</span>Reading time: <span class="post-count reading-time">8 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -485,35 +494,101 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><h3 id="多态的概念"><a href="#多态的概念" class="headerlink" title="多态的概念"></a>多态的概念</h3><ul>
+        <h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><h2 id="多态的概念"><a href="#多态的概念" class="headerlink" title="多态的概念"></a>多态的概念</h2><ul>
 <li>多态性，是面向对象中最重要的概念，在java中的体现，对象的多态性：父类的引用指向子类的对象（向上转型），是可以直接应用抽象类和接口中上</li>
-<li>多态的存在要有3个必要条件：继承，方法重写，父类引用指向子类对象</li>
-<li>父类引用指向子类对象后，用该父类引用调用子类重写的方法，，也叫做向上转型，此时多态就出现了</li>
+<li>Java引用变量有两个类型：编译时类型和运行时类型。编译时类型声明该变量时使用的类型决定，运行时类型由实际赋给该变量的对象决定。简称：编译时，看左边；运行时，看右边</li>
 </ul>
-<h4 id="便于理解："><a href="#便于理解：" class="headerlink" title="便于理解："></a>便于理解：</h4><p>首先多态是需要继承，方法重写，父类引用子类对象调用子类重写的方法来支持的</p>
-<p>拿生活中都需要重复的吃饭来举例：</p>
-<ol>
-<li>不管哪个国家的人，只要是人，都继承了统一了的父类 - 人类 （继承）</li>
-<li>不管是那种人就都需要吃饭，中国人-筷子，欧美-刀叉，印度-手（重写父类方法）</li>
-<li>人 &#x3D; 印度人 -》用手吃饭       人 &#x3D; 中国人 -》用筷子吃饭（父类引用子类对象调用子类重写方法）（构成多态）</li>
-</ol>
-<h3 id="基于继承实现的多态"><a href="#基于继承实现的多态" class="headerlink" title="基于继承实现的多态"></a>基于继承实现的多态</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.animal;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Animal2</span> &#123;<span class="comment">//父类</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">shoout</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;动物叫了一声&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal2</span>&#123;<span class="comment">//子类</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">shout</span><span class="params">()</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;汪汪汪&quot;</span>);<span class="comment">//重写父类方法</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Cat</span> <span class="keyword">extends</span> <span class="title class_">Animal2</span>&#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">shout</span><span class="params">()</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;喵喵喵&quot;</span>);<span class="comment">//重写父类方法</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.animal;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.java.animal.Animal2;</span><br><span class="line"><span class="keyword">import</span> com.java.animal.*;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AnimalTest</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">animalCry</span><span class="params">(Animal2 animal2)</span>&#123;<span class="comment">//Animal2 animla2 = new Cat();父类引用子类对象，调用子类重写方法</span></span><br><span class="line">        animal2.shoout();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span>  <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Cat</span> <span class="variable">cat</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line">        animalCry(cat);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="基于接口中的多态"><a href="#基于接口中的多态" class="headerlink" title="基于接口中的多态"></a>基于接口中的多态</h3><h4 id="关键点："><a href="#关键点：" class="headerlink" title="关键点："></a>关键点：</h4><ul>
-<li>接口的实现必须有一个实现类实现接口</li>
-<li>接口的实现类必须重写接口中所有的抽象方法，如果不重写，那么该类必须是抽象类</li>
-<li>实现类对象创建后，要进行调用</li>
-<li>实现类调用格式：接口名 对象名 &#x3D; new 实现类名称</li>
+<h2 id="向上转型"><a href="#向上转型" class="headerlink" title="向上转型"></a>向上转型</h2><ul>
+<li>子类可看作是特殊的父类，所以父类类型的引用可以指向子类的对象：向上转型</li>
+<li>子类到父类的转换通常称作向上转型，通俗来说就是：定义父类对象指向子类对象（多态）（创建对象）（编译看左），然后实例（小类转型为大类）</li>
+<li><strong>（既可以用父类派生的方法，也可以用子类重写的方法，但是不能使用子类特有的属性和方法）</strong></li>
+<li>注意：父类中的静态方法无法被子类重写，所以向上转型之后，只能调用父类原有的静态方法，如果一定要使用子类中的静态方法，只能使用向下转型的方法调用</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//animal接口</span></span><br><span class="line"><span class="keyword">package</span> animals;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">aniaml</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">		<span class="type">Animal</span> <span class="variable">animal</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Animal</span>();<span class="comment">//普通的创建对象 animal</span></span><br><span class="line">        <span class="type">Animal</span> <span class="variable">one</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Animal</span>();<span class="comment">//1</span></span><br><span class="line">        <span class="comment">//向上转型，隐式转型，自动转型</span></span><br><span class="line">        <span class="type">Animal</span> <span class="variable">two</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();<span class="comment">//2父类对象two，指向Cat方法，然后调用Cat中的方法</span></span><br><span class="line">        <span class="type">Animal</span> <span class="variable">three</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();<span class="comment">//3</span></span><br><span class="line"></span><br><span class="line">        one.eat();</span><br><span class="line">        two.eat();</span><br><span class="line">        three.eat();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Cat类调用接口 animal 重写接口中的eat方法</span></span><br><span class="line"><span class="keyword">package</span> animals;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Cat</span> <span class="keyword">implements</span> <span class="title class_">aniaml</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;小猫吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="向下转型"><a href="#向下转型" class="headerlink" title="向下转型"></a>向下转型</h2><ul>
+<li>父类到子类的转换通常被称为向下转型，将子类对象指向父类对象（创建对象）注意：必须进行强制类型转换</li>
+<li>转型时转的类型必须是父类对象所指的真实子类对象(向上转型创建的对象)，不是任意的强制类型转换</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="type">Animal</span> <span class="variable">one</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Animal</span>();<span class="comment">//1</span></span><br><span class="line">        <span class="comment">//向上转型，这里的one，two，three都是父类对象</span></span><br><span class="line">        <span class="type">Animal</span> <span class="variable">two</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();<span class="comment">//2</span></span><br><span class="line">        <span class="type">Animal</span> <span class="variable">three</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();<span class="comment">//3</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 向下转型、强制类型转换</span></span><br><span class="line"><span class="comment">         *将子类的引用指向父类，此处必须进行强转，可以调用子类特有的方法</span></span><br><span class="line"><span class="comment">         * */</span></span><br><span class="line">        <span class="type">Cat</span> <span class="variable">temp</span> <span class="operator">=</span> (Cat)two;</span><br><span class="line">        temp.run();</span><br><span class="line">        temp.eat();</span><br><span class="line">        <span class="type">Dog</span> <span class="variable">temp2</span> <span class="operator">=</span> (Dog) two;<span class="comment">//报错，two指向的是Cat子类</span></span><br><span class="line">        temp2.eat();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Dog类调用接口 animal 重写接口中的eat方法</span></span><br><span class="line"><span class="keyword">package</span> animals;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Dog</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;狗吃肉&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Instanceof运算符"><a href="#Instanceof运算符" class="headerlink" title="Instanceof运算符"></a>Instanceof运算符</h3><p>简介：</p>
+<ul>
+<li>instanceof是java中二元运算符，左边是对象，右边是类；</li>
+<li><strong>当对象是右边类或子类所创建对象时</strong>，返回true；否则，返回false</li>
+<li>instanceof左边显示声明的类型与右边操作元必须是<strong>同种类或存在继承关系</strong>，也就是说需要位于同一个继承树，否则会编译失败</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">Animal</span> <span class="variable">animal</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Animal</span>();</span><br><span class="line">        <span class="type">Animal</span> <span class="variable">one</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Animal</span>();<span class="comment">//1</span></span><br><span class="line">        <span class="comment">//向上转型，隐式转型，自动转型</span></span><br><span class="line">        <span class="type">Animal</span> <span class="variable">two</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();<span class="comment">//2Cat类创建的对象two，转换为特殊的父类</span></span><br><span class="line">        <span class="type">Animal</span> <span class="variable">three</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();<span class="comment">//3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (two <span class="keyword">instanceof</span>  Cat)&#123;<span class="comment">//条件为真，返回值为true执行if语句</span></span><br><span class="line">            <span class="type">Cat</span> <span class="variable">temp</span> <span class="operator">=</span> (Cat)two;</span><br><span class="line">            temp.run();</span><br><span class="line">            temp.eat();</span><br><span class="line">            <span class="type">Dog</span> <span class="variable">temp2</span> <span class="operator">=</span> (Dog) three;</span><br><span class="line">            temp2.eat();</span><br><span class="line">            System.out.println(<span class="string">&quot;two可以转换为Cat类型&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line"><span class="keyword">if</span>(two <span class="keyword">instanceof</span> Animal)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Animal&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"><span class="keyword">if</span> (two <span class="keyword">instanceof</span>  Object)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Object&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//全部都是true，都是可以执行的</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//测试类</span></span><br><span class="line"><span class="keyword">package</span> animals;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        aniaml ani=<span class="keyword">new</span> <span class="title class_">Cat</span>();<span class="comment">//接口引用子类对象，调用z</span></span><br><span class="line">        ani.eat();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ul>
+<li>Java中使用抽象类，限制实例化</li>
+<li>抽象类：不允许实例化，可以通过向上转型，指向子类实例，完成对象实例</li>
+<li><strong>抽象类是用来被继承的，抽象类的子类必须重写父类的抽象方法，</strong>并提供方法体。如果没有重写全部的抽象方法，仍然为抽象类</li>
+<li>应用场景：某个父类只知道其子类应该包含怎样的方法，但无法准确知道这些子类如何实现这些方法</li>
+</ul>
+<h2 id="抽象方法"><a href="#抽象方法" class="headerlink" title="抽象方法"></a>抽象方法</h2><ul>
+<li><strong>必须定义抽象类，抽象方法是不允许包含方法体；在子类中必须重写抽象方法，并提供方法体，否则子类也为抽象类</strong>（开摆）</li>
+<li>abstract定义抽象方法，不需要具体实现</li>
+<li>包含抽象方法的类一定是抽象类，但是抽象类中不一定有抽象方法</li>
+<li><strong>当抽象方法被定义的时候，子类一定要重写方法</strong>，不然的话就定义该子类为抽象类</li>
+<li>抽象方法是不可以与static，final，private并存</li>
+</ul>
+<h2 id="接口API"><a href="#接口API" class="headerlink" title="接口API"></a>接口API</h2><h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><ul>
+<li>有时必须从几个类中派生出一个子类，继承他们所有的属性和方法，但是，Java不支持多重继承。有了接口，就可以得到多重继承的效果</li>
+<li>接口的本质是契约，标准，规范，就像我们的法律一样。指定好后大家都要遵守</li>
+</ul>
+<h3 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h3><ul>
+<li>接口定义了某一批类所需要遵守的规范</li>
+<li>接口不关心这些类的内部数据，也不关心这些类里的方法的实现细节，他只规定这些类里必须提供某些方法</li>
+</ul>
+<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><ul>
+<li><strong>接口就是抽象方法和常量值定义的集合</strong></li>
+<li>用interface来定义</li>
+<li>接口中的所有成员变量都默认是由public static final修饰的</li>
+<li>接口中所有抽象方法都是默认是由public abstract修饰的</li>
+<li>接口中是没有构造方法</li>
+<li><strong>接口中采用多继承机制</strong></li>
+<li><strong>其他类调用接口的时候必须重写接口中的所写方法</strong>，因为接口是抽象方法与常量值的集合</li>
+<li>举例：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//接口</span></span><br><span class="line"><span class="keyword">package</span> com.java.tel;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 接口访问修饰符：public 默认</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">INet</span> &#123;</span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    *接口当中抽象方法可以不写abstract关键字,访问修饰符默认public</span></span><br><span class="line"><span class="comment">    * 当类实现接口时，需要去实现接口中所有的抽象方法，否则需要将该类设置为抽象类</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">network</span><span class="params">()</span>;</span><br><span class="line">   <span class="keyword">void</span> <span class="title function_">connection</span><span class="params">()</span>;</span><br><span class="line">   <span class="comment">//接口中可以包含常量，默认public static final</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> TEP=<span class="number">20</span>;<span class="comment">//常量是不可以改变的，子类调用常量时是不可改变的</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//类调用接口</span></span><br><span class="line"><span class="keyword">package</span> com.java.tel;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="keyword">class</span> <span class="title class_">SmartPhone</span> <span class="keyword">implements</span> <span class="title class_">INet</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> TEP=<span class="number">30</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">call</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;智能手表可以打电话&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">network</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;智能手表可以打电话&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">connection</span><span class="params">()</span>&#123;<span class="comment">//重写INet中的connection方法，这里是调用了IPhoto中的默认方法connection</span></span><br><span class="line">        System.out.println(<span class="string">&quot;我是重写后的connection方法&quot;</span>);</span><br><span class="line">        INet.<span class="built_in">super</span>.connection();<span class="comment">//调用接口中的默认方法，这样就不用重写默认方法中的方法体</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//测试类</span></span><br><span class="line"><span class="type">INet</span> <span class="variable">net</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Smartphone</span>();<span class="comment">//声明接口对象net，实例化对象，也就是创建并引用接口对象</span></span><br><span class="line">System.out.println(INet.TEP);<span class="comment">//接口名调用常量</span></span><br><span class="line"><span class="type">INet</span> <span class="variable">net</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SmartPhone</span>();</span><br><span class="line">System.out.println(net.TEP);<span class="comment">//创建接口实例化对象，调用常量</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="接口中的默认方法"><a href="#接口中的默认方法" class="headerlink" title="接口中的默认方法"></a>接口中的默认方法</h3><h3 id="作用：-1"><a href="#作用：-1" class="headerlink" title="作用："></a>作用：</h3><ul>
+<li>默认方法，当其他类调用接口的时候，可以依据要求是否要重写此方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//接口中的默认方法</span></span><br><span class="line"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">connection</span> <span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;我是接口中的默认连接&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//default：默认方法，结构中是可以带有方法体，既然不是抽象方法，后面的类可以不重写此方法</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//测试类中调用接口中的默认方法</span></span><br><span class="line"><span class="type">INet</span> <span class="variable">net</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SmartPhone</span>();<span class="comment">//声明接口对象net，实例化对象</span></span><br><span class="line">net.connection();<span class="comment">//</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="接口中的静态方法"><a href="#接口中的静态方法" class="headerlink" title="接口中的静态方法"></a>接口中的静态方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//接口中的静态方法</span></span><br><span class="line"><span class="comment">//接口中的静态方法也是可以带有方法体的</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">stop</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;我是接口中的静态方法&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//类中调用接口</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">connection</span><span class="params">()</span>&#123;<span class="comment">//重写INet中的connection方法，这里是调用了IPhoto中的默认方法connection，可以不重写</span></span><br><span class="line">        System.out.println(<span class="string">&quot;我是重写后的connection方法&quot;</span>);</span><br><span class="line">        INet.<span class="built_in">super</span>.connection();<span class="comment">//调用接口中的默认方法，这样就不用重写默认方法中的方法体</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//测试类中调用静态方法</span></span><br><span class="line">INet.stop();<span class="comment">//接口名.静态方法，调用接口中的静态方法</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="类调用多接口"><a href="#类调用多接口" class="headerlink" title="类调用多接口"></a>类调用多接口</h3><p><strong>用法：,后面跟着多个接口名</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">FourPhone</span> <span class="keyword">extends</span> <span class="title class_">ThreePhone</span> <span class="keyword">implements</span> <span class="title class_">IPhoto</span>,INet&#123;&#125;</span><br><span class="line"><span class="comment">//子类 extends 父类 implements 接口，接口</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="关于多接口中重名默认方法处理的解决方案："><a href="#关于多接口中重名默认方法处理的解决方案：" class="headerlink" title="关于多接口中重名默认方法处理的解决方案："></a>关于多接口中重名默认方法处理的解决方案：</h5><ul>
+<li>当类中调用两个接口时，两个接口中有同名的方法，这时只有重写此方法才能解决报错</li>
+<li>子类 extends 父类 implements 接口,接口;当父类与接口中有同名方法时，会默认使用父类中的同名方法</li>
+<li>如果父类，与接口中有同名的常量或变量的话，那依然还是无法识别的，只有在子类中定义的同名常量，才不会报错</li>
+</ul>
+<h3 id="接口中的继承"><a href="#接口中的继承" class="headerlink" title="接口中的继承"></a>接口中的继承</h3><h4 id="作用-1"><a href="#作用-1" class="headerlink" title="作用"></a>作用</h4><ul>
+<li>接口也可以实现继承，并且可以继承多个父接口，测试类调用接口的时候也需要依据要求重写接口中的方法</li>
+<li>如果继承多个父接口中有同名方法，在子类中重写方法解决报错</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.tel;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">ISon</span> <span class="keyword">extends</span> <span class="title class_">IFather</span>,IFather2&#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 
 
     </article>
@@ -522,8 +597,8 @@
         <div class="license-wrapper">
             <p>Author：<a href="https://xfy-z.github.io">XFY-Z</a>
             <p>Link：<a href="https://xfy-z.github.io/2022/04/01/Java%E5%A4%9A%E6%80%81/">https://xfy-z.github.io/2022/04/01/Java%E5%A4%9A%E6%80%81/</a>
-            <p>Publish date：<a href="https://xfy-z.github.io/2022/04/01/Java%E5%A4%9A%E6%80%81/">April 1st 2022, 1:52:43 pm</a>
-            <p>Update date：<a href="https://xfy-z.github.io/2022/04/01/Java%E5%A4%9A%E6%80%81/">April 1st 2022, 1:59:35 pm</a>
+            <p>Publish date：<a href="https://xfy-z.github.io/2022/04/01/Java%E5%A4%9A%E6%80%81/">April 1st 2022, 2:37:20 pm</a>
+            <p>Update date：<a href="https://xfy-z.github.io/2022/04/01/Java%E5%A4%9A%E6%80%81/">April 1st 2022, 2:55:52 pm</a>
             <p>License：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -533,11 +608,6 @@
             
         </li>
         <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2022/03/30/hello-world/" title="Hello World">
-                    <div class="prevTitle">Hello World</div>
-                </a>
             
         </li>
     </ul>
@@ -676,7 +746,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-number">1.</span> <span class="toc-text">多态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">多态的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%BF%E4%BA%8E%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">便于理解：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E7%BB%A7%E6%89%BF%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%A4%9A%E6%80%81"><span class="toc-number">1.2.</span> <span class="toc-text">基于继承实现的多态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%8E%A5%E5%8F%A3%E4%B8%AD%E7%9A%84%E5%A4%9A%E6%80%81"><span class="toc-number">1.3.</span> <span class="toc-text">基于接口中的多态</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E7%82%B9%EF%BC%9A"><span class="toc-number">1.3.1.</span> <span class="toc-text">关键点：</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-number">1.</span> <span class="toc-text">多态</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">多态的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%91%E4%B8%8A%E8%BD%AC%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">向上转型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%91%E4%B8%8B%E8%BD%AC%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">向下转型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Instanceof%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.1.</span> <span class="toc-text">Instanceof运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-number">1.4.</span> <span class="toc-text">抽象类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8"><span class="toc-number">1.4.1.</span> <span class="toc-text">作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-number">1.5.</span> <span class="toc-text">抽象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3API"><span class="toc-number">1.6.</span> <span class="toc-text">接口API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0%EF%BC%9A"><span class="toc-number">1.6.1.</span> <span class="toc-text">概述：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">1.6.2.</span> <span class="toc-text">作用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="toc-number">1.6.3.</span> <span class="toc-text">特点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E4%B8%AD%E7%9A%84%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95"><span class="toc-number">1.6.4.</span> <span class="toc-text">接口中的默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%EF%BC%9A-1"><span class="toc-number">1.6.5.</span> <span class="toc-text">作用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E4%B8%AD%E7%9A%84%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-number">1.6.6.</span> <span class="toc-text">接口中的静态方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E8%B0%83%E7%94%A8%E5%A4%9A%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.6.7.</span> <span class="toc-text">类调用多接口</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%A4%9A%E6%8E%A5%E5%8F%A3%E4%B8%AD%E9%87%8D%E5%90%8D%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95%E5%A4%84%E7%90%86%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A"><span class="toc-number">1.6.7.0.1.</span> <span class="toc-text">关于多接口中重名默认方法处理的解决方案：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="toc-number">1.6.8.</span> <span class="toc-text">接口中的继承</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8-1"><span class="toc-number">1.6.8.1.</span> <span class="toc-text">作用</span></a></li></ol></li></ol></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
@@ -695,21 +765,14 @@
         
         
         
-        
-        
-        
-        
-        
     
-        
-        
     
     
     
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 1
         </div>
         <!-- search  -->
         
@@ -726,22 +789,7 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/01</span>
-            <a class="archive-post-title" href="/2022/04/01/Java%E5%A4%9A%E6%80%81/">Java的多态</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2022/03/30/hello-world/">Hello World</a>
+            <a class="archive-post-title" href="/2022/04/01/Java%E5%A4%9A%E6%80%81/">Java多态</a>
         </li>
     
     </div>
@@ -749,6 +797,11 @@
 
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
+        
+            <span class="sidebar-tag-name" data-tags="Java">
+                <span class="iconfont-archer">&#xe606;</span>
+                Java
+            </span>
         
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
