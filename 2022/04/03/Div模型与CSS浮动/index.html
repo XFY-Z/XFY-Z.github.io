@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- title -->
+
+
+    
+
+<!-- keywords -->
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="XFY-Z">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="XFY-Z">
+    
+        <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+    
+    <meta name="description" content="">
+    <meta name="description" content="Div简介 Div是层叠样式表中的定位技术，全称DIVision 有时把div称为2图层，更多的时候称为块  Div样式设置 div大小 div溢出效果演示、换行、滚动条显示 div边框、轮廓设置 盒子模型  Div设置大小，位置，背景12345678div&amp;#123;    background-color: yellow;    width: 100px;    height: 100px;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Div模型与CSS浮动">
+<meta property="og:url" content="https://xfy-z.github.io/2022/04/03/Div%E6%A8%A1%E5%9E%8B%E4%B8%8ECSS%E6%B5%AE%E5%8A%A8/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="Div简介 Div是层叠样式表中的定位技术，全称DIVision 有时把div称为2图层，更多的时候称为块  Div样式设置 div大小 div溢出效果演示、换行、滚动条显示 div边框、轮廓设置 盒子模型  Div设置大小，位置，背景12345678div&amp;#123;    background-color: yellow;    width: 100px;    height: 100px;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/Admin/AppData/Roaming/Typora/typora-user-images/image-20220401215821569.png">
+<meta property="og:image" content="c:/Users/Admin/AppData/Roaming/Typora/typora-user-images/image-20220402192347557.png">
+<meta property="og:image" content="c:/Users/Admin/AppData/Roaming/Typora/typora-user-images/image-20220402194808930.png">
+<meta property="og:image" content="c:/Users/Admin/AppData/Roaming/Typora/typora-user-images/image-20220403130959027.png">
+<meta property="og:image" content="c:/Users/Admin/AppData/Roaming/Typora/typora-user-images/image-20220403134424721.png">
+<meta property="article:published_time" content="2022-04-03T13:58:16.000Z">
+<meta property="article:modified_time" content="2022-04-03T13:58:34.358Z">
+<meta property="article:author" content="XFY-Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/Admin/AppData/Roaming/Typora/typora-user-images/image-20220401215821569.png">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="/assets/favicon.ico">
+    
+    <title>Div模型与CSS浮动 · XFY-Z</title>
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+    (function (w) {
+        'use strict'
+        // rel=preload support test
+        if (!w.loadCSS) {
+            w.loadCSS = function () {}
+        }
+        // define on the loadCSS obj
+        var rp = (loadCSS.relpreload = {})
+        // rel=preload feature support test
+        // runs once and returns a function for compat purposes
+        rp.support = (function () {
+            var ret
+            try {
+                ret = w.document.createElement('link').relList.supports('preload')
+            } catch (e) {
+                ret = false
+            }
+            return function () {
+                return ret
+            }
+        })()
+
+        // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+        // then change that media back to its intended value on load
+        rp.bindMediaToggle = function (link) {
+            // remember existing media attr for ultimate state, or default to 'all'
+            var finalMedia = link.media || 'all'
+
+            function enableStylesheet() {
+                link.media = finalMedia
+            }
+
+            // bind load handlers to enable media
+            if (link.addEventListener) {
+                link.addEventListener('load', enableStylesheet)
+            } else if (link.attachEvent) {
+                link.attachEvent('onload', enableStylesheet)
+            }
+
+            // Set rel and non-applicable media type to start an async request
+            // note: timeout allows this to happen async to let rendering continue in IE
+            setTimeout(function () {
+                link.rel = 'stylesheet'
+                link.media = 'only x'
+            })
+            // also enable media after 3 seconds,
+            // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+            setTimeout(enableStylesheet, 3000)
+        }
+
+        // loop through link elements in DOM
+        rp.poly = function () {
+            // double check this to prevent external calls from running
+            if (rp.support()) {
+                return
+            }
+            var links = w.document.getElementsByTagName('link')
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i]
+                // qualify links to those with rel=preload and as=style attrs
+                if (
+                    link.rel === 'preload' &&
+                    link.getAttribute('as') === 'style' &&
+                    !link.getAttribute('data-loadcss')
+                ) {
+                    // prevent rerunning on link
+                    link.setAttribute('data-loadcss', true)
+                    // bind listeners to toggle media back
+                    rp.bindMediaToggle(link)
+                }
+            }
+        }
+
+        // if unsupported, run the polyfill
+        if (!rp.support()) {
+            // run once at least
+            rp.poly()
+
+            // rerun poly on an interval until onload
+            var run = w.setInterval(rp.poly, 500)
+            if (w.addEventListener) {
+                w.addEventListener('load', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            } else if (w.attachEvent) {
+                w.attachEvent('onload', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            }
+        }
+
+        // commonjs
+        if (typeof exports !== 'undefined') {
+            exports.loadCSS = loadCSS
+        } else {
+            w.loadCSS = loadCSS
+        }
+    })(typeof global !== 'undefined' ? global : this)
+</script>
+
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</style>
+
+    <link rel="preload" href="/css/style.css?v=20211217" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=20211217" as="style">
+    <link rel="stylesheet" href="/css/dark.css">
+    <link rel="stylesheet" href="/css/mobile.css?v=20211217" media="(max-width: 960px)">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js?v=20211217" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=20211217" as="script">
+    <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
+    <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <!-- algolia -->
+    
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ == undefined) {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js" />')
+        }
+    </script>
+    
+        <body class="post-body">
+    
+        <!-- header -->
+        <header class="header header-mobile">
+    <!-- top read progress line -->
+    <div class="header-element">
+        <div class="read-progress"></div>
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+            <div class="header-sidebar-menu">
+        
+            
+                <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- header actions -->
+    <div class="header-actions">
+        <!-- theme mode switch button -->
+        <span class="header-theme-btn header-element">
+            <i class="fas fa-adjust"></i>
+        </span>
+        <!-- back to home page text -->
+        <span class="home-link header-element">
+            <a href=/>XFY-Z</a>
+        </span>
+    </div>
+    <!-- toggle banner for post layout -->
+    
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">XFY-Z</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">Div模型与CSS浮动</a>
+            </div>
+        </div>
+    
+</header>
+
+        <!-- fixed footer -->
+        <footer class="footer-fixed">
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+            <div class="back-top back-top-hidden">
+        
+        
+            <div>&#xe639;</div>
+        
+        </div>
+    </div>
+</footer>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="site-intro" style="
+
+
+
+
+
+
+
+    height:50vh;
+
+">
+    
+    <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+                Div模型与CSS浮动
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+                
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">3.1k</span>Reading time: <span class="post-count reading-time">12 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2022/04/03</span>
+                    <!-- busuanzi -->
+                    
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+            <script>
+  // get user agent
+  function getBrowserVersions() {
+    var u = window.navigator.userAgent
+    return {
+      userAgent: u,
+      trident: u.indexOf('Trident') > -1, //IE内核
+      presto: u.indexOf('Presto') > -1, //opera内核
+      webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+      gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+      mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+      ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+      android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+      iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+      iPad: u.indexOf('iPad') > -1, //是否为iPad
+      webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+      weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+      uc: u.indexOf('UCBrowser') > -1, //是否为android下的UC浏览器
+    }
+  }
+  var browser = {
+    versions: getBrowserVersions(),
+  }
+  console.log('userAgent: ' + browser.versions.userAgent)
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded')
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document
+        .getElementsByClassName('intro-title')[0]
+        .classList.add('intro-fade-in')
+      document
+        .getElementsByClassName('intro-subtitle')[0]
+        .classList.add('intro-fade-in')
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in')
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb() {
+    if (browser.versions.uc) {
+      console.log('UCBrowser')
+      fontLoaded()
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular'],
+        },
+        loading: function () {
+          // 所有字体开始加载
+          // console.log('font loading');
+        },
+        active: function () {
+          // 所有字体已渲染
+          fontLoaded()
+        },
+        inactive: function () {
+          // 字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout')
+          fontLoaded()
+        },
+        timeout: 5000, // Set the timeout to two seconds
+      })
+    }
+  }
+
+  function asyncErr() {
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0]
+    o.src = u
+    if (cb) {
+      o.addEventListener(
+        'load',
+        function (e) {
+          cb(null, e)
+        },
+        false
+      )
+    }
+    if (err) {
+      o.addEventListener(
+        'error',
+        function (e) {
+          err(null, e)
+        },
+        false
+      )
+    }
+    s.parentNode.insertBefore(o, s)
+  }
+
+  var asyncLoadWithFallBack = function (arr, success, reject) {
+    var currReject = function () {
+      reject()
+      arr.shift()
+      if (arr.length) async(arr[0], success, currReject)
+    }
+
+    async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack(
+    [
+      'https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js',
+      'https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js',
+      "/lib/webfontloader.min.js",
+    ],
+    asyncCb,
+    asyncErr
+  )
+</script>
+
+            <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+            <div class="container container-unloaded">
+                <!-- 不可以删除，否则会调用 post 的 layout -->
+<main class="main about-page">
+    <article class="article-entry">
+        <h2 id="Div简介"><a href="#Div简介" class="headerlink" title="Div简介"></a>Div简介</h2><ul>
+<li>Div是层叠样式表中的定位技术，全称DIVision</li>
+<li>有时把div称为2图层，更多的时候称为块</li>
+</ul>
+<h2 id="Div样式设置"><a href="#Div样式设置" class="headerlink" title="Div样式设置"></a>Div样式设置</h2><ul>
+<li>div大小</li>
+<li>div溢出效果演示、换行、滚动条显示</li>
+<li>div边框、轮廓设置</li>
+<li>盒子模型</li>
+</ul>
+<h2 id="Div设置大小，位置，背景"><a href="#Div设置大小，位置，背景" class="headerlink" title="Div设置大小，位置，背景"></a>Div设置大小，位置，背景</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">position</span>:absolute;<span class="comment">/*定义绝对位置，方便下面top和left定位，不然会失效*/</span></span><br><span class="line">    <span class="attribute">top</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Div溢出处理效果"><a href="#Div溢出处理效果" class="headerlink" title="Div溢出处理效果"></a>Div溢出处理效果</h2><ul>
+<li>超出div宽度的文字或图片进行隐藏处理</li>
+<li>超出div宽度高度的文字或图片增加滚动条</li>
+</ul>
+<h3 id="overflow属性设置"><a href="#overflow属性设置" class="headerlink" title="overflow属性设置"></a>overflow属性设置</h3><p><img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220401215821569.png" alt="image-20220401215821569"></p>
+<hr>
+<h2 id="CSS轮廓"><a href="#CSS轮廓" class="headerlink" title="CSS轮廓"></a>CSS轮廓</h2><h3 id="CSS轮廓的属性值和作用"><a href="#CSS轮廓的属性值和作用" class="headerlink" title="CSS轮廓的属性值和作用"></a>CSS轮廓的属性值和作用</h3><ul>
+<li>属性值：outline</li>
+<li>作用：<strong>绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用</strong></li>
+</ul>
+<h3 id="小贴士"><a href="#小贴士" class="headerlink" title="小贴士"></a>小贴士</h3><ul>
+<li>轮廓的其他属性还有：dotted（点状轮廓），solid（实线），double（双线）</li>
+</ul>
+<h3 id="CSS轮廓属性的调用举例"><a href="#CSS轮廓属性的调用举例" class="headerlink" title="CSS轮廓属性的调用举例"></a>CSS轮廓属性的调用举例</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#div1</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">outline</span>: dashed;<span class="comment">/*虚线轮廓*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--定义html结构--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;test.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div1&quot;</span>&gt;</span></span><br><span class="line">        B站早期是一个ACG(动画、漫画、游戏）内容创作与分享的视频网站。 [5-6]  经过十年多的发展,围绕用户、创作者和内容,构建了一个源源不断产生优质内容的生态系统,B站已经涵盖7000多个兴趣圈层的多元文化社区,曾获得QuestMobile研究院评选的“Z世代偏爱APP”和“Z世代偏爱泛娱乐APP”两项榜单第一名并入选“BrandZ”报告2019最具价值中国品牌100强</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="CSS边框"><a href="#CSS边框" class="headerlink" title="CSS边框"></a>CSS边框</h2><h3 id="CSS边框的属性"><a href="#CSS边框的属性" class="headerlink" title="CSS边框的属性"></a>CSS边框的属性</h3><ul>
+<li>border-left</li>
+<li>border-right</li>
+<li>border-top</li>
+<li>border-bottom</li>
+</ul>
+<h3 id="CSS边框的作用"><a href="#CSS边框的作用" class="headerlink" title="CSS边框的作用"></a>CSS边框的作用</h3><ul>
+<li>设置div边框的边线宽度、颜色、虚线、实线等样式css属性</li>
+</ul>
+<h3 id="举例border-bottom：solid；-x2F-x2F-设置下边框为实线"><a href="#举例border-bottom：solid；-x2F-x2F-设置下边框为实线" class="headerlink" title="举例border-bottom：solid；&#x2F;&#x2F;设置下边框为实线"></a>举例border-bottom：solid；&#x2F;&#x2F;设置下边框为实线</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#div1</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">outline</span>: dotted;</span><br><span class="line">    <span class="attribute">border-bottom</span>: solid;<span class="comment">/*设置下边框为实线*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;test.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div1&quot;</span>&gt;</span></span><br><span class="line">        B站早期是一个ACG(动画、漫画、游戏）内容创作与分享的视频网站。 [5-6]  经过十年多的发展,围绕用户、创作者和内容,构建了一个源源不断产生优质内容的生态系统,B站已经涵盖7000多个兴趣圈层的多元文化社区,曾获得QuestMobile研究院评选的“Z世代偏爱APP”和“Z世代偏爱泛娱乐APP”两项榜单第一名并入选“BrandZ”报告2019最具价值中国品牌100强</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220402192347557.png" alt="image-20220402192347557"></p>
+<h3 id="小贴士-1"><a href="#小贴士-1" class="headerlink" title="小贴士"></a>小贴士</h3><ul>
+<li>border还有其他的属性：none（无边框），double（双线边框）等</li>
+</ul>
+<hr>
+<h2 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h2><h3 id="CSS盒子模型简介"><a href="#CSS盒子模型简介" class="headerlink" title="CSS盒子模型简介"></a>CSS盒子模型简介</h3><ul>
+<li>在HTML中，所有的标签都可以设置宽度&#x2F;高度、内边距、边框、外边距，HTML中所有的标签都是盒子</li>
+</ul>
+<h3 id="CSS盒子模型的范围"><a href="#CSS盒子模型的范围" class="headerlink" title="CSS盒子模型的范围"></a>CSS盒子模型的范围</h3><p><img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220402194808930.png" alt="image-20220402194808930"></p>
+<p>宽度&#x2F;高度（蓝色）：content 指定可以存放的位置</p>
+<p>内边距（绿色）：padding</p>
+<p>边框（黄色）：border</p>
+<p>外边距（橘色）：margin</p>
+<h3 id="盒子模型的宽度和高度"><a href="#盒子模型的宽度和高度" class="headerlink" title="盒子模型的宽度和高度"></a>盒子模型的宽度和高度</h3><h4 id="1-内容的宽度和高度"><a href="#1-内容的宽度和高度" class="headerlink" title="1.内容的宽度和高度"></a>1.内容的宽度和高度</h4><p>​    内容的宽度和高度就是通过标签的width&#x2F;height属性设置的宽度和高度</p>
+<h4 id="2-元素的宽度和高度"><a href="#2-元素的宽度和高度" class="headerlink" title="2.元素的宽度和高度"></a>2.元素的宽度和高度</h4><p>​    宽度&#x3D;左边框+左内边框+内容的宽度+右内边框+右边宽</p>
+<p>​    高度&#x3D;上边框+上内边框+内容的高度+下内边框+下边宽</p>
+<h4 id="3-元素的空间的宽度和高度"><a href="#3-元素的空间的宽度和高度" class="headerlink" title="3.元素的空间的宽度和高度"></a>3.元素的空间的宽度和高度</h4><p>​    宽度&#x3D;左外边距+左边框+左内边框+内容的宽度+右内边距+右边框+右外边距</p>
+<p>​    高度&#x3D;上外边距离+上边框+上内边距+内容的高度+下内边框+下边宽+下外边距</p>
+<h3 id="盒子box-sizing属性"><a href="#盒子box-sizing属性" class="headerlink" title="盒子box-sizing属性"></a>盒子box-sizing属性</h3><ul>
+<li>CSS3新增加了一个box-sizing属性，这个属性可以保证我们盒子新增padding和border属性之后，盒子的宽度和高度是不变的</li>
+<li>新增padding和border属性之后，要想保证盒子元素的宽度不变，那么就必须减去一部分内容的宽度和高度</li>
+</ul>
+<hr>
+<h2 id="CSS元素居中"><a href="#CSS元素居中" class="headerlink" title="CSS元素居中"></a>CSS元素居中</h2><h3 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h3><ul>
+<li>将文字居中：就是让自己的容器中的~元素居中，<strong>常用于文本或图片等内联元素</strong></li>
+<li>将对象居中：就是让容器中的~自己居中，<strong>常作用于块元素，且需要配合宽度的使用</strong></li>
+</ul>
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><ul>
+<li>设置文字居中</li>
+<li>设置块状居中</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#div1</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">200px</span>;    <span class="comment">/*表示文字垂直水平居中*/</span></span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span> auto;      <span class="comment">/*设置块状水平居中，20px是距离上边框的距离*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220403130959027.png" alt="image-20220403130959027"></p>
+<hr>
+<h2 id="CSS浮动"><a href="#CSS浮动" class="headerlink" title="CSS浮动"></a>CSS浮动</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>可以使对象与对象的排列方式发生改变，以达到页面布局的效果</li>
+</ul>
+<h3 id="CSS浮动的术语"><a href="#CSS浮动的术语" class="headerlink" title="CSS浮动的术语"></a>CSS浮动的术语</h3><ul>
+<li>行级元素：行内元素与其他元素都会在一条水平线上排列，都是在同一行</li>
+<li>行级相关元素：a标签，label，img，span等</li>
+<li>块级元素：在默认情况下，会独占一行</li>
+<li>块级相关元素：div，h标签，li，table等</li>
+</ul>
+<h3 id="CSS定位机制"><a href="#CSS定位机制" class="headerlink" title="CSS定位机制"></a>CSS定位机制</h3><h4 id="定位机制"><a href="#定位机制" class="headerlink" title="定位机制"></a>定位机制</h4><ul>
+<li>首先定位机制主要针对的是块级元素</li>
+<li>(标准)文档流（从上到下依次排列，中间没有改变任何布局和位置）</li>
+</ul>
+<p><img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220403134424721.png" alt="image-20220403134424721"></p>
+<ul>
+<li>脱标流：(脱离标准文档流)有两种，分别是float，position:absolute)，被称为浮动，也被称为position的实现效果（让块级元素实现从左到右，从上往下）比如让内容4脱离文档流，出现在内容2的后面</li>
+</ul>
+<h3 id="CSS浮动：float属性"><a href="#CSS浮动：float属性" class="headerlink" title="CSS浮动：float属性"></a>CSS浮动：float属性</h3><h4 id="float属性设置"><a href="#float属性设置" class="headerlink" title="float属性设置"></a>float属性设置</h4><ul>
+<li>left-元素向左浮动</li>
+<li>right-元素向右浮动</li>
+<li>none-默认值。元素不浮动</li>
+</ul>
+<h5 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h5><p><strong>给谁添加float，就将谁脱标，后面的内容会顶上来显示</strong>。</p>
+<p>如果顶上去以后，托标的内容没有改变位置，就会出现后者被前者（脱标内容）覆盖的情况。</p>
+<p>如果没有改变位置，就会出现该在的地方</p>
+<h3 id="float的崩溃"><a href="#float的崩溃" class="headerlink" title="float的崩溃"></a>float的崩溃</h3><h4 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h4><ul>
+<li>当父元素没有设置高度的情况下，将子元素设置为浮动（float）父一级的块级元素高度发生破坏（又称为破坏，崩塌）</li>
+<li>核心的内容为，<strong>浮动的子元素不能撑起非浮动的父元素</strong></li>
+<li><strong>也就是说浮动的子元素并不能撑起父元素的高度，必须是标准流的子元素（非浮动的）才能撑起父元素的高度</strong></li>
+<li>子类中元素的高度和宽度会撑起父级元素的高度和宽度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#div1</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">    </span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#div2</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">450px</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;<span class="comment">/*不会撑起父类块级元素中的高度 */</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#div3</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;<span class="comment">/*不会撑起父类块级元素中的高度 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="float的包裹性"><a href="#float的包裹性" class="headerlink" title="float的包裹性"></a>float的包裹性</h3><h4 id="包裹性"><a href="#包裹性" class="headerlink" title="包裹性"></a>包裹性</h4><ul>
+<li><strong>当div设置浮动后，宽度会自适应其内容的宽度</strong></li>
+<li>块级元素默认宽度就是父级元素的宽度，<strong>div设置浮动产生包裹特性</strong></li>
+<li>如果块级元素为父元素，行级元素为子元素，当块级元素设置float时，产生包裹特性，会多出（基准线）</li>
+</ul>
+<h4 id="解决float包裹性产生的基准线"><a href="#解决float包裹性产生的基准线" class="headerlink" title="解决float包裹性产生的基准线"></a>解决float包裹性产生的基准线</h4><ol>
+<li>将img转换为块级元素vertical-align：bottom</li>
+<li>垂直对齐方式：底部对齐；行级元素转块级元素</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">   &lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-tag">div</span>&#123;</span><br><span class="line">    	<span class="attribute">background-color</span>: yellow;</span><br><span class="line">    	<span class="attribute">float</span>: left;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">img</span>&#123;</span><br><span class="line">    	<span class="attribute">vertical-align</span>: bottom;<span class="comment">/*将行级元素更改为块级元素*/</span></span><br><span class="line">    &#125;</span><br><span class="line">   &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">   &lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">   	&lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;image/<span class="number">3</span><span class="selector-class">.jpg</span>&quot;/&gt;</span><br><span class="line">   &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">body</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">html</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3.使用float进行图文混排</p>
+<p>float的设计初衷 –&gt; 实现图文混排（环绕方式），文字和矩形位置，能够进行环绕排列</p>
+<p>随着技术进入 –&gt;例如用于商品列表并排表示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">/*img和div为平级关系*/</span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">div</span>&#123;</span></span><br><span class="line"><span class="language-css">    	<span class="attribute">background-color</span>: yellow;</span></span><br><span class="line"><span class="language-css">    	<span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">img</span>&#123;</span></span><br><span class="line"><span class="language-css">    	<span class="attribute">vertical-align</span>: bottom;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">    	<span class="attribute">text-align</span>: justify;<span class="comment">/*设置两端对齐*/</span></span></span><br><span class="line"><span class="language-css">    	<span class="attribute">line-height</span>: <span class="number">20px</span>;<span class="comment">/*设置行高*/</span></span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">   </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;image/3.jpg&quot;</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">   	包裹性：当div设置浮动后 宽度会自适应其内容的宽度。</span><br><span class="line">块级元素默认宽度就是父级元素的宽度，div设置为float 产生包裹特性</span><br><span class="line">行级元素都会出现块级元素包裹多出（基准线）</span><br><span class="line">解决：</span><br><span class="line">1）将img转换为块级元素 vertical-align:botom</span><br><span class="line">2）垂直对齐方式：底部对齐；行级元素转块级元素  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">/*块级元素和行级元素为父子关系*/</span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">div</span>&#123;</span></span><br><span class="line"><span class="language-css">    	<span class="attribute">background-color</span>: white;</span></span><br><span class="line"><span class="language-css">    	<span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">img</span>&#123;</span></span><br><span class="line"><span class="language-css">    	<span class="attribute">vertical-align</span>: bottom;</span></span><br><span class="line"><span class="language-css">    	<span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">    	<span class="attribute">text-align</span>: justify;</span></span><br><span class="line"><span class="language-css">    	<span class="attribute">line-height</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">   </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;image/3.jpg&quot;</span>/&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">   	包裹性：当div设置浮动后 宽度会自适应其内容的宽度。</span><br><span class="line">块级元素默认宽度就是父级元素的宽度，div设置为float 产生包裹特性</span><br><span class="line">行级元素都会出现块级元素包裹多出（基准线）</span><br><span class="line">解决：</span><br><span class="line">1）将img转换为块级元素 vertical-align:botom</span><br><span class="line">2）垂直对齐方式：底部对齐；行级元素转块级元素  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="CSS的float清除浮动"><a href="#CSS的float清除浮动" class="headerlink" title="CSS的float清除浮动"></a>CSS的float清除浮动</h2><h3 id="为什么需要清除浮动"><a href="#为什么需要清除浮动" class="headerlink" title="为什么需要清除浮动"></a>为什么需要清除浮动</h3><ul>
+<li>为了父元素不会出现”高度崩塌”</li>
+<li>如果强制规定了外层容器的尺寸，则显得就不那么灵活，高度就不能自动适应了（以后的数据，大多都是从后台获取的，这样的内容多少和版本就会不一致）</li>
+<li><strong>从某个元素开始我们不再需要浮动效果了</strong></li>
+</ul>
+<h3 id="清除float浮动的方法"><a href="#清除float浮动的方法" class="headerlink" title="清除float浮动的方法"></a>清除float浮动的方法</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p>清除浮动代码 -&gt; clear:both（right and left）； - &gt; 表示清除元素之前的浮动，如果本元素之后还有浮动，是不受这段清除代码的影响的</p>
+<p>clear: left -&gt;清除左浮动</p>
+<p>clear:right -&gt;清除右浮动</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#div4</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: black;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">width</span>: <span class="number">240px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">240px</span>; </span><br><span class="line">    <span class="attribute">clear</span>: both;<span class="comment">/*清除浮动float，说明从div4的时候就不再浮动了*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>额外添加一个清除浮动的div，防止清除div的代码</p>
+<p>#clearDiv{clear：both}</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#clearDiv</span>&#123;<span class="comment">/*在div3和div4中间设置clear: both来达到div4清除浮动的效果*/</span></span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;test.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div1&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;clearDiv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="comment">&lt;!--设置一个块级元素来设置css样式做清除浮动的操作--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div4&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h4><p>目前一些大型网站流行的方法，当网站内容很多的时候，可以防止出现一个意料之外的问题</p>
+<p>方法二的升级，防止其他的误操作</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#clearDiv</span>&#123;<span class="comment">/*被下面的伪元素选择器，不在浏览器中显示*/</span></span><br><span class="line">    <span class="attribute">background-color</span>: pink;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1000px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1000px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#clearDiv</span><span class="selector-pseudo">::after</span>&#123;<span class="comment">/*在clearDiv内容之后插入新的元素*/</span></span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;<span class="comment">/*在clearDiv中间设置内容，但是不在浏览器中显示*/</span></span><br><span class="line">    <span class="attribute">visibility</span>: hidden;<span class="comment">/*将内容进行隐藏，防止误操作*/</span>    </span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0px</span>;<span class="comment">/*将行高设置为空*/</span></span><br><span class="line">    <span class="attribute">display</span>: block;<span class="comment">/*块状显示，将content转换为跨级元素*/</span></span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </article>
+</main>
+
+                <!-- profile -->
+                
+            </div>
+            <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+        <div class="social">
+            
+    
+        
+            
+                <a href="mailto:1983107554@qq.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/XFY-Z" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                    
+                    <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+        </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- website approve for Chinese user -->
+    
+    <!-- 不蒜子  -->
+    
+        <div class="busuanzi-container">
+            
+             
+                <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+            
+        </div>
+    	
+</footer>
+
+        </div>
+        <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Div%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">Div简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Div%E6%A0%B7%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">Div样式设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Div%E8%AE%BE%E7%BD%AE%E5%A4%A7%E5%B0%8F%EF%BC%8C%E4%BD%8D%E7%BD%AE%EF%BC%8C%E8%83%8C%E6%99%AF"><span class="toc-number">3.</span> <span class="toc-text">Div设置大小，位置，背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Div%E6%BA%A2%E5%87%BA%E5%A4%84%E7%90%86%E6%95%88%E6%9E%9C"><span class="toc-number">4.</span> <span class="toc-text">Div溢出处理效果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#overflow%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE"><span class="toc-number">4.1.</span> <span class="toc-text">overflow属性设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E8%BD%AE%E5%BB%93"><span class="toc-number">5.</span> <span class="toc-text">CSS轮廓</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E8%BD%AE%E5%BB%93%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="toc-number">5.1.</span> <span class="toc-text">CSS轮廓的属性值和作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E8%B4%B4%E5%A3%AB"><span class="toc-number">5.2.</span> <span class="toc-text">小贴士</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E8%BD%AE%E5%BB%93%E5%B1%9E%E6%80%A7%E7%9A%84%E8%B0%83%E7%94%A8%E4%B8%BE%E4%BE%8B"><span class="toc-number">5.3.</span> <span class="toc-text">CSS轮廓属性的调用举例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E8%BE%B9%E6%A1%86"><span class="toc-number">6.</span> <span class="toc-text">CSS边框</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E8%BE%B9%E6%A1%86%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">6.1.</span> <span class="toc-text">CSS边框的属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E8%BE%B9%E6%A1%86%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">6.2.</span> <span class="toc-text">CSS边框的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%BE%8Bborder-bottom%EF%BC%9Asolid%EF%BC%9B-x2F-x2F-%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BE%B9%E6%A1%86%E4%B8%BA%E5%AE%9E%E7%BA%BF"><span class="toc-number">6.3.</span> <span class="toc-text">举例border-bottom：solid；&#x2F;&#x2F;设置下边框为实线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E8%B4%B4%E5%A3%AB-1"><span class="toc-number">6.4.</span> <span class="toc-text">小贴士</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="toc-number">7.</span> <span class="toc-text">CSS盒子模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B"><span class="toc-number">7.1.</span> <span class="toc-text">CSS盒子模型简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%8C%83%E5%9B%B4"><span class="toc-number">7.2.</span> <span class="toc-text">CSS盒子模型的范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%AE%BD%E5%BA%A6%E5%92%8C%E9%AB%98%E5%BA%A6"><span class="toc-number">7.3.</span> <span class="toc-text">盒子模型的宽度和高度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%86%85%E5%AE%B9%E7%9A%84%E5%AE%BD%E5%BA%A6%E5%92%8C%E9%AB%98%E5%BA%A6"><span class="toc-number">7.3.1.</span> <span class="toc-text">1.内容的宽度和高度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%85%83%E7%B4%A0%E7%9A%84%E5%AE%BD%E5%BA%A6%E5%92%8C%E9%AB%98%E5%BA%A6"><span class="toc-number">7.3.2.</span> <span class="toc-text">2.元素的宽度和高度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%85%83%E7%B4%A0%E7%9A%84%E7%A9%BA%E9%97%B4%E7%9A%84%E5%AE%BD%E5%BA%A6%E5%92%8C%E9%AB%98%E5%BA%A6"><span class="toc-number">7.3.3.</span> <span class="toc-text">3.元素的空间的宽度和高度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%92%E5%AD%90box-sizing%E5%B1%9E%E6%80%A7"><span class="toc-number">7.4.</span> <span class="toc-text">盒子box-sizing属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD"><span class="toc-number">8.</span> <span class="toc-text">CSS元素居中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%85%E4%B8%AD"><span class="toc-number">8.1.</span> <span class="toc-text">居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%BE%8B"><span class="toc-number">8.2.</span> <span class="toc-text">举例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E6%B5%AE%E5%8A%A8"><span class="toc-number">9.</span> <span class="toc-text">CSS浮动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">9.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%9C%AF%E8%AF%AD"><span class="toc-number">9.2.</span> <span class="toc-text">CSS浮动的术语</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E5%AE%9A%E4%BD%8D%E6%9C%BA%E5%88%B6"><span class="toc-number">9.3.</span> <span class="toc-text">CSS定位机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%BD%8D%E6%9C%BA%E5%88%B6"><span class="toc-number">9.3.1.</span> <span class="toc-text">定位机制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E6%B5%AE%E5%8A%A8%EF%BC%9Afloat%E5%B1%9E%E6%80%A7"><span class="toc-number">9.4.</span> <span class="toc-text">CSS浮动：float属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#float%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE"><span class="toc-number">9.4.1.</span> <span class="toc-text">float属性设置</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-number">9.4.1.1.</span> <span class="toc-text">总结：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#float%E7%9A%84%E5%B4%A9%E6%BA%83"><span class="toc-number">9.5.</span> <span class="toc-text">float的崩溃</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5-1"><span class="toc-number">9.5.1.</span> <span class="toc-text">概念</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#float%E7%9A%84%E5%8C%85%E8%A3%B9%E6%80%A7"><span class="toc-number">9.6.</span> <span class="toc-text">float的包裹性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%85%E8%A3%B9%E6%80%A7"><span class="toc-number">9.6.1.</span> <span class="toc-text">包裹性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3float%E5%8C%85%E8%A3%B9%E6%80%A7%E4%BA%A7%E7%94%9F%E7%9A%84%E5%9F%BA%E5%87%86%E7%BA%BF"><span class="toc-number">9.6.2.</span> <span class="toc-text">解决float包裹性产生的基准线</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E7%9A%84float%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8"><span class="toc-number">10.</span> <span class="toc-text">CSS的float清除浮动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8"><span class="toc-number">10.1.</span> <span class="toc-text">为什么需要清除浮动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%85%E9%99%A4float%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">10.2.</span> <span class="toc-text">清除float浮动的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="toc-number">10.2.1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="toc-number">10.2.2.</span> <span class="toc-text">方法二</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%89"><span class="toc-number">10.2.3.</span> <span class="toc-text">方法三</span></a></li></ol></li></ol></li></ol>
+            </div>
+        
+        <!-- sidebar -->
+        <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+        <div class="sidebar-panel-archives">
+    <!-- 在 ejs 中将 archive 按照时间排序 -->
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 2
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+        
+            
+            
+            <div class="archive-year"> 2022 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/03</span>
+            <a class="archive-post-title" href="/2022/04/03/Div%E6%A8%A1%E5%9E%8B%E4%B8%8ECSS%E6%B5%AE%E5%8A%A8/">Div模型与CSS浮动</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span>
+            <a class="archive-post-title" href="/2022/04/01/Java%E5%A4%9A%E6%80%81/">Java多态</a>
+        </li>
+    
+    </div>
+</div>
+
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+        
+            <span class="sidebar-tag-name" data-tags="Java">
+                <span class="iconfont-archer">&#xe606;</span>
+                Java
+            </span>
+        
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+        缺失模块，请参考主题文档进行安装配置：https://github.com/fi3ework/hexo-theme-archer#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+
+    </div>
+</div>
+
+        <!-- site-meta -->
+        <script>
+    var siteMetaRoot = "/"
+    if (siteMetaRoot === "undefined") {
+        siteMetaRoot = '/'
+    }
+    var siteMeta = {
+        url: "https://xfy-z.github.io",
+        root: siteMetaRoot,
+        author: "XFY-Z"
+    }
+</script>
+
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
+        <!-- main func -->
+        <script src="/scripts/main.js?v=20211217"></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v=20211217"></script>
+        <!-- fancybox -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+        <!-- algolia -->
+        
+        <!-- busuanzi -->
+        
+            <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+        
+        <!-- CNZZ -->
+        
+        <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
+        
+        <!-- mermaid -->
+        
+    </body>
+</html>
