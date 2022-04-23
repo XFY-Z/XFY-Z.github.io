@@ -107,7 +107,10 @@
        
   <h2 id="JS数组"><a href="#JS数组" class="headerlink" title="JS数组"></a>JS数组</h2><h3 id="声明与创建数组"><a href="#声明与创建数组" class="headerlink" title="声明与创建数组"></a>声明与创建数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明或创建一个不指定长度的数组</span></span><br><span class="line"><span class="keyword">var</span> arrayObj=<span class="keyword">new</span> <span class="title class_">Array</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//声明或创建一个数组并指定长度的数组</span></span><br><span class="line"><span class="keyword">var</span> arrayObj=<span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//声明或创建一个带有默认值的数组</span></span><br><span class="line"><span class="keyword">var</span> arrayObj=<span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">1</span>,<span class="number">11</span>,<span class="number">22</span>,<span class="string">&quot;zz&quot;</span>,<span class="string">&quot;123a&quot;</span>,<span class="string">&quot;q&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个数组并赋值的简写，又称为隐式创建数据</span></span><br><span class="line"><span class="keyword">var</span> arrayObj1=[<span class="number">1</span>,<span class="number">11</span>,<span class="number">22</span>,<span class="string">&quot;zz&quot;</span>,<span class="string">&quot;123a&quot;</span>,<span class="string">&quot;q&quot;</span>];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="输出数组"><a href="#输出数组" class="headerlink" title="输出数组"></a>输出数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数组赋值，字符下标，数组遍历 </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arrayObj[<span class="number">1</span>]);<span class="comment">//输出指定位置</span></span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;arrayObj1.<span class="property">length</span>;i++)&#123;<span class="comment">//循环遍历输出数组</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arrayObj1[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> o <span class="keyword">in</span> arrayObj1)&#123;<span class="comment">//便捷循环遍历数组</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arrayObj1[o]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<p>###输出数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数组赋值，字符下标，数组遍历 </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arrayObj[<span class="number">1</span>]);<span class="comment">//输出指定位置</span></span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;arrayObj1.<span class="property">length</span>;i++)&#123;<span class="comment">//循环遍历输出数组</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arrayObj1[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> o <span class="keyword">in</span> arrayObj1)&#123;<span class="comment">//便捷循环遍历数组</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arrayObj1[o]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -256,8 +259,7 @@
     
   </nav>
 
-   
- 
+  
    
     
     <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
@@ -299,18 +301,9 @@
     </ul>
     <ul>
       
-        <li>
-          <a href="https://beian.miit.gov.cn/" target="_black" rel="nofollow">闽ICP备88888888</a>
-        </li>
-        
     </ul>
     <ul>
       
-      <li>
-          <img src="/images/beian.png"></img>
-          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" target="_black" rel="nofollow">闽公网安备01234567890123号</a>
-      </li>
-        
     </ul>
     <ul>
       <li>
@@ -352,11 +345,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags/Java;/tags/JavaWeb">标签</a>
+      <a class="nav-item-link" href="/tags">标签</a>
     </li>
     
     <li class="nav-item">
@@ -364,7 +353,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2022/about">关于我</a>
+      <a class="nav-item-link" href="/about">关于我</a>
     </li>
     
   </ul>
@@ -627,7 +616,9 @@
 </script>
  
 <!-- CanvasBackground -->
-
+ 
+<script src="/js/dz.js"></script>
+ 
 <script>
   if (window.mermaid) {
     mermaid.initialize({ theme: "forest" });
