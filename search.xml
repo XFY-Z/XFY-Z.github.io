@@ -234,6 +234,29 @@
       </tags>
   </entry>
   <entry>
+    <title>JS事件与DOM总结</title>
+    <url>/JS%E4%BA%8B%E4%BB%B6%E4%B8%8EDOM%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h2 id="JS事件与DOM总结"><a href="#JS事件与DOM总结" class="headerlink" title="JS事件与DOM总结"></a>JS事件与DOM总结</h2><h3 id="什么是事件"><a href="#什么是事件" class="headerlink" title="什么是事件"></a>什么是事件</h3><p>事件是指被程序发现的行为或发生的事情，而且它可以能会被程序处理</p>
+<h3 id="事件的特点"><a href="#事件的特点" class="headerlink" title="事件的特点"></a>事件的特点</h3><p>js的事件，都是以on开头，有onclick、onchange、onload……</p>
+<h3 id="事件的分类"><a href="#事件的分类" class="headerlink" title="事件的分类"></a>事件的分类</h3><p>键盘事件、鼠标事件、表单事件……</p>
+<span id="more"></span>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221035716.png" alt="image-20220408221035716"></p>
+<h2 id="DOM事件的总结"><a href="#DOM事件的总结" class="headerlink" title="DOM事件的总结"></a>DOM事件的总结</h2><h3 id="什么是DOM事件"><a href="#什么是DOM事件" class="headerlink" title="什么是DOM事件"></a>什么是DOM事件</h3><p>DOM的全称为：Document Object Model，将文档(页面)表现为结构化的表示方法，<strong>使每一个页面元素都是可操控</strong>，DOM网页和脚本以及其他的编程语言联系起来</p>
+<h3 id="DOM事件的特点"><a href="#DOM事件的特点" class="headerlink" title="DOM事件的特点"></a>DOM事件的特点</h3><p>利用js控制页面中的所有元素，使页面更加”聪明”</p>
+<h3 id="DOM事件的分类"><a href="#DOM事件的分类" class="headerlink" title="DOM事件的分类"></a>DOM事件的分类</h3><ul>
+<li>元素节点</li>
+<li>属性节点</li>
+<li>文本节点</li>
+</ul>
+<h3 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221627126.png" alt="image-20220408221627126"></p>
+<h3 id="常见的DOM操作"><a href="#常见的DOM操作" class="headerlink" title="常见的DOM操作"></a>常见的DOM操作</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221019694.png" alt="image-20220408221019694"></p>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Dom4j与Xpath</title>
     <url>/Dom4j%E4%B8%8EXpath/</url>
     <content><![CDATA[<h2 id="DOM文档对象模型"><a href="#DOM文档对象模型" class="headerlink" title="DOM文档对象模型"></a>DOM文档对象模型</h2><ul>
@@ -897,29 +920,6 @@
 ]]></content>
       <tags>
         <tag>XML</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS事件与DOM总结</title>
-    <url>/JS%E4%BA%8B%E4%BB%B6%E4%B8%8EDOM%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h2 id="JS事件与DOM总结"><a href="#JS事件与DOM总结" class="headerlink" title="JS事件与DOM总结"></a>JS事件与DOM总结</h2><h3 id="什么是事件"><a href="#什么是事件" class="headerlink" title="什么是事件"></a>什么是事件</h3><p>事件是指被程序发现的行为或发生的事情，而且它可以能会被程序处理</p>
-<h3 id="事件的特点"><a href="#事件的特点" class="headerlink" title="事件的特点"></a>事件的特点</h3><p>js的事件，都是以on开头，有onclick、onchange、onload……</p>
-<h3 id="事件的分类"><a href="#事件的分类" class="headerlink" title="事件的分类"></a>事件的分类</h3><p>键盘事件、鼠标事件、表单事件……</p>
-<span id="more"></span>
-
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221035716.png" alt="image-20220408221035716"></p>
-<h2 id="DOM事件的总结"><a href="#DOM事件的总结" class="headerlink" title="DOM事件的总结"></a>DOM事件的总结</h2><h3 id="什么是DOM事件"><a href="#什么是DOM事件" class="headerlink" title="什么是DOM事件"></a>什么是DOM事件</h3><p>DOM的全称为：Document Object Model，将文档(页面)表现为结构化的表示方法，<strong>使每一个页面元素都是可操控</strong>，DOM网页和脚本以及其他的编程语言联系起来</p>
-<h3 id="DOM事件的特点"><a href="#DOM事件的特点" class="headerlink" title="DOM事件的特点"></a>DOM事件的特点</h3><p>利用js控制页面中的所有元素，使页面更加”聪明”</p>
-<h3 id="DOM事件的分类"><a href="#DOM事件的分类" class="headerlink" title="DOM事件的分类"></a>DOM事件的分类</h3><ul>
-<li>元素节点</li>
-<li>属性节点</li>
-<li>文本节点</li>
-</ul>
-<h3 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221627126.png" alt="image-20220408221627126"></p>
-<h3 id="常见的DOM操作"><a href="#常见的DOM操作" class="headerlink" title="常见的DOM操作"></a>常见的DOM操作</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221019694.png" alt="image-20220408221019694"></p>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
 </search>
