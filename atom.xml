@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-04-23T14:04:27.422Z</updated>
+  <updated>2022-04-23T14:06:53.987Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>请求与响应</title>
+    <title>Servlet之请求与响应</title>
     <link href="https://xfy-z.github.io/%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/"/>
     <id>https://xfy-z.github.io/%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/</id>
     <published>2022-04-23T13:56:26.000Z</published>
-    <updated>2022-04-23T14:04:27.422Z</updated>
+    <updated>2022-04-23T14:06:53.987Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;HTTP请求的结构&quot;&gt;&lt;a href=&quot;#HTTP请求的结构&quot; class=&quot;headerlink&quot; title=&quot;HTTP请求的结构&quot;&gt;&lt;/a&gt;HTTP请求的结构&lt;/h2&gt;&lt;ul&gt;
