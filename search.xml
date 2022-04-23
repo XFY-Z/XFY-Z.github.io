@@ -391,80 +391,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JS事件与DOM总结</title>
-    <url>/JS%E4%BA%8B%E4%BB%B6%E4%B8%8EDOM%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h2 id="JS事件与DOM总结"><a href="#JS事件与DOM总结" class="headerlink" title="JS事件与DOM总结"></a>JS事件与DOM总结</h2><h3 id="什么是事件"><a href="#什么是事件" class="headerlink" title="什么是事件"></a>什么是事件</h3><p>事件是指被程序发现的行为或发生的事情，而且它可以能会被程序处理</p>
-<h3 id="事件的特点"><a href="#事件的特点" class="headerlink" title="事件的特点"></a>事件的特点</h3><p>js的事件，都是以on开头，有onclick、onchange、onload……</p>
-<h3 id="事件的分类"><a href="#事件的分类" class="headerlink" title="事件的分类"></a>事件的分类</h3><p>键盘事件、鼠标事件、表单事件……</p>
-<span id="more"></span>
-
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221035716.png" alt="image-20220408221035716"></p>
-<h2 id="DOM事件的总结"><a href="#DOM事件的总结" class="headerlink" title="DOM事件的总结"></a>DOM事件的总结</h2><h3 id="什么是DOM事件"><a href="#什么是DOM事件" class="headerlink" title="什么是DOM事件"></a>什么是DOM事件</h3><p>DOM的全称为：Document Object Model，将文档(页面)表现为结构化的表示方法，<strong>使每一个页面元素都是可操控</strong>，DOM网页和脚本以及其他的编程语言联系起来</p>
-<h3 id="DOM事件的特点"><a href="#DOM事件的特点" class="headerlink" title="DOM事件的特点"></a>DOM事件的特点</h3><p>利用js控制页面中的所有元素，使页面更加”聪明”</p>
-<h3 id="DOM事件的分类"><a href="#DOM事件的分类" class="headerlink" title="DOM事件的分类"></a>DOM事件的分类</h3><ul>
-<li>元素节点</li>
-<li>属性节点</li>
-<li>文本节点</li>
-</ul>
-<h3 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221627126.png" alt="image-20220408221627126"></p>
-<h3 id="常见的DOM操作"><a href="#常见的DOM操作" class="headerlink" title="常见的DOM操作"></a>常见的DOM操作</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221019694.png" alt="image-20220408221019694"></p>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS概述及基本使用</title>
-    <url>/JS%E6%A6%82%E8%BF%B0%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="JS简介"><a href="#JS简介" class="headerlink" title="JS简介"></a>JS简介</h2><ul>
-<li>什么是JS-Java-Script的简称，是一种脚本语言</li>
-<li>什么是动态页面、静态页面（以人机交互做为区分的）</li>
-<li>JS不需要安装就可以使用了</li>
-<li>BOM（浏览器对象模型），DOM（文档对象模型）</li>
-<li>可以运用在html结构中任意一个地方</li>
-</ul>
-<span id="more"></span>
-
-<h3 id="页面使用JS的方法"><a href="#页面使用JS的方法" class="headerlink" title="页面使用JS的方法"></a>页面使用JS的方法</h3><ul>
-<li><p>使用 “script” 在HTML页面中插入JavaScript</p>
-  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>JS基础<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">alert</span>(<span class="string">&quot;hello,javascript&quot;</span>)</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>引用外部JS文件</p>
-  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>JS基础<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js1.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="comment">&lt;!--引用外部文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="JS的变量"><a href="#JS的变量" class="headerlink" title="JS的变量"></a>JS的变量</h2><h3 id="JS变量的简介"><a href="#JS变量的简介" class="headerlink" title="JS变量的简介"></a>JS变量的简介</h3><p>简介：与其他程序设计语言相同，是用来临时存储信息，<strong>变量赋值是弱数据类型赋值，不用像Java那样强调变量的数据类型</strong></p>
-<h3 id="JS创建的创建方法"><a href="#JS创建的创建方法" class="headerlink" title="JS创建的创建方法"></a>JS创建的创建方法</h3><ul>
-<li><p>方法一</p>
-  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x =<span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> x =<span class="number">2</span>,name=<span class="string">&quot;zhangsan&quot;</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法二</p>
-  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x;</span><br><span class="line">x=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>小贴士</p>
-<p><strong>Js中的变量，区分类型，但是没有int类型的关键字</strong></p>
-<h2 id="JS调试"><a href="#JS调试" class="headerlink" title="JS调试"></a>JS调试</h2><h3 id="JS调试的方法"><a href="#JS调试的方法" class="headerlink" title="JS调试的方法"></a>JS调试的方法</h3><ul>
-<li>alter弹框调试</li>
-<li>console.log控制台输出调试</li>
-</ul>
-<h3 id="JS调式的作用"><a href="#JS调式的作用" class="headerlink" title="JS调式的作用"></a>JS调式的作用</h3><p>观察变量值的变化规律，是否符合程序设计的目的</p>
-<h3 id="JS调式的示例"><a href="#JS调式的示例" class="headerlink" title="JS调式的示例"></a>JS调式的示例</h3><ul>
-<li><p>方法一</p>
-  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x =<span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="title function_">alert</span>(x);<span class="comment">//网页出现弹框，弹框中是我们想要的结果</span></span><br></pre></td></tr></table></figure>
-
-<p>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/202204042208466.png" alt="image-20220404220826413"></p>
-</li>
-<li><p>方法二</p>
-  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x =<span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x+<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
-
-<p>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/202204042209849.png" alt="image-20220404220937802"></p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JS数组与DOM对表单的设置</title>
     <url>/JS%E6%95%B0%E7%BB%84%E4%B8%8EDOM%E5%AF%B9%E8%A1%A8%E5%8D%95%E7%9A%84%E8%AE%BE%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="JS数组"><a href="#JS数组" class="headerlink" title="JS数组"></a>JS数组</h2><h3 id="声明与创建数组"><a href="#声明与创建数组" class="headerlink" title="声明与创建数组"></a>声明与创建数组</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//声明或创建一个不指定长度的数组</span></span><br><span class="line"><span class="keyword">var</span> arrayObj=<span class="keyword">new</span> <span class="title class_">Array</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//声明或创建一个数组并指定长度的数组</span></span><br><span class="line"><span class="keyword">var</span> arrayObj=<span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//声明或创建一个带有默认值的数组</span></span><br><span class="line"><span class="keyword">var</span> arrayObj=<span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">1</span>,<span class="number">11</span>,<span class="number">22</span>,<span class="string">&quot;zz&quot;</span>,<span class="string">&quot;123a&quot;</span>,<span class="string">&quot;q&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个数组并赋值的简写，又称为隐式创建数据</span></span><br><span class="line"><span class="keyword">var</span> arrayObj1=[<span class="number">1</span>,<span class="number">11</span>,<span class="number">22</span>,<span class="string">&quot;zz&quot;</span>,<span class="string">&quot;123a&quot;</span>,<span class="string">&quot;q&quot;</span>];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -521,6 +447,57 @@
 <p>当选听歌的时候，点击反选</p>
 <p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221504921.png" alt="image-20220408221504921"></p>
 <p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408211854801.png" alt="image-20220408211854801"></p>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS概述及基本使用</title>
+    <url>/JS%E6%A6%82%E8%BF%B0%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="JS简介"><a href="#JS简介" class="headerlink" title="JS简介"></a>JS简介</h2><ul>
+<li>什么是JS-Java-Script的简称，是一种脚本语言</li>
+<li>什么是动态页面、静态页面（以人机交互做为区分的）</li>
+<li>JS不需要安装就可以使用了</li>
+<li>BOM（浏览器对象模型），DOM（文档对象模型）</li>
+<li>可以运用在html结构中任意一个地方</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="页面使用JS的方法"><a href="#页面使用JS的方法" class="headerlink" title="页面使用JS的方法"></a>页面使用JS的方法</h3><ul>
+<li><p>使用 “script” 在HTML页面中插入JavaScript</p>
+  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>JS基础<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">alert</span>(<span class="string">&quot;hello,javascript&quot;</span>)</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>引用外部JS文件</p>
+  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>JS基础<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js1.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="comment">&lt;!--引用外部文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="JS的变量"><a href="#JS的变量" class="headerlink" title="JS的变量"></a>JS的变量</h2><h3 id="JS变量的简介"><a href="#JS变量的简介" class="headerlink" title="JS变量的简介"></a>JS变量的简介</h3><p>简介：与其他程序设计语言相同，是用来临时存储信息，<strong>变量赋值是弱数据类型赋值，不用像Java那样强调变量的数据类型</strong></p>
+<h3 id="JS创建的创建方法"><a href="#JS创建的创建方法" class="headerlink" title="JS创建的创建方法"></a>JS创建的创建方法</h3><ul>
+<li><p>方法一</p>
+  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x =<span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> x =<span class="number">2</span>,name=<span class="string">&quot;zhangsan&quot;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法二</p>
+  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x;</span><br><span class="line">x=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>小贴士</p>
+<p><strong>Js中的变量，区分类型，但是没有int类型的关键字</strong></p>
+<h2 id="JS调试"><a href="#JS调试" class="headerlink" title="JS调试"></a>JS调试</h2><h3 id="JS调试的方法"><a href="#JS调试的方法" class="headerlink" title="JS调试的方法"></a>JS调试的方法</h3><ul>
+<li>alter弹框调试</li>
+<li>console.log控制台输出调试</li>
+</ul>
+<h3 id="JS调式的作用"><a href="#JS调式的作用" class="headerlink" title="JS调式的作用"></a>JS调式的作用</h3><p>观察变量值的变化规律，是否符合程序设计的目的</p>
+<h3 id="JS调式的示例"><a href="#JS调式的示例" class="headerlink" title="JS调式的示例"></a>JS调式的示例</h3><ul>
+<li><p>方法一</p>
+  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x =<span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="title function_">alert</span>(x);<span class="comment">//网页出现弹框，弹框中是我们想要的结果</span></span><br></pre></td></tr></table></figure>
+
+<p>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/202204042208466.png" alt="image-20220404220826413"></p>
+</li>
+<li><p>方法二</p>
+  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x =<span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x+<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+
+<p>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/202204042209849.png" alt="image-20220404220937802"></p>
+</li>
+</ul>
 ]]></content>
       <tags>
         <tag>JavaScript</tag>
@@ -920,6 +897,29 @@
 ]]></content>
       <tags>
         <tag>XML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS事件与DOM总结</title>
+    <url>/JS%E4%BA%8B%E4%BB%B6%E4%B8%8EDOM%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h2 id="JS事件与DOM总结"><a href="#JS事件与DOM总结" class="headerlink" title="JS事件与DOM总结"></a>JS事件与DOM总结</h2><h3 id="什么是事件"><a href="#什么是事件" class="headerlink" title="什么是事件"></a>什么是事件</h3><p>事件是指被程序发现的行为或发生的事情，而且它可以能会被程序处理</p>
+<h3 id="事件的特点"><a href="#事件的特点" class="headerlink" title="事件的特点"></a>事件的特点</h3><p>js的事件，都是以on开头，有onclick、onchange、onload……</p>
+<h3 id="事件的分类"><a href="#事件的分类" class="headerlink" title="事件的分类"></a>事件的分类</h3><p>键盘事件、鼠标事件、表单事件……</p>
+<span id="more"></span>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221035716.png" alt="image-20220408221035716"></p>
+<h2 id="DOM事件的总结"><a href="#DOM事件的总结" class="headerlink" title="DOM事件的总结"></a>DOM事件的总结</h2><h3 id="什么是DOM事件"><a href="#什么是DOM事件" class="headerlink" title="什么是DOM事件"></a>什么是DOM事件</h3><p>DOM的全称为：Document Object Model，将文档(页面)表现为结构化的表示方法，<strong>使每一个页面元素都是可操控</strong>，DOM网页和脚本以及其他的编程语言联系起来</p>
+<h3 id="DOM事件的特点"><a href="#DOM事件的特点" class="headerlink" title="DOM事件的特点"></a>DOM事件的特点</h3><p>利用js控制页面中的所有元素，使页面更加”聪明”</p>
+<h3 id="DOM事件的分类"><a href="#DOM事件的分类" class="headerlink" title="DOM事件的分类"></a>DOM事件的分类</h3><ul>
+<li>元素节点</li>
+<li>属性节点</li>
+<li>文本节点</li>
+</ul>
+<h3 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221627126.png" alt="image-20220408221627126"></p>
+<h3 id="常见的DOM操作"><a href="#常见的DOM操作" class="headerlink" title="常见的DOM操作"></a>常见的DOM操作</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221019694.png" alt="image-20220408221019694"></p>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
 </search>
