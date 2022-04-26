@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Archives: 2022/4 |  </title>
+      <title> </title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -52,248 +52,175 @@
     
       
     <main class="content on">
-      <section class="outer">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/XFY-Z"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/preview.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/"></a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
   
+<div id="main">
+  <section class="outer">
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
   
   <article class="articles">
     
     
-    <h1 class="page-type-title">2022/4</h1>
     
     
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2022" class="archive-year">2022</a>
+    <article
+  id="post-Java多态"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/Java%E5%A4%9A%E6%80%81/"
+    >Java多态</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Java%E5%A4%9A%E6%80%81/" class="article-date">
+  <time datetime="2022-04-01T06:37:20.000Z" itemprop="datePublished">2022-04-01</time>
+</a>    
     </div>
-    <div class="archives">
       
-      <article class="archive-article archive-type-about">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Servlet%E4%B9%8Bcookie/" class="archive-article-date">
-  <time datetime="2022-04-26T14:09:38.000Z" itemprop="datePublished">04/26</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/Servlet%E4%B9%8Bcookie/"
-    >Servlet之cookie</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-about">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Servlet%E4%B9%8B%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/" class="archive-article-date">
-  <time datetime="2022-04-23T13:56:26.000Z" itemprop="datePublished">04/23</time>
-</a>
+  <h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><h2 id="多态的概念"><a href="#多态的概念" class="headerlink" title="多态的概念"></a>多态的概念</h2><ul>
+<li>多态性，是面向对象中最重要的概念，在java中的体现，对象的多态性：父类的引用指向子类的对象（向上转型），是可以直接应用抽象类和接口中上</li>
+<li>Java引用变量有两个类型：编译时类型和运行时类型。编译时类型声明该变量时使用的类型决定，运行时类型由实际赋给该变量的对象决定。简称：编译时，看左边；运行时，看右边</li>
+</ul> 
+      <a class="article-more-link" href="/Java%E5%A4%9A%E6%80%81/"
+        >阅读更多...</a
+      >
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/Servlet%E4%B9%8B%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/"
-    >Servlet之请求与响应</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-about">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Servlet%E5%85%A5%E9%97%A8/" class="archive-article-date">
-  <time datetime="2022-04-18T13:40:01.000Z" itemprop="datePublished">04/18</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/Servlet%E5%85%A5%E9%97%A8/"
-    >Servlet入门</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-about">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Dom4j%E4%B8%8EXpath/" class="archive-article-date">
-  <time datetime="2022-04-14T14:30:09.000Z" itemprop="datePublished">04/14</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/Dom4j%E4%B8%8EXpath/"
-    >Dom4j与Xpath</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-about">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/XML%E4%B9%8BDTD%E4%B8%8ESchema%E6%96%87%E4%BB%B6/" class="archive-article-date">
-  <time datetime="2022-04-12T14:03:35.000Z" itemprop="datePublished">04/12</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/XML%E4%B9%8BDTD%E4%B8%8ESchema%E6%96%87%E4%BB%B6/"
-    >XML之DTD文件与Schema文件</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-about">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/JS%E6%95%B0%E7%BB%84%E4%B8%8EDOM%E5%AF%B9%E8%A1%A8%E5%8D%95%E7%9A%84%E8%AE%BE%E7%BD%AE/" class="archive-article-date">
-  <time datetime="2022-04-08T14:03:14.000Z" itemprop="datePublished">04/08</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/JS%E6%95%B0%E7%BB%84%E4%B8%8EDOM%E5%AF%B9%E8%A1%A8%E5%8D%95%E7%9A%84%E8%AE%BE%E7%BD%AE/"
-    >JS数组与DOM对表单的设置</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-about">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/JS%E4%BA%8B%E4%BB%B6%E4%B8%8EDOM%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  <time datetime="2022-04-08T14:02:14.000Z" itemprop="datePublished">04/08</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/JS%E4%BA%8B%E4%BB%B6%E4%B8%8EDOM%E6%80%BB%E7%BB%93/"
-    >JS事件与DOM总结</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/JS%E6%A6%82%E8%BF%B0%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  <time datetime="2022-04-05T07:41:32.000Z" itemprop="datePublished">04/05</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/JS%E6%A6%82%E8%BF%B0%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
-    >JS概述及基本使用</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/CSS%E5%AE%9A%E4%BD%8D/" class="archive-article-date">
-  <time datetime="2022-04-05T06:47:29.000Z" itemprop="datePublished">04/05</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/CSS%E5%AE%9A%E4%BD%8D/"
-    >CSS定位</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Div%E6%A0%87%E7%AD%BE%E4%B8%8ECSS%E6%B5%AE%E5%8A%A8/" class="archive-article-date">
-  <time datetime="2022-04-05T06:43:09.000Z" itemprop="datePublished">04/05</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/Div%E6%A0%87%E7%AD%BE%E4%B8%8ECSS%E6%B5%AE%E5%8A%A8/"
-    >Div标签与CSS浮动</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
+      <!-- reward -->
       
     </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
+    </footer>
   </div>
-  
+
+   
+    
+</article>
+
+    
+  </article>
   
 
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2022/04/page/2/">2</a><a class="extend next" rel="next" href="/archives/2022/04/page/2/">下一页</a>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </nav>
   
 </section>
+</div>
+
       <footer class="footer">
   <div class="outer">
     <ul>
