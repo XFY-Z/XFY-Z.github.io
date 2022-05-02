@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-04-26T14:11:33.365Z</updated>
+  <updated>2022-05-02T14:09:27.559Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JSP九大内置对象</title>
+    <link href="https://xfy-z.github.io/JSP%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/"/>
+    <id>https://xfy-z.github.io/JSP%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/</id>
+    <published>2022-05-02T14:07:30.000Z</published>
+    <updated>2022-05-02T14:09:27.559Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;JSP九大内置对象&quot;&gt;&lt;a href=&quot;#JSP九大内置对象&quot; class=&quot;headerlink&quot; title=&quot;JSP九大内置对象&quot;&gt;&lt;/a&gt;JSP九大内置对象&lt;/h2&gt;&lt;p&gt;Java九大内置对象：request和out对象用的多点，其他的用的很少&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;内置对象&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;request&lt;/td&gt;
+&lt;td&gt;请求对象 - HttpServletRequest&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;response&lt;/td&gt;
+&lt;td&gt;响应对象 - HttpServletResponse&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;session&lt;/td&gt;
+&lt;td&gt;用户对象 - HttpSession&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;application&lt;/td&gt;
+&lt;td&gt;应用全局对象 - ServletContext&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;out&lt;/td&gt;
+&lt;td&gt;输出对象 - PrintWriter&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;page&lt;/td&gt;
+&lt;td&gt;当前页面对象 - this&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pageContext&lt;/td&gt;
+&lt;td&gt;页面上下文对象 - PageContext&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;config&lt;/td&gt;
+&lt;td&gt;应用配置对象 - ServletConfig&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;exception&lt;/td&gt;
+&lt;td&gt;应用异常对象 - Throwable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;</summary>
+    
+    
+    
+    
+    <category term="JavaWeb" scheme="https://xfy-z.github.io/tags/JavaWeb/"/>
+    
+  </entry>
   
   <entry>
     <title>Servlet之cookie</title>
