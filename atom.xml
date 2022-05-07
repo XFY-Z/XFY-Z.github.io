@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-05-07T11:59:42.555Z</updated>
+  <updated>2022-05-07T12:02:34.429Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -21,17 +21,20 @@
     <link href="https://xfy-z.github.io/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/"/>
     <id>https://xfy-z.github.io/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</id>
     <published>2022-05-07T11:58:07.000Z</published>
-    <updated>2022-05-07T11:59:42.555Z</updated>
+    <updated>2022-05-07T12:02:34.429Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;h2 id=&quot;JSON简介&quot;&gt;&lt;a href=&quot;#JSON简介&quot; class=&quot;headerlink&quot; title=&quot;JSON简介&quot;&gt;&lt;/a&gt;JSON简介&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;JavaScript Object Notation(JavaScript</summary>
-        
-      
+&lt;li&gt;&lt;p&gt;JavaScript Object Notation(JavaScript 对象表示法)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;JSON是轻量级的文本数据交换格式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;JSON独立于语言，具有自我描述性，更易理解&lt;/p&gt;
+  &lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;punctuation&quot;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;quot;sites&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;[&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;punctuation&quot;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&quot;attr&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;百度&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;attr&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;www.baidu.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 &lt;span class=&quot;punctuation&quot;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&quot;attr&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;b站&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;attr&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;www.bilibili.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 &lt;span class=&quot;punctuation&quot;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&quot;attr&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;网易&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;attr&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;www.163.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;  JSON对于人来说，阅读体验很好；JSON规则清晰，容易被计算机解析，JSON已经越来越多的用在数据传递和数据表上，JSON已经逐渐替代了XML，成为了软件开发的主流数据表达形式&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
