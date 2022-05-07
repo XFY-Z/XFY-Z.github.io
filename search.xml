@@ -234,6 +234,91 @@
       </tags>
   </entry>
   <entry>
+    <title>JSP九大内置对象</title>
+    <url>/JSP%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h2 id="JSP九大内置对象"><a href="#JSP九大内置对象" class="headerlink" title="JSP九大内置对象"></a>JSP九大内置对象</h2><p>Java九大内置对象：request和out对象用的多点，其他的用的很少</p>
+<table>
+<thead>
+<tr>
+<th>内置对象</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>request</td>
+<td>请求对象 - HttpServletRequest</td>
+</tr>
+<tr>
+<td>response</td>
+<td>响应对象 - HttpServletResponse</td>
+</tr>
+<tr>
+<td>session</td>
+<td>用户对象 - HttpSession</td>
+</tr>
+<tr>
+<td>application</td>
+<td>应用全局对象 - ServletContext</td>
+</tr>
+<tr>
+<td>out</td>
+<td>输出对象 - PrintWriter</td>
+</tr>
+<tr>
+<td>page</td>
+<td>当前页面对象 - this</td>
+</tr>
+<tr>
+<td>pageContext</td>
+<td>页面上下文对象 - PageContext</td>
+</tr>
+<tr>
+<td>config</td>
+<td>应用配置对象 - ServletConfig</td>
+</tr>
+<tr>
+<td>exception</td>
+<td>应用异常对象 - Throwable</td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+
+<p>JSP本身就是Servlet，我们知道Serblet中有很多对象，JSP为了简化操作，在JSP中设置了九大内置对象，这些对象与Servlet中的对象一 一对应；即当我们使用JSP内置对象的时候，其背后实际上会去调用Servlet中对应的对象（具体怎么调用的，无需关心，这是JSP背后默默在奉献……）；如，在JSP中使用request对象，其本质是使用Servlet中的HttpServletRequest对象<br>内置对象不是新的东西，其只是在Servlet的基础上，简化的预置的变量，<strong>也就是说JSP的本质就是Servlet</strong></p>
+<h2 id="示例：内置对象可以在任何有效的Java代码块中直接调用"><a href="#示例：内置对象可以在任何有效的Java代码块中直接调用" class="headerlink" title="示例：内置对象可以在任何有效的Java代码块中直接调用"></a>示例：内置对象可以在任何有效的Java代码块中直接调用</h2><h3 id="示例1：request对象和response对象"><a href="#示例1：request对象和response对象" class="headerlink" title="示例1：request对象和response对象"></a>示例1：request对象和response对象</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A11.png" alt="JSP内置对象1"></p>
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220428203130337.png" alt="image-20220428203130337"></p>
+<h3 id="示例二：out对象"><a href="#示例二：out对象" class="headerlink" title="示例二：out对象"></a>示例二：out对象</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%25E5%2586%2585%25E7%25BD%25AE%25E5%25AF%25B9%25E8%25B1%25A12.png" alt="JSP内置对象2"></p>
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A13.png" alt="JSP内置对象3"></p>
+<h3 id="示例三：session对象："><a href="#示例三：session对象：" class="headerlink" title="示例三：session对象："></a>示例三：session对象：</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A14.png" alt="JSP内置对象4"></p>
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%25E5%2586%2585%25E7%25BD%25AE%25E5%25AF%25B9%25E8%25B1%25A15.png" alt="JSP内置对象5"></p>
+<h3 id="示例四：application对象"><a href="#示例四：application对象" class="headerlink" title="示例四：application对象"></a>示例四：application对象</h3><p>applicaton对象的本质就是ServletContext，ServletContext中的方法，application也能使用</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A16.png" alt="JSP内置对象6"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A17.png" alt="JSP内置对象7"></p>
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A18.png" alt="JSP内置对象8"></p>
+<h3 id="示例五：pageContext对象"><a href="#示例五：pageContext对象" class="headerlink" title="示例五：pageContext对象"></a>示例五：pageContext对象</h3><p>pageContext对象用于获取其他的内置对象</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%25E5%2586%2585%25E7%25BD%25AE%25E5%25AF%25B9%25E8%25B1%25A19.png" alt="JSP内置对象9"></p>
+<h3 id="示例六：exception对象"><a href="#示例六：exception对象" class="headerlink" title="示例六：exception对象"></a>示例六：exception对象</h3><p>即使不考虑JSP内置对象，这里也提供了一种，通过JSP文件动态实现404，500等错误界面的策略</p>
+<p>如前面，在web.xml中配置404等错误默认界面的时候，定义了404.html</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220428213516659.png" alt="image-20220428213516659"></p>
+<p>404.html：这个界面其实是个定死的东西，在实际中，这个界面最好是动态的，可以动态的显示错误的信息</p>
+<p>所以该怎么做呢？</p>
+<p>第一步在error文件夹中创建404.jsp文件与500.jsp文件</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A110.png" alt="JSP内置对象10"></p>
+<p>第二步在web.xml中进行更改</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A111.png" alt="JSP内置对象11"></p>
+<p>第三步在500.jsp中进行对应的操作</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A112.png" alt="JSP内置对象12"></p>
+<p>第四步查看效果</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210106134448321.png" alt="img"></p>
+]]></content>
+      <tags>
+        <tag>JavaWeb</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Dom4j与Xpath</title>
     <url>/Dom4j%E4%B8%8EXpath/</url>
     <content><![CDATA[<h2 id="DOM文档对象模型"><a href="#DOM文档对象模型" class="headerlink" title="DOM文档对象模型"></a>DOM文档对象模型</h2><ul>
@@ -391,6 +476,29 @@
       </tags>
   </entry>
   <entry>
+    <title>JS事件与DOM总结</title>
+    <url>/JS%E4%BA%8B%E4%BB%B6%E4%B8%8EDOM%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h2 id="JS事件与DOM总结"><a href="#JS事件与DOM总结" class="headerlink" title="JS事件与DOM总结"></a>JS事件与DOM总结</h2><h3 id="什么是事件"><a href="#什么是事件" class="headerlink" title="什么是事件"></a>什么是事件</h3><p>事件是指被程序发现的行为或发生的事情，而且它可以能会被程序处理</p>
+<h3 id="事件的特点"><a href="#事件的特点" class="headerlink" title="事件的特点"></a>事件的特点</h3><p>js的事件，都是以on开头，有onclick、onchange、onload……</p>
+<h3 id="事件的分类"><a href="#事件的分类" class="headerlink" title="事件的分类"></a>事件的分类</h3><p>键盘事件、鼠标事件、表单事件……</p>
+<span id="more"></span>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221035716.png" alt="image-20220408221035716"></p>
+<h2 id="DOM事件的总结"><a href="#DOM事件的总结" class="headerlink" title="DOM事件的总结"></a>DOM事件的总结</h2><h3 id="什么是DOM事件"><a href="#什么是DOM事件" class="headerlink" title="什么是DOM事件"></a>什么是DOM事件</h3><p>DOM的全称为：Document Object Model，将文档(页面)表现为结构化的表示方法，<strong>使每一个页面元素都是可操控</strong>，DOM网页和脚本以及其他的编程语言联系起来</p>
+<h3 id="DOM事件的特点"><a href="#DOM事件的特点" class="headerlink" title="DOM事件的特点"></a>DOM事件的特点</h3><p>利用js控制页面中的所有元素，使页面更加”聪明”</p>
+<h3 id="DOM事件的分类"><a href="#DOM事件的分类" class="headerlink" title="DOM事件的分类"></a>DOM事件的分类</h3><ul>
+<li>元素节点</li>
+<li>属性节点</li>
+<li>文本节点</li>
+</ul>
+<h3 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221627126.png" alt="image-20220408221627126"></p>
+<h3 id="常见的DOM操作"><a href="#常见的DOM操作" class="headerlink" title="常见的DOM操作"></a>常见的DOM操作</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221019694.png" alt="image-20220408221019694"></p>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JSON简介与语法规则</title>
     <url>/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</url>
     <content><![CDATA[<h2 id="JSON简介"><a href="#JSON简介" class="headerlink" title="JSON简介"></a>JSON简介</h2><ul>
@@ -418,114 +526,6 @@
 ]]></content>
       <tags>
         <tag>JSON</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JSP九大内置对象</title>
-    <url>/JSP%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h2 id="JSP九大内置对象"><a href="#JSP九大内置对象" class="headerlink" title="JSP九大内置对象"></a>JSP九大内置对象</h2><p>Java九大内置对象：request和out对象用的多点，其他的用的很少</p>
-<table>
-<thead>
-<tr>
-<th>内置对象</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>request</td>
-<td>请求对象 - HttpServletRequest</td>
-</tr>
-<tr>
-<td>response</td>
-<td>响应对象 - HttpServletResponse</td>
-</tr>
-<tr>
-<td>session</td>
-<td>用户对象 - HttpSession</td>
-</tr>
-<tr>
-<td>application</td>
-<td>应用全局对象 - ServletContext</td>
-</tr>
-<tr>
-<td>out</td>
-<td>输出对象 - PrintWriter</td>
-</tr>
-<tr>
-<td>page</td>
-<td>当前页面对象 - this</td>
-</tr>
-<tr>
-<td>pageContext</td>
-<td>页面上下文对象 - PageContext</td>
-</tr>
-<tr>
-<td>config</td>
-<td>应用配置对象 - ServletConfig</td>
-</tr>
-<tr>
-<td>exception</td>
-<td>应用异常对象 - Throwable</td>
-</tr>
-</tbody></table>
-<span id="more"></span>
-
-<p>JSP本身就是Servlet，我们知道Serblet中有很多对象，JSP为了简化操作，在JSP中设置了九大内置对象，这些对象与Servlet中的对象一 一对应；即当我们使用JSP内置对象的时候，其背后实际上会去调用Servlet中对应的对象（具体怎么调用的，无需关心，这是JSP背后默默在奉献……）；如，在JSP中使用request对象，其本质是使用Servlet中的HttpServletRequest对象<br>内置对象不是新的东西，其只是在Servlet的基础上，简化的预置的变量，<strong>也就是说JSP的本质就是Servlet</strong></p>
-<h2 id="示例：内置对象可以在任何有效的Java代码块中直接调用"><a href="#示例：内置对象可以在任何有效的Java代码块中直接调用" class="headerlink" title="示例：内置对象可以在任何有效的Java代码块中直接调用"></a>示例：内置对象可以在任何有效的Java代码块中直接调用</h2><h3 id="示例1：request对象和response对象"><a href="#示例1：request对象和response对象" class="headerlink" title="示例1：request对象和response对象"></a>示例1：request对象和response对象</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A11.png" alt="JSP内置对象1"></p>
-<p>效果：</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220428203130337.png" alt="image-20220428203130337"></p>
-<h3 id="示例二：out对象"><a href="#示例二：out对象" class="headerlink" title="示例二：out对象"></a>示例二：out对象</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%25E5%2586%2585%25E7%25BD%25AE%25E5%25AF%25B9%25E8%25B1%25A12.png" alt="JSP内置对象2"></p>
-<p>效果：</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A13.png" alt="JSP内置对象3"></p>
-<h3 id="示例三：session对象："><a href="#示例三：session对象：" class="headerlink" title="示例三：session对象："></a>示例三：session对象：</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A14.png" alt="JSP内置对象4"></p>
-<p>效果：</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%25E5%2586%2585%25E7%25BD%25AE%25E5%25AF%25B9%25E8%25B1%25A15.png" alt="JSP内置对象5"></p>
-<h3 id="示例四：application对象"><a href="#示例四：application对象" class="headerlink" title="示例四：application对象"></a>示例四：application对象</h3><p>applicaton对象的本质就是ServletContext，ServletContext中的方法，application也能使用</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A16.png" alt="JSP内置对象6"></p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A17.png" alt="JSP内置对象7"></p>
-<p>效果：</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A18.png" alt="JSP内置对象8"></p>
-<h3 id="示例五：pageContext对象"><a href="#示例五：pageContext对象" class="headerlink" title="示例五：pageContext对象"></a>示例五：pageContext对象</h3><p>pageContext对象用于获取其他的内置对象</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%25E5%2586%2585%25E7%25BD%25AE%25E5%25AF%25B9%25E8%25B1%25A19.png" alt="JSP内置对象9"></p>
-<h3 id="示例六：exception对象"><a href="#示例六：exception对象" class="headerlink" title="示例六：exception对象"></a>示例六：exception对象</h3><p>即使不考虑JSP内置对象，这里也提供了一种，通过JSP文件动态实现404，500等错误界面的策略</p>
-<p>如前面，在web.xml中配置404等错误默认界面的时候，定义了404.html</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220428213516659.png" alt="image-20220428213516659"></p>
-<p>404.html：这个界面其实是个定死的东西，在实际中，这个界面最好是动态的，可以动态的显示错误的信息</p>
-<p>所以该怎么做呢？</p>
-<p>第一步在error文件夹中创建404.jsp文件与500.jsp文件</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A110.png" alt="JSP内置对象10"></p>
-<p>第二步在web.xml中进行更改</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A111.png" alt="JSP内置对象11"></p>
-<p>第三步在500.jsp中进行对应的操作</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A112.png" alt="JSP内置对象12"></p>
-<p>第四步查看效果</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210106134448321.png" alt="img"></p>
-]]></content>
-      <tags>
-        <tag>JavaWeb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS事件与DOM总结</title>
-    <url>/JS%E4%BA%8B%E4%BB%B6%E4%B8%8EDOM%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h2 id="JS事件与DOM总结"><a href="#JS事件与DOM总结" class="headerlink" title="JS事件与DOM总结"></a>JS事件与DOM总结</h2><h3 id="什么是事件"><a href="#什么是事件" class="headerlink" title="什么是事件"></a>什么是事件</h3><p>事件是指被程序发现的行为或发生的事情，而且它可以能会被程序处理</p>
-<h3 id="事件的特点"><a href="#事件的特点" class="headerlink" title="事件的特点"></a>事件的特点</h3><p>js的事件，都是以on开头，有onclick、onchange、onload……</p>
-<h3 id="事件的分类"><a href="#事件的分类" class="headerlink" title="事件的分类"></a>事件的分类</h3><p>键盘事件、鼠标事件、表单事件……</p>
-<span id="more"></span>
-
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221035716.png" alt="image-20220408221035716"></p>
-<h2 id="DOM事件的总结"><a href="#DOM事件的总结" class="headerlink" title="DOM事件的总结"></a>DOM事件的总结</h2><h3 id="什么是DOM事件"><a href="#什么是DOM事件" class="headerlink" title="什么是DOM事件"></a>什么是DOM事件</h3><p>DOM的全称为：Document Object Model，将文档(页面)表现为结构化的表示方法，<strong>使每一个页面元素都是可操控</strong>，DOM网页和脚本以及其他的编程语言联系起来</p>
-<h3 id="DOM事件的特点"><a href="#DOM事件的特点" class="headerlink" title="DOM事件的特点"></a>DOM事件的特点</h3><p>利用js控制页面中的所有元素，使页面更加”聪明”</p>
-<h3 id="DOM事件的分类"><a href="#DOM事件的分类" class="headerlink" title="DOM事件的分类"></a>DOM事件的分类</h3><ul>
-<li>元素节点</li>
-<li>属性节点</li>
-<li>文本节点</li>
-</ul>
-<h3 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221627126.png" alt="image-20220408221627126"></p>
-<h3 id="常见的DOM操作"><a href="#常见的DOM操作" class="headerlink" title="常见的DOM操作"></a>常见的DOM操作</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220408221019694.png" alt="image-20220408221019694"></p>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -748,61 +748,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Servlet之cookie</title>
-    <url>/Servlet%E4%B9%8Bcookie/</url>
-    <content><![CDATA[<h2 id="浏览器Cookie"><a href="#浏览器Cookie" class="headerlink" title="浏览器Cookie"></a>浏览器Cookie</h2><ul>
-<li><strong>Cookie（曲奇饼干）是浏览器保存在本地的文本内容</strong></li>
-<li>Cookie常用于保存登录状态、用户资料等小文本</li>
-<li>Cookie具有时效性，Cookie内容会伴随请求发送给Tomcat</li>
-<li>默认没有设置cookie时效性的情况下，cookie的有效期就是为当前浏览器窗口</li>
-</ul>
-<span id="more"></span>
-
-<h3 id="Cookie的例子"><a href="#Cookie的例子" class="headerlink" title="Cookie的例子"></a>Cookie的例子</h3><p>例如一个平常登录的一个网站，如果选择”7天内自动登录”，登录后，关闭浏览器；重新打开浏览器，会发现登录状态并没有消失</p>
-<p>底层的原理：利用Cookie技术，存放了用户的登录信息；浏览器二次访问时，浏览器会把Cookie中存放的用户登录信息提取出来，并通知服务器说之前这个用户已经登录过了，并不需要重新登录</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220423212850398.png" alt="image-20220423212850398"></p>
-<h3 id="存放Cookie的文件放在哪里"><a href="#存放Cookie的文件放在哪里" class="headerlink" title="存放Cookie的文件放在哪里"></a>存放Cookie的文件放在哪里</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210105021346629.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210105021449657.png" alt="img"></p>
-<h3 id="设置Cookie示例"><a href="#设置Cookie示例" class="headerlink" title="设置Cookie示例"></a>设置Cookie示例</h3><h4 id="向浏览器发送cookie"><a href="#向浏览器发送cookie" class="headerlink" title="向浏览器发送cookie"></a>向浏览器发送cookie</h4><p>设置Cookie，并将Cookie信息随着response(响应)发回到浏览器端；浏览器将这个Cookie信息保存到本地的文件中；之后每一次请求，request(请求对象)都会包含这个Cookie信息，一并发送到对应的地址上。<strong>所以要先设置发送到浏览器cookie值(respone)，然后的请求就带有cookie值</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginServlet&quot;, value = &quot;/cookies/login&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//cookie的核心方法，第一个参数是cookie的名称，第二个参数是在cookie中要保存的数据</span></span><br><span class="line">        <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cookie</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;admin&quot;</span>);<span class="comment">//创建cookie</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//如果想让Cookie保存在客户端浏览器（中，需要调用下面的addCookie()方法</span></span><br><span class="line">        response.addCookie(cookie);<span class="comment">//在客户端浏览器中增加名字为user值为admin的Cookie</span></span><br><span class="line">        response.getWriter().println(<span class="string">&quot;Login success&quot;</span>);<span class="comment">//页面上输出Login Success</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220424140611052.png" alt="image-20220424140611052"></p>
-<p>查看Cookie是否生效，在浏览器中F12查看</p>
-<p>可以看到图片中的**user:”admin”**这个的含义是：对于当前的浏览器来说，每次发送请求的时候，都会将user&#x3D;admin随着请求一并发送到Tomcat服务器上</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1401.png" alt="1401"></p>
-<h4 id="服务器获取cookie"><a href="#服务器获取cookie" class="headerlink" title="服务器获取cookie"></a>服务器获取cookie</h4><p>直接上代码演示</p>
-<p>服务器先向浏览器上发送cookie（response），并保存在本地，之后的每一次浏览器请求都带有这个cookie的值，所以必须先登录让浏览器端之后的请求中带有cookie值，然后服务器端才可以获取到cookie的值</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginServlet&quot;, value = &quot;/cookies/login&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//cookie的核心方法，第一个参数是cookie的名称，第二个参数是在cookie中要保存的数据</span></span><br><span class="line">        <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cookie</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;admin&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果想让Cookie保存在客户端浏览器中，需要调用下面的addCookie()方法</span></span><br><span class="line">        response.addCookie(cookie);<span class="comment">//在客户端浏览器中增加名字为user值为admin的Cookie</span></span><br><span class="line">        response.getWriter().println(<span class="string">&quot;Login success&quot;</span>);<span class="comment">//页面上输出Login Success</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginIndexServlet&quot;, value = &quot;/cookies/index&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginIndexServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//getCookies()方法，获取请求中的Cookie信息，集合的形式</span></span><br><span class="line">        Cookie[] cs =request.getCookies();</span><br><span class="line">        String user=<span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">for</span> (Cookie c:cs)&#123;</span><br><span class="line">            <span class="comment">//c.getName():获取Cookie名称；c.getValue:获取Cookie的值</span></span><br><span class="line">            System.out.println(c.getName()+<span class="string">&quot;:&quot;</span>+c.getValue());</span><br><span class="line">            <span class="keyword">if</span> (c.getName().equals(<span class="string">&quot;user&quot;</span>))&#123;<span class="comment">//判断cookie的user的值是否为user，如果是，则获取到user的value值</span></span><br><span class="line">                user=c.getValue();</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (user==<span class="literal">null</span>)&#123;<span class="comment">//如果获取到的cookie的</span></span><br><span class="line">            response.getWriter().println(<span class="string">&quot;user not login&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1845.png" alt="1845"></p>
-<h3 id="Cookie的时效性"><a href="#Cookie的时效性" class="headerlink" title="Cookie的时效性"></a>Cookie的时效性</h3><p><strong>当Cookie没有设置有效期时，Cookie的有效期就是当前的浏览器窗口：</strong></p>
-<p>在上面的例子中，我们先访问了LoginServlet这个Servlet，我们是在这个Servlet中设置增加的Cookie，然后在没有关闭浏览器的情况下，又访问了IndexServlet这个Servlet，在这个Servlet中我们访问了Cookie并获取到Cookie的值</p>
-<p>其实是因为我们没有关闭浏览器，所以在LoginServlet设置Cookie信息会有效，IndexServlet能支持访问到Cookie的信息，但一旦，我们关闭了浏览器，重新打开浏览器，直接访问IndexServlet时，会报错，Cookie失效了</p>
-<p><img src="D:\Documents\1915.png" alt="1915"></p>
-<p>但是这里的报错是空指针异常，就是没有cookie值，cookie数组是空的（因为所有的Cookie信息都失效了），会引发空指针异常</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1921.png" alt="1921"></p>
-<p>可以将上面的程序更改一下，增强健壮性</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1934.png" alt="1934"></p>
-<p>没有访问LoginServlet的情况下，访问IndexServlet，就会输出user not login</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425193558361.png" alt="image-20220425193558361"></p>
-<h4 id="设置Cookie时效性"><a href="#设置Cookie时效性" class="headerlink" title="设置Cookie时效性"></a>设置Cookie时效性</h4><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/2032.png" alt="2032"></p>
-<p>先访问LoginServlet，先让浏览器将cookie信息保存，让后面request请求中带有cookie信息</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425200041766.png" alt="image-20220425200041766"></p>
-<p>关闭浏览器：然后重新启动Tomcat服务，访问IndexServlet：结果是发现Cookie并没有因为关闭浏览器而失效，因为我们把其时效性设置为7天</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425202552895.png" alt="image-20220425202552895"></p>
-<hr>
-<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><ol>
-<li>cookie（大概率）也是浏览器自动创建的，浏览器会在本地创建一个存放所有Cookie对象的列表：然后我们也可以通过<br> Cookie cookie  &#x3D; new Cookie(“user”,”admin”); 自己创建一个cookie，然后通过response.addCookie(cookie); 响应返回浏览器，然后浏览器会把这个返回cookie添加到自己维护的cookie列表中; 然后通过Cookie[] cs &#x3D; request.getCookies(); 获取所有cookie列表</li>
-<li>换句话说，Cookie是浏览器创建和维护的；这是个特殊的Java对象，这些对象有很多属性和方法，我们可以按需调用</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>JavaWeb</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Servlet之请求与响应</title>
     <url>/Servlet%E4%B9%8B%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/</url>
     <content><![CDATA[<h2 id="HTTP请求的结构"><a href="#HTTP请求的结构" class="headerlink" title="HTTP请求的结构"></a>HTTP请求的结构</h2><ul>
@@ -955,6 +900,108 @@
 ]]></content>
       <tags>
         <tag>JavaWeb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Servlet之cookie</title>
+    <url>/Servlet%E4%B9%8Bcookie/</url>
+    <content><![CDATA[<h2 id="浏览器Cookie"><a href="#浏览器Cookie" class="headerlink" title="浏览器Cookie"></a>浏览器Cookie</h2><ul>
+<li><strong>Cookie（曲奇饼干）是浏览器保存在本地的文本内容</strong></li>
+<li>Cookie常用于保存登录状态、用户资料等小文本</li>
+<li>Cookie具有时效性，Cookie内容会伴随请求发送给Tomcat</li>
+<li>默认没有设置cookie时效性的情况下，cookie的有效期就是为当前浏览器窗口</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="Cookie的例子"><a href="#Cookie的例子" class="headerlink" title="Cookie的例子"></a>Cookie的例子</h3><p>例如一个平常登录的一个网站，如果选择”7天内自动登录”，登录后，关闭浏览器；重新打开浏览器，会发现登录状态并没有消失</p>
+<p>底层的原理：利用Cookie技术，存放了用户的登录信息；浏览器二次访问时，浏览器会把Cookie中存放的用户登录信息提取出来，并通知服务器说之前这个用户已经登录过了，并不需要重新登录</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220423212850398.png" alt="image-20220423212850398"></p>
+<h3 id="存放Cookie的文件放在哪里"><a href="#存放Cookie的文件放在哪里" class="headerlink" title="存放Cookie的文件放在哪里"></a>存放Cookie的文件放在哪里</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210105021346629.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210105021449657.png" alt="img"></p>
+<h3 id="设置Cookie示例"><a href="#设置Cookie示例" class="headerlink" title="设置Cookie示例"></a>设置Cookie示例</h3><h4 id="向浏览器发送cookie"><a href="#向浏览器发送cookie" class="headerlink" title="向浏览器发送cookie"></a>向浏览器发送cookie</h4><p>设置Cookie，并将Cookie信息随着response(响应)发回到浏览器端；浏览器将这个Cookie信息保存到本地的文件中；之后每一次请求，request(请求对象)都会包含这个Cookie信息，一并发送到对应的地址上。<strong>所以要先设置发送到浏览器cookie值(respone)，然后的请求就带有cookie值</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginServlet&quot;, value = &quot;/cookies/login&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//cookie的核心方法，第一个参数是cookie的名称，第二个参数是在cookie中要保存的数据</span></span><br><span class="line">        <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cookie</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;admin&quot;</span>);<span class="comment">//创建cookie</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//如果想让Cookie保存在客户端浏览器（中，需要调用下面的addCookie()方法</span></span><br><span class="line">        response.addCookie(cookie);<span class="comment">//在客户端浏览器中增加名字为user值为admin的Cookie</span></span><br><span class="line">        response.getWriter().println(<span class="string">&quot;Login success&quot;</span>);<span class="comment">//页面上输出Login Success</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220424140611052.png" alt="image-20220424140611052"></p>
+<p>查看Cookie是否生效，在浏览器中F12查看</p>
+<p>可以看到图片中的**user:”admin”**这个的含义是：对于当前的浏览器来说，每次发送请求的时候，都会将user&#x3D;admin随着请求一并发送到Tomcat服务器上</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1401.png" alt="1401"></p>
+<h4 id="服务器获取cookie"><a href="#服务器获取cookie" class="headerlink" title="服务器获取cookie"></a>服务器获取cookie</h4><p>直接上代码演示</p>
+<p>服务器先向浏览器上发送cookie（response），并保存在本地，之后的每一次浏览器请求都带有这个cookie的值，所以必须先登录让浏览器端之后的请求中带有cookie值，然后服务器端才可以获取到cookie的值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginServlet&quot;, value = &quot;/cookies/login&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//cookie的核心方法，第一个参数是cookie的名称，第二个参数是在cookie中要保存的数据</span></span><br><span class="line">        <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cookie</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;admin&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果想让Cookie保存在客户端浏览器中，需要调用下面的addCookie()方法</span></span><br><span class="line">        response.addCookie(cookie);<span class="comment">//在客户端浏览器中增加名字为user值为admin的Cookie</span></span><br><span class="line">        response.getWriter().println(<span class="string">&quot;Login success&quot;</span>);<span class="comment">//页面上输出Login Success</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginIndexServlet&quot;, value = &quot;/cookies/index&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginIndexServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//getCookies()方法，获取请求中的Cookie信息，集合的形式</span></span><br><span class="line">        Cookie[] cs =request.getCookies();</span><br><span class="line">        String user=<span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">for</span> (Cookie c:cs)&#123;</span><br><span class="line">            <span class="comment">//c.getName():获取Cookie名称；c.getValue:获取Cookie的值</span></span><br><span class="line">            System.out.println(c.getName()+<span class="string">&quot;:&quot;</span>+c.getValue());</span><br><span class="line">            <span class="keyword">if</span> (c.getName().equals(<span class="string">&quot;user&quot;</span>))&#123;<span class="comment">//判断cookie的user的值是否为user，如果是，则获取到user的value值</span></span><br><span class="line">                user=c.getValue();</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (user==<span class="literal">null</span>)&#123;<span class="comment">//如果获取到的cookie的</span></span><br><span class="line">            response.getWriter().println(<span class="string">&quot;user not login&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1845.png" alt="1845"></p>
+<h3 id="Cookie的时效性"><a href="#Cookie的时效性" class="headerlink" title="Cookie的时效性"></a>Cookie的时效性</h3><p><strong>当Cookie没有设置有效期时，Cookie的有效期就是当前的浏览器窗口：</strong></p>
+<p>在上面的例子中，我们先访问了LoginServlet这个Servlet，我们是在这个Servlet中设置增加的Cookie，然后在没有关闭浏览器的情况下，又访问了IndexServlet这个Servlet，在这个Servlet中我们访问了Cookie并获取到Cookie的值</p>
+<p>其实是因为我们没有关闭浏览器，所以在LoginServlet设置Cookie信息会有效，IndexServlet能支持访问到Cookie的信息，但一旦，我们关闭了浏览器，重新打开浏览器，直接访问IndexServlet时，会报错，Cookie失效了</p>
+<p><img src="D:\Documents\1915.png" alt="1915"></p>
+<p>但是这里的报错是空指针异常，就是没有cookie值，cookie数组是空的（因为所有的Cookie信息都失效了），会引发空指针异常</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1921.png" alt="1921"></p>
+<p>可以将上面的程序更改一下，增强健壮性</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1934.png" alt="1934"></p>
+<p>没有访问LoginServlet的情况下，访问IndexServlet，就会输出user not login</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425193558361.png" alt="image-20220425193558361"></p>
+<h4 id="设置Cookie时效性"><a href="#设置Cookie时效性" class="headerlink" title="设置Cookie时效性"></a>设置Cookie时效性</h4><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/2032.png" alt="2032"></p>
+<p>先访问LoginServlet，先让浏览器将cookie信息保存，让后面request请求中带有cookie信息</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425200041766.png" alt="image-20220425200041766"></p>
+<p>关闭浏览器：然后重新启动Tomcat服务，访问IndexServlet：结果是发现Cookie并没有因为关闭浏览器而失效，因为我们把其时效性设置为7天</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425202552895.png" alt="image-20220425202552895"></p>
+<hr>
+<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><ol>
+<li>cookie（大概率）也是浏览器自动创建的，浏览器会在本地创建一个存放所有Cookie对象的列表：然后我们也可以通过<br> Cookie cookie  &#x3D; new Cookie(“user”,”admin”); 自己创建一个cookie，然后通过response.addCookie(cookie); 响应返回浏览器，然后浏览器会把这个返回cookie添加到自己维护的cookie列表中; 然后通过Cookie[] cs &#x3D; request.getCookies(); 获取所有cookie列表</li>
+<li>换句话说，Cookie是浏览器创建和维护的；这是个特殊的Java对象，这些对象有很多属性和方法，我们可以按需调用</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>JavaWeb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>XML之DTD文件与Schema文件</title>
+    <url>/XML%E4%B9%8BDTD%E4%B8%8ESchema%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="XML语义约束"><a href="#XML语义约束" class="headerlink" title="XML语义约束"></a>XML语义约束</h2><ul>
+<li>XML文档结构正确，但可能不是有效的</li>
+<li>例如：员工档案XML中绝对不允许出现”植物品种”标签。XML语义约束就是用于规定XML文档中允许出现哪些元素</li>
+<li>XML语义约束有两种定义方式：DTD与XML Schema</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Doucument-Type-Defintion"><a href="#Doucument-Type-Defintion" class="headerlink" title="Doucument Type Defintion"></a>Doucument Type Defintion</h2><ul>
+<li><p>DTD(Document Type Definition ,文档类型定义)是一种简单易用的语义约束方式</p>
+</li>
+<li><p>DTD文件扩展名为.dtd</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hr.dtd</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salaey,department)&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot;&quot;&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;</span><br><span class="line">…</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="DTD定义节点"><a href="#DTD定义节点" class="headerlink" title="DTD定义节点"></a>DTD定义节点</h3><ul>
+<li><p>利用DTD中的&lt;!ELEMENT&gt;标签，我们可以定义XML文档中允许出现的节点及数量，以hr.xml为例：</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--定义hr(主节点)下只允许出现1个employee子节点--&gt;</span><br><span class="line">hr.dtd</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salaey,department)&gt;&lt;!--employee节点下必须包含以下四个节点，且按顺序出现--&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot;&quot;&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;&lt;!--定义name标签体只能是文本，#PCDATA代表文本元素--&gt;</span><br><span class="line">…</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如某字节点需要多次重复出现，则需要在子节点后增加相应的描述</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--hr节点下最少出现1个employee子节点--&gt;</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!--hr节点下可出现0..n个employee子节点--&gt;</span><br><span class="line">&lt;!ELEMENT hr(employee*)&gt;</span><br><span class="line">&lt;!--hr--&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="XML引用DTD文件"><a href="#XML引用DTD文件" class="headerlink" title="XML引用DTD文件"></a>XML引用DTD文件</h3><ul>
+<li><p>在XML中使用&lt;!DOCTYPE&gt;标签来引用DTD文件</p>
+  <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">书写格式：</span><br><span class="line"><span class="meta">&lt;!DOCTYPE 根节点 <span class="keyword">SYSTEM</span> <span class="string">&quot;dtd文件路径&quot;</span>&gt;</span></span><br><span class="line">示例：</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">hr</span> <span class="keyword">SYSTEM</span> <span class="string">&quot;hr.dtd&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建DTD文件</p>
+  <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">hr</span> <span class="keyword">SYSTEM</span> <span class="string">&quot;hr.dtd&quot;</span>&gt;</span><span class="comment">&lt;!--XML文件引用DTD文件--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--人力资源管理系统--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3309&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>31<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>会计部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B103<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3310&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>李四<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>23<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>工程部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B104<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hr</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;!--dtd文件本质上也是xml文件--&gt;</span><br><span class="line">&lt;!ELEMENT hr (employee+)&gt;&lt;!--可以拥有多个employee元素--&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salary,department)&gt;&lt;!--employee主元素下拥有这四个子元素--&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot; &quot;&gt;&lt;!--定义employee元素中的属性no--&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;&lt;!--定义name子元素为纯文本--&gt;</span><br><span class="line">&lt;!ELEMENT age (#PCDATA)&gt;</span><br><span class="line">&lt;!ELEMENT salary (#PCDATA)&gt;</span><br><span class="line">&lt;!ELEMENT department (dname,address)&gt;&lt;!--定义department元素下拥有两个子元素--&gt;</span><br><span class="line">&lt;!ELEMENT dname (#PCDATA)&gt;&lt;!--定义dname子元素为纯文本--&gt;</span><br><span class="line">&lt;!ELEMENT address (#PCDATA)&gt;&lt;!--定义address子元素为纯文本--&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="XML-Schema"><a href="#XML-Schema" class="headerlink" title="XML Schema"></a>XML Schema</h2><h3 id="XML-Schema的概述"><a href="#XML-Schema的概述" class="headerlink" title="XML Schema的概述"></a>XML Schema的概述</h3><ul>
+<li>XML Schema比DTD更为复杂，提供了更多的功能</li>
+<li>XML Schema提供了数据类型、格式限定、数据范围等特性XMLX</li>
+<li>XML Schema是W3C标准</li>
+</ul>
+<h3 id="XML-Schema文件的具体例子"><a href="#XML-Schema文件的具体例子" class="headerlink" title="XML Schema文件的具体例子"></a>XML Schema文件的具体例子</h3><p>直接上代码：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="comment">&lt;!--人力资源管理系统--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--调用hr-scheam.xsd文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>  <span class="attr">xsi:noNamespaceSchemaLocation</span>=<span class="string">&quot;hr-schema.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3309&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>19<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>会计部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B103<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3310&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>李四<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>23<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>工程部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B104<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hr</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xsd"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">xs:schema</span> <span class="attr">xmlns:xs</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;hr&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--complexType标签含义是复杂节点，包含子节点时必须使用这个标签--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--sequence标签包含是子节点必须严格书写，--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;employee&quot;</span>  <span class="attr">maxOccurs</span>=<span class="string">&quot;10&quot;</span>&gt;</span><span class="comment">&lt;!--定义employee节点出现的次数--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span><span class="comment">&lt;!--说明前后顺序--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span><span class="comment">&lt;!--代表的是name子元素是字符串类型，且不能拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;age&quot;</span>&gt;</span></span><br><span class="line">                                <span class="comment">&lt;!--设置age属性的简单类型约束--&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">xs:simpleType</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">&quot;xs:integer&quot;</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:minInclusive</span> <span class="attr">value</span>=<span class="string">&quot;18&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:minInclusive</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:maxInclusive</span> <span class="attr">value</span>=<span class="string">&quot;60&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:maxInclusive</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--代表的是salary只允许输入整型，不能拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;salary&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:integer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--代表的是department，拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;department&quot;</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span><span class="comment">&lt;!--说明含有子节点--&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span><span class="comment">&lt;!--说明前后顺序--&gt;</span></span><br><span class="line">                                        <span class="comment">&lt;!--代表的是：department节点下的两个子节点，且不能含有其他子节点--&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;dname&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;address&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--定义employee的no属性，必须是string类型，required表示的是employee下必须存在的--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">&quot;no&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span> <span class="attr">use</span>=<span class="string">&quot;required&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">xs:attribute</span>&gt;</span><span class="comment">&lt;!--定义节点中的属性，名字与数据类型--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">xs:schema</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>XML</tag>
       </tags>
   </entry>
   <entry>
@@ -1198,53 +1245,6 @@
 ]]></content>
       <tags>
         <tag>JavaWeb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>XML之DTD文件与Schema文件</title>
-    <url>/XML%E4%B9%8BDTD%E4%B8%8ESchema%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="XML语义约束"><a href="#XML语义约束" class="headerlink" title="XML语义约束"></a>XML语义约束</h2><ul>
-<li>XML文档结构正确，但可能不是有效的</li>
-<li>例如：员工档案XML中绝对不允许出现”植物品种”标签。XML语义约束就是用于规定XML文档中允许出现哪些元素</li>
-<li>XML语义约束有两种定义方式：DTD与XML Schema</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="Doucument-Type-Defintion"><a href="#Doucument-Type-Defintion" class="headerlink" title="Doucument Type Defintion"></a>Doucument Type Defintion</h2><ul>
-<li><p>DTD(Document Type Definition ,文档类型定义)是一种简单易用的语义约束方式</p>
-</li>
-<li><p>DTD文件扩展名为.dtd</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hr.dtd</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salaey,department)&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot;&quot;&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;</span><br><span class="line">…</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="DTD定义节点"><a href="#DTD定义节点" class="headerlink" title="DTD定义节点"></a>DTD定义节点</h3><ul>
-<li><p>利用DTD中的&lt;!ELEMENT&gt;标签，我们可以定义XML文档中允许出现的节点及数量，以hr.xml为例：</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--定义hr(主节点)下只允许出现1个employee子节点--&gt;</span><br><span class="line">hr.dtd</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salaey,department)&gt;&lt;!--employee节点下必须包含以下四个节点，且按顺序出现--&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot;&quot;&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;&lt;!--定义name标签体只能是文本，#PCDATA代表文本元素--&gt;</span><br><span class="line">…</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如某字节点需要多次重复出现，则需要在子节点后增加相应的描述</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--hr节点下最少出现1个employee子节点--&gt;</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!--hr节点下可出现0..n个employee子节点--&gt;</span><br><span class="line">&lt;!ELEMENT hr(employee*)&gt;</span><br><span class="line">&lt;!--hr--&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="XML引用DTD文件"><a href="#XML引用DTD文件" class="headerlink" title="XML引用DTD文件"></a>XML引用DTD文件</h3><ul>
-<li><p>在XML中使用&lt;!DOCTYPE&gt;标签来引用DTD文件</p>
-  <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">书写格式：</span><br><span class="line"><span class="meta">&lt;!DOCTYPE 根节点 <span class="keyword">SYSTEM</span> <span class="string">&quot;dtd文件路径&quot;</span>&gt;</span></span><br><span class="line">示例：</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">hr</span> <span class="keyword">SYSTEM</span> <span class="string">&quot;hr.dtd&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建DTD文件</p>
-  <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">hr</span> <span class="keyword">SYSTEM</span> <span class="string">&quot;hr.dtd&quot;</span>&gt;</span><span class="comment">&lt;!--XML文件引用DTD文件--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--人力资源管理系统--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3309&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>31<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>会计部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B103<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3310&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>李四<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>23<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>工程部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B104<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hr</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;!--dtd文件本质上也是xml文件--&gt;</span><br><span class="line">&lt;!ELEMENT hr (employee+)&gt;&lt;!--可以拥有多个employee元素--&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salary,department)&gt;&lt;!--employee主元素下拥有这四个子元素--&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot; &quot;&gt;&lt;!--定义employee元素中的属性no--&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;&lt;!--定义name子元素为纯文本--&gt;</span><br><span class="line">&lt;!ELEMENT age (#PCDATA)&gt;</span><br><span class="line">&lt;!ELEMENT salary (#PCDATA)&gt;</span><br><span class="line">&lt;!ELEMENT department (dname,address)&gt;&lt;!--定义department元素下拥有两个子元素--&gt;</span><br><span class="line">&lt;!ELEMENT dname (#PCDATA)&gt;&lt;!--定义dname子元素为纯文本--&gt;</span><br><span class="line">&lt;!ELEMENT address (#PCDATA)&gt;&lt;!--定义address子元素为纯文本--&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="XML-Schema"><a href="#XML-Schema" class="headerlink" title="XML Schema"></a>XML Schema</h2><h3 id="XML-Schema的概述"><a href="#XML-Schema的概述" class="headerlink" title="XML Schema的概述"></a>XML Schema的概述</h3><ul>
-<li>XML Schema比DTD更为复杂，提供了更多的功能</li>
-<li>XML Schema提供了数据类型、格式限定、数据范围等特性XMLX</li>
-<li>XML Schema是W3C标准</li>
-</ul>
-<h3 id="XML-Schema文件的具体例子"><a href="#XML-Schema文件的具体例子" class="headerlink" title="XML Schema文件的具体例子"></a>XML Schema文件的具体例子</h3><p>直接上代码：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="comment">&lt;!--人力资源管理系统--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--调用hr-scheam.xsd文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>  <span class="attr">xsi:noNamespaceSchemaLocation</span>=<span class="string">&quot;hr-schema.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3309&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>19<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>会计部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B103<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3310&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>李四<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>23<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>工程部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B104<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hr</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xsd"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">xs:schema</span> <span class="attr">xmlns:xs</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;hr&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--complexType标签含义是复杂节点，包含子节点时必须使用这个标签--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--sequence标签包含是子节点必须严格书写，--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;employee&quot;</span>  <span class="attr">maxOccurs</span>=<span class="string">&quot;10&quot;</span>&gt;</span><span class="comment">&lt;!--定义employee节点出现的次数--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span><span class="comment">&lt;!--说明前后顺序--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span><span class="comment">&lt;!--代表的是name子元素是字符串类型，且不能拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;age&quot;</span>&gt;</span></span><br><span class="line">                                <span class="comment">&lt;!--设置age属性的简单类型约束--&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">xs:simpleType</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">&quot;xs:integer&quot;</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:minInclusive</span> <span class="attr">value</span>=<span class="string">&quot;18&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:minInclusive</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:maxInclusive</span> <span class="attr">value</span>=<span class="string">&quot;60&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:maxInclusive</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--代表的是salary只允许输入整型，不能拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;salary&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:integer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--代表的是department，拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;department&quot;</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span><span class="comment">&lt;!--说明含有子节点--&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span><span class="comment">&lt;!--说明前后顺序--&gt;</span></span><br><span class="line">                                        <span class="comment">&lt;!--代表的是：department节点下的两个子节点，且不能含有其他子节点--&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;dname&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;address&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--定义employee的no属性，必须是string类型，required表示的是employee下必须存在的--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">&quot;no&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span> <span class="attr">use</span>=<span class="string">&quot;required&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">xs:attribute</span>&gt;</span><span class="comment">&lt;!--定义节点中的属性，名字与数据类型--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">xs:schema</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>XML</tag>
       </tags>
   </entry>
 </search>
