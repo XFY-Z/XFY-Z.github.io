@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> </title>
+      <title>JSON简介与语法规则 |  </title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -52,111 +52,10 @@
     
       
     <main class="content on">
-      
-<section class="cover">
-    
-      
-      <a class="forkMe" href="https://github.com/XFY-Z"
-        target="_blank"><img width="149" height="149" src="/images/forkme.png"
-          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/preview.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/"></a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-
-
-<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
-
-
-<!-- Subtitle -->
-
-  <script>
-    try {
-      var typed = new Typed("#subtitle", {
-        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
-        startDelay: 0,
-        typeSpeed: 200,
-        loop: true,
-        backSpeed: 100,
-        showCursor: true
-      });
-    } catch (err) {
-      console.log(err)
-    }
-  </script>
-  
-<div id="main">
-  <section class="outer">
-  
-  
-  
-
-<div class="notice" style="margin-top:50px">
-    <i class="ri-heart-fill"></i>
-    <div class="notice-content" id="broad"></div>
-</div>
-<script type="text/javascript">
-    fetch('https://v1.hitokoto.cn')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("broad").innerHTML = data.hitokoto;
-        })
-        .catch(console.error)
-</script>
-
-<style>
-    .notice {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-    }
-
-    .notice i {
-        float: left;
-        color: #999;
-        font-size: 16px;
-        padding-right: 10px;
-        vertical-align: middle;
-        margin-top: -2px;
-    }
-
-    .notice-content {
-        display: initial;
-        vertical-align: middle;
-    }
-</style>
-  
-  <article class="articles">
-    
-    
-    
-    
-    <article
-  id="post-JS概述及基本使用"
-  class="article article-type-post"
+      <section class="outer">
+  <article
+  id="about-JSON简介与语法规则-1"
+  class="article article-type-about"
   itemscope
   itemprop="blogPost"
   data-scroll-reveal
@@ -165,232 +64,174 @@
     
     <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="article-title" href="/JS%E6%A6%82%E8%BF%B0%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
-    >JS概述及基本使用</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  JSON简介与语法规则
+</h1>
  
 
       
     </header>
      
     <div class="article-meta">
-      <a href="/JS%E6%A6%82%E8%BF%B0%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="article-date">
-  <time datetime="2022-04-05T07:41:32.000Z" itemprop="datePublished">2022-04-05</time>
-</a>    
+      <a href="/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99-1/" class="article-date">
+  <time datetime="2022-05-10T14:11:02.000Z" itemprop="datePublished">2022-05-10</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">353</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">1 min</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
       
+    <div class="tocbot"></div>
+
+
+
+
+  
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="JS简介"><a href="#JS简介" class="headerlink" title="JS简介"></a>JS简介</h2><ul>
-<li>什么是JS-Java-Script的简称，是一种脚本语言</li>
-<li>什么是动态页面、静态页面（以人机交互做为区分的）</li>
-<li>JS不需要安装就可以使用了</li>
-<li>BOM（浏览器对象模型），DOM（文档对象模型）</li>
-<li>可以运用在html结构中任意一个地方</li>
-</ul> 
-      <a class="article-more-link" href="/JS%E6%A6%82%E8%BF%B0%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"
-        >阅读更多...</a
-      >
-       
+  <h2 id="JSON简介"><a href="#JSON简介" class="headerlink" title="JSON简介"></a>JSON简介</h2><ul>
+<li><p>JavaScript Object Notation(JavaScript 对象表示法)</p>
+</li>
+<li><p>JSON是轻量级的文本数据交换格式</p>
+</li>
+<li><p>JSON独立于语言，具有自我描述性，更易理解</p>
+  <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="string">&quot;sites&quot;</span><span class="punctuation">[</span></span><br><span class="line">     <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;百度&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.baidu.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;b站&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.bilibili.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;网易&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.163.com&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>  JSON对于人来说，阅读体验很好；JSON规则清晰，容易被计算机解析，JSON已经越来越多的用在数据传递和数据表上，JSON已经逐渐替代了XML，成为了软件开发的主流数据表达形式</p>
+  <span id="more"></span></li>
+</ul>
+<h2 id="JSON语法规则"><a href="#JSON语法规则" class="headerlink" title="JSON语法规则"></a>JSON语法规则</h2><ul>
+<li>数据由键(key)值(value)描述，由逗号分隔</li>
+<li>{ }大括号代表一个完整的对象(JSON对象)，拥有多个键&#x2F;值对，其可以被javaScript直接识别</li>
+<li>[ ]中括号保存数据，多个JSON对象(用{}大括号的是JSON对象)之间使用逗号分隔，[ ]对于了一个数组，数组中保存了多个JSON对象<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210109233300548.png" alt="img"></li>
+</ul>
+<h3 id="JSON简单示例程序"><a href="#JSON简单示例程序" class="headerlink" title="JSON简单示例程序"></a>JSON简单示例程序</h3><p>首先创建新的web工程，在web根目录下，创建json文件(点击file,创建.json文件)</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON1.png" alt="JSON1"></p>
+<p>按照JSON语法创建一个员工信息表</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON2.png" alt="JSON2"></p>
+<p>JSON书写到后面会变得很长，这时候我们需要进行编码格式化，点击编辑器上工具类中得code→Reformat Code</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON3.png" alt="JSON3"></p>
+ 
       <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
       
     </div>
     
 
     <!-- copyright -->
     
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
     <footer class="article-footer">
        
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xfy-z.github.io/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99-1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
 
     </footer>
   </div>
 
    
+  <nav class="article-nav">
     
-</article>
-
     
-    <article
-  id="post-CSS定位"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
+      <a href="/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">JSON简介与语法规则</div>
+      </a>
     
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/CSS%E5%AE%9A%E4%BD%8D/"
-    >CSS定位</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/CSS%E5%AE%9A%E4%BD%8D/" class="article-date">
-  <time datetime="2022-04-05T06:47:29.000Z" itemprop="datePublished">2022-04-05</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="CSS定位及相对定位"><a href="#CSS定位及相对定位" class="headerlink" title="CSS定位及相对定位"></a>CSS定位及相对定位</h2><h3 id="CSS定位的属性"><a href="#CSS定位的属性" class="headerlink" title="CSS定位的属性"></a>CSS定位的属性</h3><ul>
-<li>relative（相对的）</li>
-<li>absolute（绝对的）</li>
-<li>static（无定位的）</li>
-<li>fixed（固定的）</li>
-</ul> 
-      <a class="article-more-link" href="/CSS%E5%AE%9A%E4%BD%8D/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Div标签与CSS浮动"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/Div%E6%A0%87%E7%AD%BE%E4%B8%8ECSS%E6%B5%AE%E5%8A%A8/"
-    >Div标签与CSS浮动</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/Div%E6%A0%87%E7%AD%BE%E4%B8%8ECSS%E6%B5%AE%E5%8A%A8/" class="article-date">
-  <time datetime="2022-04-05T06:43:09.000Z" itemprop="datePublished">2022-04-05</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="Div简介"><a href="#Div简介" class="headerlink" title="Div简介"></a>Div简介</h2><ul>
-<li>Div是层叠样式表中的定位技术，全称DIVision</li>
-<li>有时把div称为2图层，更多的时候称为块</li>
-</ul> 
-      <a class="article-more-link" href="/Div%E6%A0%87%E7%AD%BE%E4%B8%8ECSS%E6%B5%AE%E5%8A%A8/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Java多态"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/Java%E5%A4%9A%E6%80%81/"
-    >Java多态</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/Java%E5%A4%9A%E6%80%81/" class="article-date">
-  <time datetime="2022-04-01T06:37:20.000Z" itemprop="datePublished">2022-04-01</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><h2 id="多态的概念"><a href="#多态的概念" class="headerlink" title="多态的概念"></a>多态的概念</h2><ul>
-<li>多态性，是面向对象中最重要的概念，在java中的体现，对象的多态性：父类的引用指向子类的对象（向上转型），是可以直接应用抽象类和接口中上</li>
-<li>Java引用变量有两个类型：编译时类型和运行时类型。编译时类型声明该变量时使用的类型决定，运行时类型由实际赋给该变量的对象决定。简称：编译时，看左边；运行时，看右边</li>
-</ul> 
-      <a class="article-more-link" href="/Java%E5%A4%9A%E6%80%81/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-  </article>
-  
-
-  
-  <nav class="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </nav>
-  
-</section>
-</div>
 
+  
+   
+    
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
       <footer class="footer">
   <div class="outer">
     <ul>
@@ -526,6 +367,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
