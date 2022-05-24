@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-05-24T13:54:23.448Z</updated>
+  <updated>2022-05-24T13:59:47.284Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS访问JSON并输出</title>
+    <link href="https://xfy-z.github.io/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/"/>
+    <id>https://xfy-z.github.io/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/</id>
+    <published>2022-05-24T13:58:41.000Z</published>
+    <updated>2022-05-24T13:59:47.284Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;JavaScript访问JSON&quot;&gt;&lt;a href=&quot;#JavaScript访问JSON&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JSON" scheme="https://xfy-z.github.io/tags/JSON/"/>
+    
+  </entry>
   
   <entry>
     <title>正则表达式</title>
