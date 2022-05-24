@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-05-24T14:00:19.652Z</updated>
+  <updated>2022-05-24T14:11:44.698Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FastJson工具使用及案例分析</title>
+    <link href="https://xfy-z.github.io/FastJson%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/"/>
+    <id>https://xfy-z.github.io/FastJson%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/</id>
+    <published>2022-05-24T14:11:04.000Z</published>
+    <updated>2022-05-24T14:11:44.698Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Java对象转换为JSON字符串案例&quot;&gt;&lt;a href=&quot;#Java对象转换为JSON字符串案例&quot; class=&quot;headerlink&quot; title=&quot;Java对象转换为JSON字符串案例&quot;&gt;&lt;/a&gt;Java对象转换为JSON字符串案例&lt;/h2&gt;&lt;p&gt;主要内容是Java中利用FastJson对JSON工具的序列化&lt;/p&gt;
+&lt;p&gt;序列化：简单来说序列化就是用来处理对象流的机制，所谓对象流也就是将对象的内容进行流化，流的概念这里不用多说(就是I&amp;#x2F;O)，&lt;strong&gt;我们可以对流化后的对象进行读写操作，也可将流化后的对象传输于网络之间(注：想要将对象传输于网络必须进行流化&lt;/strong&gt;）在对对象流进行读写操作时会引发一些问题，而序列化机制也正是用来解决这些问题&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="JSON" scheme="https://xfy-z.github.io/tags/JSON/"/>
+    
+  </entry>
   
   <entry>
     <title>JS访问JSON并输出</title>

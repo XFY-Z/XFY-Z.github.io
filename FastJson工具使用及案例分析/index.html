@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>FastJson工具使用及案例分析 |  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="null" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="about-FastJson工具使用及案例分析"
+  class="article article-type-about"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  FastJson工具使用及案例分析
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/FastJson%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" class="article-date">
+  <time datetime="2022-05-24T14:11:04.000Z" itemprop="datePublished">2022-05-24</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.6k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">6 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="Java对象转换为JSON字符串案例"><a href="#Java对象转换为JSON字符串案例" class="headerlink" title="Java对象转换为JSON字符串案例"></a>Java对象转换为JSON字符串案例</h2><p>主要内容是Java中利用FastJson对JSON工具的序列化</p>
+<p>序列化：简单来说序列化就是用来处理对象流的机制，所谓对象流也就是将对象的内容进行流化，流的概念这里不用多说(就是I&#x2F;O)，<strong>我们可以对流化后的对象进行读写操作，也可将流化后的对象传输于网络之间(注：想要将对象传输于网络必须进行流化</strong>）在对对象流进行读写操作时会引发一些问题，而序列化机制也正是用来解决这些问题</p>
+<span id="more"></span>
+
+<h4 id="示例：利用FastJson将java对象转变为JSON字符串"><a href="#示例：利用FastJson将java对象转变为JSON字符串" class="headerlink" title="示例：利用FastJson将java对象转变为JSON字符串"></a>示例：利用FastJson将java对象转变为JSON字符串</h4><p>创建一个Java类程序，使其后面的赋值更加方便</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.json;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Employee</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Integer empno;</span><br><span class="line">    <span class="keyword">private</span> String ename;</span><br><span class="line">    <span class="keyword">private</span> String job;</span><br><span class="line">    <span class="keyword">private</span> Date hdarw;</span><br><span class="line">    <span class="keyword">private</span> Float salary;</span><br><span class="line">    <span class="keyword">private</span> String dname;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Integer <span class="title function_">getEmpno</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> empno;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setEmpno</span><span class="params">(Integer empno)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.empno = empno;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getEname</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> ename;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setEname</span><span class="params">(String ename)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.ename = ename;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getJob</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> job;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setJob</span><span class="params">(String job)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.job = job;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Date <span class="title function_">getHdarw</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> hdarw;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setHdarw</span><span class="params">(Date hdarw)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.hdarw = hdarw;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Float <span class="title function_">getSalary</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> salary;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setSalary</span><span class="params">(Float salary)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.salary = salary;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getDname</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> dname;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setDname</span><span class="params">(String dname)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.dname = dname;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>再创建一个Java类，将刚刚的java类实例化，并进行赋值然后利用FastJson工具将对象转变为字符串（序列化）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.json;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Calendar;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">FastJsonSample1</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Employee</span> <span class="variable">employee</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">Employee</span>();</span><br><span class="line">        employee.setEmpno(<span class="number">4488</span>);</span><br><span class="line">        employee.setEname(<span class="string">&quot;张东西&quot;</span>);</span><br><span class="line">        employee.setJob(<span class="string">&quot;客户经理&quot;</span>);</span><br><span class="line">        employee.setSalary(<span class="number">10000f</span>);</span><br><span class="line">        employee.setDname(<span class="string">&quot;工程师&quot;</span>);</span><br><span class="line">        <span class="comment">//月份是从0开始的，所以5代表的是六月，Calendar日历函数，通过set放置开始时间，getTime得到刚刚设置好的时间</span></span><br><span class="line">        <span class="type">Calendar</span> <span class="variable">c</span> <span class="operator">=</span> Calendar.getInstance();</span><br><span class="line">        c.set(<span class="number">2020</span>,<span class="number">5</span>,<span class="number">16</span>,<span class="number">10</span>,<span class="number">38</span>,<span class="number">10</span>);</span><br><span class="line">        employee.setHdarw(c.getTime());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//FastJson中提供了Json对象，完成对象与JSON字符串的互相转换</span></span><br><span class="line">        <span class="comment">//这里我们将对象序列化变为字符串</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">jsonString</span> <span class="operator">=</span> JSON.toJSONString(employee);</span><br><span class="line">        System.out.println(jsonString);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>结果：输出了刚刚在实例化对象中定义好的属性，并以JSON对象的形式输出出来</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/fastjson3.png" alt="fastjson3"></p>
+<h3 id="JSONField注解"><a href="#JSONField注解" class="headerlink" title="JSONField注解"></a>JSONField注解</h3><p>这里发现，上面的hdarw的值是：设置时间的毫秒数，很难看懂；为了解决这个问题，需要用到JSON注释来对日期格式进行格式化输出：@JSONField注释</p>
+<h4 id="我们在定义属性的java类中编写JSONField注解"><a href="#我们在定义属性的java类中编写JSONField注解" class="headerlink" title="我们在定义属性的java类中编写JSONField注解"></a>我们在定义属性的java类中编写JSONField注解</h4><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/fastjson4.png" alt="fastjson4"></p>
+<p>这时候我们在运行的效果：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/fastjson5.png" alt="fastjson5"></p>
+<h4 id="JSONField注解还可以对输出的key进行描述"><a href="#JSONField注解还可以对输出的key进行描述" class="headerlink" title="JSONField注解还可以对输出的key进行描述"></a>JSONField注解还可以对输出的key进行描述</h4><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/fastjson6.png" alt="fastjson6"></p>
+<p>此时的效果：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/fastjson7.png" alt="fastjson7"></p>
+<h4 id="JSONFile注解还可以取消个别属性的JSON序列化"><a href="#JSONFile注解还可以取消个别属性的JSON序列化" class="headerlink" title="JSONFile注解还可以取消个别属性的JSON序列化"></a>JSONFile注解还可以取消个别属性的JSON序列化</h4><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/fastjson8.png" alt="fastjson8"></p>
+<p>效果：可以看到说已经没有dname这个属性</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/fastjson9.png" alt="fastjson9"></p>
+<h3 id="JSON字符串转换为Java对象"><a href="#JSON字符串转换为Java对象" class="headerlink" title="JSON字符串转换为Java对象"></a>JSON字符串转换为Java对象</h3><p>主要内容是Java中利用FastJson对java对象的反序列化</p>
+<p>反序列化：Java反序列化就是指把字节序列恢复为Java对象的过程，<strong>反序列化最重要的作用是根据字节流中保存的对象状态及描述信息，通过反序列化重建对象</strong></p>
+<h4 id="示例：利用FastJson将JSON字符串转变为java对象"><a href="#示例：利用FastJson将JSON字符串转变为java对象" class="headerlink" title="示例：利用FastJson将JSON字符串转变为java对象"></a>示例：利用FastJson将JSON字符串转变为java对象</h4><p>Employee emp &#x3D; JSON.parseObject(jsonString,Employee.class)：第一个参数为待转换的JSON字符串，第二个参数为想要转换的已存在类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.json;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Calendar;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">FastJsonSample1</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Employee</span> <span class="variable">employee</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">Employee</span>();</span><br><span class="line">        employee.setEmpno(<span class="number">4488</span>);</span><br><span class="line">        employee.setEname(<span class="string">&quot;张东西&quot;</span>);</span><br><span class="line">        employee.setJob(<span class="string">&quot;客户经理&quot;</span>);</span><br><span class="line">        employee.setSalary(<span class="number">10000f</span>);</span><br><span class="line">        employee.setDname(<span class="string">&quot;工程师&quot;</span>);</span><br><span class="line">        <span class="comment">//月份是从0开始的，所以5代表的是六月，Calendar日历函数，通过set放置开始时间，getTime得到刚刚设置的时间</span></span><br><span class="line">        <span class="type">Calendar</span> <span class="variable">c</span> <span class="operator">=</span> Calendar.getInstance();</span><br><span class="line">        c.set(<span class="number">2020</span>,<span class="number">5</span>,<span class="number">16</span>,<span class="number">10</span>,<span class="number">38</span>,<span class="number">10</span>);</span><br><span class="line">        employee.setHdarw(c.getTime());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//FastJson中提供了Json对象，完成对象与JSON字符串的互相转换</span></span><br><span class="line">        <span class="comment">//这里我们将对象序列化变为字符串</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">jsonString</span> <span class="operator">=</span> JSON.toJSONString(employee);</span><br><span class="line">        System.out.println(jsonString);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将字符串反序列化为对象</span></span><br><span class="line">        <span class="type">Employee</span> <span class="variable">emp</span> <span class="operator">=</span>JSON.parseObject(jsonString,Employee.class);</span><br><span class="line">        System.out.println(emp.getEname());<span class="comment">//输出emp这个JSON对象中的Ename属性</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/fastjson10.png" alt="fastjson10"></p>
+<h2 id="Java对象集合与JSON-数组-的转换"><a href="#Java对象集合与JSON-数组-的转换" class="headerlink" title="Java对象集合与JSON(数组)的转换"></a>Java对象集合与JSON(数组)的转换</h2><p>在实际业务中，往往会是对多个对象批量出来：这个用处会非常广泛</p>
+<p>JSON序列化与反序列化用途，比如：</p>
+<p>(1)要求：本地有100个员工对象信息，如何把这100个员工的的信息传递给另外一个系统呢</p>
+<p>方法：可以将100个员工的信息JSON序列化，然后传递给另外一个系统；另外一个系统接受后，JSON反序列化成员工对象即可</p>
+<p>(2)后面的Ajax中也会用到JSON序列化</p>
+<h3 id="多个对象的集合，转成JSON-数组"><a href="#多个对象的集合，转成JSON-数组" class="headerlink" title="多个对象的集合，转成JSON(数组)"></a>多个对象的集合，转成JSON(数组)</h3><p>String jsonString &#x3D; JSON.toJSONString(empList):还是这个方法，将对象集合作为参数传入即可：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.json;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">FastJsonSample2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        List&lt;Employee&gt; emplist = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Employee&gt;();<span class="comment">//创建一个集合</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++) &#123;<span class="comment">//简单模拟一下10个员工；设置了两个属性；</span></span><br><span class="line">            <span class="type">Employee</span> <span class="variable">employee</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Employee</span>();<span class="comment">//实例化对象</span></span><br><span class="line">            employee.setEmpno(<span class="number">4488</span>+i);</span><br><span class="line">            employee.setEname(<span class="string">&quot;员工&quot;</span>+i);</span><br><span class="line">            emplist.add(employee);<span class="comment">//增加到集合中</span></span><br><span class="line">        &#125;</span><br><span class="line">        String jsonString=JSON.toJSONString(emplist);<span class="comment">//java集合对象序列化为字符串</span></span><br><span class="line">        System.out.println(jsonString);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>输出：发现（1）[]说明这是一个集合；（2）只有empno和ename，说明当某个属性的属性值为null的时候，则FastJson会将其忽略</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/fastjson11.png" alt="fastjson11"></p>
+<h3 id="将JSON数组转成对象的集合"><a href="#将JSON数组转成对象的集合" class="headerlink" title="将JSON数组转成对象的集合"></a>将JSON数组转成对象的集合</h3><p>List<Employee> listEmployee &#x3D; JSON.pareArray(jsonString,Employee.class);将JSON数组,转变为对象集合</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.json;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">FastJsonSample2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        List&lt;Employee&gt; emplist = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Employee&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++) &#123;<span class="comment">//简单模拟一下10个员工；设置了两个属性；</span></span><br><span class="line">            <span class="type">Employee</span> <span class="variable">employee</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Employee</span>();</span><br><span class="line">            employee.setEmpno(<span class="number">4488</span>+i);</span><br><span class="line">            employee.setEname(<span class="string">&quot;员工&quot;</span>+i);</span><br><span class="line">            emplist.add(employee);</span><br><span class="line">        &#125;</span><br><span class="line">        String jsonString=JSON.toJSONString(emplist);<span class="comment">//序列化，将集合元素变为JOSN（数组）字符串</span></span><br><span class="line">        System.out.println(jsonString);</span><br><span class="line"></span><br><span class="line">        List&lt;Employee&gt; listEmployee = JSON.parseArray(jsonString,Employee.class);<span class="comment">//反序列化，将JSON（数组）字符串变为JSON集合对象</span></span><br><span class="line">        <span class="keyword">for</span> (Employee e:listEmployee)&#123;<span class="comment">//增强型for循环，循环遍历JSON集合对象</span></span><br><span class="line">            System.out.println(e.getEmpno()+<span class="string">&quot;:&quot;</span>+e.getEname());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/fastjson13.jpg" alt="fastjson13"></p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xfy-z.github.io/FastJson%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSON/" rel="tag">JSON</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">JS访问JSON并输出</div>
+      </a>
+    
+  </nav>
+
+  
+   
+    
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022
+        <i class="ri-heart-fill heart_icon"></i> XFY-Z
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt=""></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="86"
+        src="//music.163.com/outchain/player?type=2&id=1359818052&auto=1&height=66"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>
