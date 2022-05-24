@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-05-24T14:11:44.698Z</updated>
+  <updated>2022-05-24T14:20:16.884Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Ajax工具介绍</title>
+    <link href="https://xfy-z.github.io/Ajax%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://xfy-z.github.io/Ajax%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/</id>
+    <published>2022-05-24T14:17:57.000Z</published>
+    <updated>2022-05-24T14:20:16.884Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Ajax介绍&quot;&gt;&lt;a href=&quot;#Ajax介绍&quot; class=&quot;headerlink&quot; title=&quot;Ajax介绍&quot;&gt;&lt;/a&gt;Ajax介绍&lt;/h2&gt;&lt;p&gt;Ajax主要作用：在不刷新网页的情况下，与后台数据进行交互，从而实现页面局部刷新的功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Asynchronous JavaScript And Xml（异步的JavaScript和XML）&lt;/li&gt;
+&lt;li&gt;Ajax可以在不刷新页面的前提下，进行页面局部更新&lt;/li&gt;
+&lt;li&gt;Ajax不是新的技术，Ajax并不是W3C的标准&lt;/li&gt;
+&lt;li&gt;Ajax并不是一种标准，而是服务商提供的一种技术；大部分浏览器在浏览器内核中都提供了Ajax的核心实现；后来某位大牛对这些技术进行整合和命名，才有今天的Ajax&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>FastJson工具使用及案例分析</title>
     <link href="https://xfy-z.github.io/FastJson%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/"/>
     <id>https://xfy-z.github.io/FastJson%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/</id>
     <published>2022-05-24T14:11:04.000Z</published>
-    <updated>2022-05-24T14:11:44.698Z</updated>
+    <updated>2022-05-24T14:16:55.951Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;Java对象转换为JSON字符串案例&quot;&gt;&lt;a href=&quot;#Java对象转换为JSON字符串案例&quot; class=&quot;headerlink&quot; title=&quot;Java对象转换为JSON字符串案例&quot;&gt;&lt;/a&gt;Java对象转换为JSON字符串案例&lt;/h2&gt;&lt;p&gt;主要内容是Java中利用FastJson对JSON工具的序列化&lt;/p&gt;
@@ -30,7 +53,7 @@
     
     
     
-    <category term="JSON" scheme="https://xfy-z.github.io/tags/JSON/"/>
+    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
     
   </entry>
   
@@ -39,7 +62,7 @@
     <link href="https://xfy-z.github.io/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/"/>
     <id>https://xfy-z.github.io/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/</id>
     <published>2022-05-24T13:58:41.000Z</published>
-    <updated>2022-05-24T14:00:19.652Z</updated>
+    <updated>2022-05-24T14:17:04.915Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;JavaScript访问JSON&quot;&gt;&lt;a href=&quot;#JavaScript访问JSON&quot; class=&quot;headerlink&quot; title=&quot;JavaScript访问JSON&quot;&gt;&lt;/a&gt;JavaScript访问JSON&lt;/h2&gt;&lt;p&gt;疑问：JSON主要用于数据传递和数据表示上，程序势必要和JSON数据进行交互；那么JavaScript如何访问JSON文件的呢&lt;/p&gt;
@@ -50,7 +73,7 @@
     
     
     
-    <category term="JSON" scheme="https://xfy-z.github.io/tags/JSON/"/>
+    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
     
   </entry>
   
@@ -106,7 +129,7 @@
     <link href="https://xfy-z.github.io/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/"/>
     <id>https://xfy-z.github.io/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</id>
     <published>2022-05-07T11:58:07.000Z</published>
-    <updated>2022-05-07T12:02:34.429Z</updated>
+    <updated>2022-05-24T14:17:25.396Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;JSON简介&quot;&gt;&lt;a href=&quot;#JSON简介&quot; class=&quot;headerlink&quot; title=&quot;JSON简介&quot;&gt;&lt;/a&gt;JSON简介&lt;/h2&gt;&lt;ul&gt;
@@ -124,7 +147,7 @@
     
     
     
-    <category term="JSON" scheme="https://xfy-z.github.io/tags/JSON/"/>
+    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
     
   </entry>
   
