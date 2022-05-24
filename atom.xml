@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-05-24T13:59:47.284Z</updated>
+  <updated>2022-05-24T14:00:19.652Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -21,16 +21,13 @@
     <link href="https://xfy-z.github.io/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/"/>
     <id>https://xfy-z.github.io/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/</id>
     <published>2022-05-24T13:58:41.000Z</published>
-    <updated>2022-05-24T13:59:47.284Z</updated>
+    <updated>2022-05-24T14:00:19.652Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;JavaScript访问JSON&quot;&gt;&lt;a href=&quot;#JavaScript访问JSON&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;JavaScript访问JSON&quot;&gt;&lt;a href=&quot;#JavaScript访问JSON&quot; class=&quot;headerlink&quot; title=&quot;JavaScript访问JSON&quot;&gt;&lt;/a&gt;JavaScript访问JSON&lt;/h2&gt;&lt;p&gt;疑问：JSON主要用于数据传递和数据表示上，程序势必要和JSON数据进行交互；那么JavaScript如何访问JSON文件的呢&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;JavaScript天生就具备JSON数据的处理能力&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在web目录下创建sample.html&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON%E8%AE%BF%E9%97%AEJS1.png&quot; alt=&quot;JSON访问JS1&quot;&gt;&lt;/p&gt;</summary>
     
     
     

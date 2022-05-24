@@ -234,36 +234,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JSON简介与语法规则</title>
-    <url>/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99-1/</url>
-    <content><![CDATA[<h2 id="JSON简介"><a href="#JSON简介" class="headerlink" title="JSON简介"></a>JSON简介</h2><ul>
-<li><p>JavaScript Object Notation(JavaScript 对象表示法)</p>
-</li>
-<li><p>JSON是轻量级的文本数据交换格式</p>
-</li>
-<li><p>JSON独立于语言，具有自我描述性，更易理解</p>
-  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="string">&quot;sites&quot;</span><span class="punctuation">[</span></span><br><span class="line">     <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;百度&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.baidu.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;b站&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.bilibili.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;网易&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.163.com&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>  JSON对于人来说，阅读体验很好；JSON规则清晰，容易被计算机解析，JSON已经越来越多的用在数据传递和数据表上，JSON已经逐渐替代了XML，成为了软件开发的主流数据表达形式</p>
-  <span id="more"></span></li>
-</ul>
-<h2 id="JSON语法规则"><a href="#JSON语法规则" class="headerlink" title="JSON语法规则"></a>JSON语法规则</h2><ul>
-<li>数据由键(key)值(value)描述，由逗号分隔</li>
-<li>{ }大括号代表一个完整的对象(JSON对象)，拥有多个键&#x2F;值对，其可以被javaScript直接识别</li>
-<li>[ ]中括号保存数据，多个JSON对象(用{}大括号的是JSON对象)之间使用逗号分隔，[ ]对于了一个数组，数组中保存了多个JSON对象<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210109233300548.png" alt="img"></li>
-</ul>
-<h3 id="JSON简单示例程序"><a href="#JSON简单示例程序" class="headerlink" title="JSON简单示例程序"></a>JSON简单示例程序</h3><p>首先创建新的web工程，在web根目录下，创建json文件(点击file,创建.json文件)</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON1.png" alt="JSON1"></p>
-<p>按照JSON语法创建一个员工信息表</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON2.png" alt="JSON2"></p>
-<p>JSON书写到后面会变得很长，这时候我们需要进行编码格式化，点击编辑器上工具类中得code→Reformat Code</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON3.png" alt="JSON3"></p>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Dom4j与Xpath</title>
     <url>/Dom4j%E4%B8%8EXpath/</url>
     <content><![CDATA[<h2 id="DOM文档对象模型"><a href="#DOM文档对象模型" class="headerlink" title="DOM文档对象模型"></a>DOM文档对象模型</h2><ul>
@@ -421,6 +391,68 @@
       </tags>
   </entry>
   <entry>
+    <title>JSON简介与语法规则</title>
+    <url>/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</url>
+    <content><![CDATA[<h2 id="JSON简介"><a href="#JSON简介" class="headerlink" title="JSON简介"></a>JSON简介</h2><ul>
+<li><p>JavaScript Object Notation(JavaScript 对象表示法)</p>
+</li>
+<li><p>JSON是轻量级的文本数据交换格式</p>
+</li>
+<li><p>JSON独立于语言，具有自我描述性，更易理解</p>
+  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="string">&quot;sites&quot;</span><span class="punctuation">[</span></span><br><span class="line">     <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;百度&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.baidu.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;b站&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.bilibili.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;网易&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.163.com&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>  JSON对于人来说，阅读体验很好；JSON规则清晰，容易被计算机解析，JSON已经越来越多的用在数据传递和数据表上，JSON已经逐渐替代了XML，成为了软件开发的主流数据表达形式</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="JSON语法规则"><a href="#JSON语法规则" class="headerlink" title="JSON语法规则"></a>JSON语法规则</h2><ul>
+<li>数据由键(key)值(value)描述，由逗号分隔</li>
+<li>{ }大括号代表一个完整的对象(JSON对象)，拥有多个键&#x2F;值对，其可以被javaScript直接识别</li>
+<li>[ ]中括号保存数据，多个JSON对象(用{}大括号的是JSON对象)之间使用逗号分隔，[ ]对于了一个数组，数组中保存了多个JSON对象<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210109233300548.png" alt="img"></li>
+</ul>
+<h3 id="JSON简单示例程序"><a href="#JSON简单示例程序" class="headerlink" title="JSON简单示例程序"></a>JSON简单示例程序</h3><p>首先创建新的web工程，在web根目录下，创建json文件(点击file,创建.json文件)</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON1.png" alt="JSON1"></p>
+<p>按照JSON语法创建一个员工信息表</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON2.png" alt="JSON2"></p>
+<p>JSON书写到后面会变得很长，这时候我们需要进行编码格式化，点击编辑器上工具类中得code→Reformat Code</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON3.png" alt="JSON3"></p>
+]]></content>
+      <tags>
+        <tag>JSON</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JSON简介与语法规则</title>
+    <url>/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99-1/</url>
+    <content><![CDATA[<h2 id="JSON简介"><a href="#JSON简介" class="headerlink" title="JSON简介"></a>JSON简介</h2><ul>
+<li><p>JavaScript Object Notation(JavaScript 对象表示法)</p>
+</li>
+<li><p>JSON是轻量级的文本数据交换格式</p>
+</li>
+<li><p>JSON独立于语言，具有自我描述性，更易理解</p>
+  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="string">&quot;sites&quot;</span><span class="punctuation">[</span></span><br><span class="line">     <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;百度&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.baidu.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;b站&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.bilibili.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;网易&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.163.com&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>  JSON对于人来说，阅读体验很好；JSON规则清晰，容易被计算机解析，JSON已经越来越多的用在数据传递和数据表上，JSON已经逐渐替代了XML，成为了软件开发的主流数据表达形式</p>
+  <span id="more"></span></li>
+</ul>
+<h2 id="JSON语法规则"><a href="#JSON语法规则" class="headerlink" title="JSON语法规则"></a>JSON语法规则</h2><ul>
+<li>数据由键(key)值(value)描述，由逗号分隔</li>
+<li>{ }大括号代表一个完整的对象(JSON对象)，拥有多个键&#x2F;值对，其可以被javaScript直接识别</li>
+<li>[ ]中括号保存数据，多个JSON对象(用{}大括号的是JSON对象)之间使用逗号分隔，[ ]对于了一个数组，数组中保存了多个JSON对象<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210109233300548.png" alt="img"></li>
+</ul>
+<h3 id="JSON简单示例程序"><a href="#JSON简单示例程序" class="headerlink" title="JSON简单示例程序"></a>JSON简单示例程序</h3><p>首先创建新的web工程，在web根目录下，创建json文件(点击file,创建.json文件)</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON1.png" alt="JSON1"></p>
+<p>按照JSON语法创建一个员工信息表</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON2.png" alt="JSON2"></p>
+<p>JSON书写到后面会变得很长，这时候我们需要进行编码格式化，点击编辑器上工具类中得code→Reformat Code</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON3.png" alt="JSON3"></p>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JSP九大内置对象</title>
     <url>/JSP%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<h2 id="JSP九大内置对象"><a href="#JSP九大内置对象" class="headerlink" title="JSP九大内置对象"></a>JSP九大内置对象</h2><p>Java九大内置对象：request和out对象用的多点，其他的用的很少</p>
@@ -503,38 +535,6 @@
 ]]></content>
       <tags>
         <tag>JavaWeb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JSON简介与语法规则</title>
-    <url>/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</url>
-    <content><![CDATA[<h2 id="JSON简介"><a href="#JSON简介" class="headerlink" title="JSON简介"></a>JSON简介</h2><ul>
-<li><p>JavaScript Object Notation(JavaScript 对象表示法)</p>
-</li>
-<li><p>JSON是轻量级的文本数据交换格式</p>
-</li>
-<li><p>JSON独立于语言，具有自我描述性，更易理解</p>
-  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="string">&quot;sites&quot;</span><span class="punctuation">[</span></span><br><span class="line">     <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;百度&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.baidu.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;b站&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.bilibili.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;网易&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.163.com&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>  JSON对于人来说，阅读体验很好；JSON规则清晰，容易被计算机解析，JSON已经越来越多的用在数据传递和数据表上，JSON已经逐渐替代了XML，成为了软件开发的主流数据表达形式</p>
-</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="JSON语法规则"><a href="#JSON语法规则" class="headerlink" title="JSON语法规则"></a>JSON语法规则</h2><ul>
-<li>数据由键(key)值(value)描述，由逗号分隔</li>
-<li>{ }大括号代表一个完整的对象(JSON对象)，拥有多个键&#x2F;值对，其可以被javaScript直接识别</li>
-<li>[ ]中括号保存数据，多个JSON对象(用{}大括号的是JSON对象)之间使用逗号分隔，[ ]对于了一个数组，数组中保存了多个JSON对象<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210109233300548.png" alt="img"></li>
-</ul>
-<h3 id="JSON简单示例程序"><a href="#JSON简单示例程序" class="headerlink" title="JSON简单示例程序"></a>JSON简单示例程序</h3><p>首先创建新的web工程，在web根目录下，创建json文件(点击file,创建.json文件)</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON1.png" alt="JSON1"></p>
-<p>按照JSON语法创建一个员工信息表</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON2.png" alt="JSON2"></p>
-<p>JSON书写到后面会变得很长，这时候我们需要进行编码格式化，点击编辑器上工具类中得code→Reformat Code</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON3.png" alt="JSON3"></p>
-]]></content>
-      <tags>
-        <tag>JSON</tag>
       </tags>
   </entry>
   <entry>
@@ -680,6 +680,8 @@
 <p><strong>JavaScript天生就具备JSON数据的处理能力</strong></p>
 <p>在web目录下创建sample.html</p>
 <p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON%E8%AE%BF%E9%97%AEJS1.png" alt="JSON访问JS1"></p>
+<span id="more"></span>
+
 <p><strong>直接将emp.json中的内容，赋值给变量json；JavaScript可以将其作为一个数组进行解析</strong></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Insert title here<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> json=[<span class="comment">//将JSON中的内容设置为JavaScript中的数组</span></span></span><br><span class="line"><span class="language-javascript">            &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;empno&quot;</span>: <span class="string">&quot;7369&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;ename&quot;</span>: <span class="string">&quot;张三&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;job&quot;</span>: <span class="string">&quot;软件工程师&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;hiredate&quot;</span>: <span class="string">&quot;2017-05-12&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;salary&quot;</span>: <span class="number">130000</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;dname&quot;</span>: <span class="string">&quot;研发部&quot;</span></span></span><br><span class="line"><span class="language-javascript">            &#125;,</span></span><br><span class="line"><span class="language-javascript">            &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;empno&quot;</span>: <span class="string">&quot;7449&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;ename&quot;</span>: <span class="string">&quot;王五&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;job&quot;</span>: <span class="string">&quot;客户经理&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;hiredate&quot;</span>: <span class="string">&quot;2018-06-12&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;salary&quot;</span>: <span class="number">100000</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;dname&quot;</span>: <span class="string">&quot;市场部&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;customers&quot;</span>: [</span></span><br><span class="line"><span class="language-javascript">                    &#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="string">&quot;cname&quot;</span>: <span class="string">&quot;李四&quot;</span></span></span><br><span class="line"><span class="language-javascript">                    &#125;,</span></span><br><span class="line"><span class="language-javascript">                    &#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="string">&quot;cname&quot;</span>: <span class="string">&quot;黄玉峰&quot;</span></span></span><br><span class="line"><span class="language-javascript">                    &#125;,</span></span><br><span class="line"><span class="language-javascript">                    &#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="string">&quot;cname&quot;</span>: <span class="string">&quot;郭嘉&quot;</span></span></span><br><span class="line"><span class="language-javascript">                    &#125;</span></span><br><span class="line"><span class="language-javascript">                ]</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">        ];</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">//在浏览器控制台中对json内容进行输出。console是浏览器的内置对象，表示控制台</span></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">//log方法是向浏览器输出一个日志</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(json);<span class="comment">//这时候我们可以在网页控制台中查看到JSON的内容</span></span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
