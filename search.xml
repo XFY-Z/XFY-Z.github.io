@@ -234,36 +234,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JSON简介与语法规则</title>
-    <url>/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99-1/</url>
-    <content><![CDATA[<h2 id="JSON简介"><a href="#JSON简介" class="headerlink" title="JSON简介"></a>JSON简介</h2><ul>
-<li><p>JavaScript Object Notation(JavaScript 对象表示法)</p>
-</li>
-<li><p>JSON是轻量级的文本数据交换格式</p>
-</li>
-<li><p>JSON独立于语言，具有自我描述性，更易理解</p>
-  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="string">&quot;sites&quot;</span><span class="punctuation">[</span></span><br><span class="line">     <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;百度&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.baidu.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;b站&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.bilibili.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;网易&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.163.com&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>  JSON对于人来说，阅读体验很好；JSON规则清晰，容易被计算机解析，JSON已经越来越多的用在数据传递和数据表上，JSON已经逐渐替代了XML，成为了软件开发的主流数据表达形式</p>
-  <span id="more"></span></li>
-</ul>
-<h2 id="JSON语法规则"><a href="#JSON语法规则" class="headerlink" title="JSON语法规则"></a>JSON语法规则</h2><ul>
-<li>数据由键(key)值(value)描述，由逗号分隔</li>
-<li>{ }大括号代表一个完整的对象(JSON对象)，拥有多个键&#x2F;值对，其可以被javaScript直接识别</li>
-<li>[ ]中括号保存数据，多个JSON对象(用{}大括号的是JSON对象)之间使用逗号分隔，[ ]对于了一个数组，数组中保存了多个JSON对象<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210109233300548.png" alt="img"></li>
-</ul>
-<h3 id="JSON简单示例程序"><a href="#JSON简单示例程序" class="headerlink" title="JSON简单示例程序"></a>JSON简单示例程序</h3><p>首先创建新的web工程，在web根目录下，创建json文件(点击file,创建.json文件)</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON1.png" alt="JSON1"></p>
-<p>按照JSON语法创建一个员工信息表</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON2.png" alt="JSON2"></p>
-<p>JSON书写到后面会变得很长，这时候我们需要进行编码格式化，点击编辑器上工具类中得code→Reformat Code</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON3.png" alt="JSON3"></p>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Dom4j与Xpath</title>
     <url>/Dom4j%E4%B8%8EXpath/</url>
     <content><![CDATA[<h2 id="DOM文档对象模型"><a href="#DOM文档对象模型" class="headerlink" title="DOM文档对象模型"></a>DOM文档对象模型</h2><ul>
@@ -421,6 +391,38 @@
       </tags>
   </entry>
   <entry>
+    <title>JSON简介与语法规则</title>
+    <url>/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</url>
+    <content><![CDATA[<h2 id="JSON简介"><a href="#JSON简介" class="headerlink" title="JSON简介"></a>JSON简介</h2><ul>
+<li><p>JavaScript Object Notation(JavaScript 对象表示法)</p>
+</li>
+<li><p>JSON是轻量级的文本数据交换格式</p>
+</li>
+<li><p>JSON独立于语言，具有自我描述性，更易理解</p>
+  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="string">&quot;sites&quot;</span><span class="punctuation">[</span></span><br><span class="line">     <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;百度&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.baidu.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;b站&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.bilibili.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;网易&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.163.com&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>  JSON对于人来说，阅读体验很好；JSON规则清晰，容易被计算机解析，JSON已经越来越多的用在数据传递和数据表上，JSON已经逐渐替代了XML，成为了软件开发的主流数据表达形式</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="JSON语法规则"><a href="#JSON语法规则" class="headerlink" title="JSON语法规则"></a>JSON语法规则</h2><ul>
+<li>数据由键(key)值(value)描述，由逗号分隔</li>
+<li>{ }大括号代表一个完整的对象(JSON对象)，拥有多个键&#x2F;值对，其可以被javaScript直接识别</li>
+<li>[ ]中括号保存数据，多个JSON对象(用{}大括号的是JSON对象)之间使用逗号分隔，[ ]对于了一个数组，数组中保存了多个JSON对象<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210109233300548.png" alt="img"></li>
+</ul>
+<h3 id="JSON简单示例程序"><a href="#JSON简单示例程序" class="headerlink" title="JSON简单示例程序"></a>JSON简单示例程序</h3><p>首先创建新的web工程，在web根目录下，创建json文件(点击file,创建.json文件)</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON1.png" alt="JSON1"></p>
+<p>按照JSON语法创建一个员工信息表</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON2.png" alt="JSON2"></p>
+<p>JSON书写到后面会变得很长，这时候我们需要进行编码格式化，点击编辑器上工具类中得code→Reformat Code</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON3.png" alt="JSON3"></p>
+]]></content>
+      <tags>
+        <tag>JSON</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JSP九大内置对象</title>
     <url>/JSP%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<h2 id="JSP九大内置对象"><a href="#JSP九大内置对象" class="headerlink" title="JSP九大内置对象"></a>JSP九大内置对象</h2><p>Java九大内置对象：request和out对象用的多点，其他的用的很少</p>
@@ -507,7 +509,7 @@
   </entry>
   <entry>
     <title>JSON简介与语法规则</title>
-    <url>/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</url>
+    <url>/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99-1/</url>
     <content><![CDATA[<h2 id="JSON简介"><a href="#JSON简介" class="headerlink" title="JSON简介"></a>JSON简介</h2><ul>
 <li><p>JavaScript Object Notation(JavaScript 对象表示法)</p>
 </li>
@@ -517,10 +519,8 @@
   <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="string">&quot;sites&quot;</span><span class="punctuation">[</span></span><br><span class="line">     <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;百度&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.baidu.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;b站&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.bilibili.com&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	 <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;网易&quot;</span><span class="punctuation">,</span><span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;www.163.com&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>  JSON对于人来说，阅读体验很好；JSON规则清晰，容易被计算机解析，JSON已经越来越多的用在数据传递和数据表上，JSON已经逐渐替代了XML，成为了软件开发的主流数据表达形式</p>
-</li>
+  <span id="more"></span></li>
 </ul>
-<span id="more"></span>
-
 <h2 id="JSON语法规则"><a href="#JSON语法规则" class="headerlink" title="JSON语法规则"></a>JSON语法规则</h2><ul>
 <li>数据由键(key)值(value)描述，由逗号分隔</li>
 <li>{ }大括号代表一个完整的对象(JSON对象)，拥有多个键&#x2F;值对，其可以被javaScript直接识别</li>
@@ -534,7 +534,7 @@
 <p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/JSON3.png" alt="JSON3"></p>
 ]]></content>
       <tags>
-        <tag>JSON</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -674,6 +674,61 @@
       </tags>
   </entry>
   <entry>
+    <title>Servlet之cookie</title>
+    <url>/Servlet%E4%B9%8Bcookie/</url>
+    <content><![CDATA[<h2 id="浏览器Cookie"><a href="#浏览器Cookie" class="headerlink" title="浏览器Cookie"></a>浏览器Cookie</h2><ul>
+<li><strong>Cookie（曲奇饼干）是浏览器保存在本地的文本内容</strong></li>
+<li>Cookie常用于保存登录状态、用户资料等小文本</li>
+<li>Cookie具有时效性，Cookie内容会伴随请求发送给Tomcat</li>
+<li>默认没有设置cookie时效性的情况下，cookie的有效期就是为当前浏览器窗口</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="Cookie的例子"><a href="#Cookie的例子" class="headerlink" title="Cookie的例子"></a>Cookie的例子</h3><p>例如一个平常登录的一个网站，如果选择”7天内自动登录”，登录后，关闭浏览器；重新打开浏览器，会发现登录状态并没有消失</p>
+<p>底层的原理：利用Cookie技术，存放了用户的登录信息；浏览器二次访问时，浏览器会把Cookie中存放的用户登录信息提取出来，并通知服务器说之前这个用户已经登录过了，并不需要重新登录</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220423212850398.png" alt="image-20220423212850398"></p>
+<h3 id="存放Cookie的文件放在哪里"><a href="#存放Cookie的文件放在哪里" class="headerlink" title="存放Cookie的文件放在哪里"></a>存放Cookie的文件放在哪里</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210105021346629.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210105021449657.png" alt="img"></p>
+<h3 id="设置Cookie示例"><a href="#设置Cookie示例" class="headerlink" title="设置Cookie示例"></a>设置Cookie示例</h3><h4 id="向浏览器发送cookie"><a href="#向浏览器发送cookie" class="headerlink" title="向浏览器发送cookie"></a>向浏览器发送cookie</h4><p>设置Cookie，并将Cookie信息随着response(响应)发回到浏览器端；浏览器将这个Cookie信息保存到本地的文件中；之后每一次请求，request(请求对象)都会包含这个Cookie信息，一并发送到对应的地址上。<strong>所以要先设置发送到浏览器cookie值(respone)，然后的请求就带有cookie值</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginServlet&quot;, value = &quot;/cookies/login&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//cookie的核心方法，第一个参数是cookie的名称，第二个参数是在cookie中要保存的数据</span></span><br><span class="line">        <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cookie</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;admin&quot;</span>);<span class="comment">//创建cookie</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//如果想让Cookie保存在客户端浏览器（中，需要调用下面的addCookie()方法</span></span><br><span class="line">        response.addCookie(cookie);<span class="comment">//在客户端浏览器中增加名字为user值为admin的Cookie</span></span><br><span class="line">        response.getWriter().println(<span class="string">&quot;Login success&quot;</span>);<span class="comment">//页面上输出Login Success</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220424140611052.png" alt="image-20220424140611052"></p>
+<p>查看Cookie是否生效，在浏览器中F12查看</p>
+<p>可以看到图片中的**user:”admin”**这个的含义是：对于当前的浏览器来说，每次发送请求的时候，都会将user&#x3D;admin随着请求一并发送到Tomcat服务器上</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1401.png" alt="1401"></p>
+<h4 id="服务器获取cookie"><a href="#服务器获取cookie" class="headerlink" title="服务器获取cookie"></a>服务器获取cookie</h4><p>直接上代码演示</p>
+<p>服务器先向浏览器上发送cookie（response），并保存在本地，之后的每一次浏览器请求都带有这个cookie的值，所以必须先登录让浏览器端之后的请求中带有cookie值，然后服务器端才可以获取到cookie的值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginServlet&quot;, value = &quot;/cookies/login&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//cookie的核心方法，第一个参数是cookie的名称，第二个参数是在cookie中要保存的数据</span></span><br><span class="line">        <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cookie</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;admin&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果想让Cookie保存在客户端浏览器中，需要调用下面的addCookie()方法</span></span><br><span class="line">        response.addCookie(cookie);<span class="comment">//在客户端浏览器中增加名字为user值为admin的Cookie</span></span><br><span class="line">        response.getWriter().println(<span class="string">&quot;Login success&quot;</span>);<span class="comment">//页面上输出Login Success</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginIndexServlet&quot;, value = &quot;/cookies/index&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginIndexServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//getCookies()方法，获取请求中的Cookie信息，集合的形式</span></span><br><span class="line">        Cookie[] cs =request.getCookies();</span><br><span class="line">        String user=<span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">for</span> (Cookie c:cs)&#123;</span><br><span class="line">            <span class="comment">//c.getName():获取Cookie名称；c.getValue:获取Cookie的值</span></span><br><span class="line">            System.out.println(c.getName()+<span class="string">&quot;:&quot;</span>+c.getValue());</span><br><span class="line">            <span class="keyword">if</span> (c.getName().equals(<span class="string">&quot;user&quot;</span>))&#123;<span class="comment">//判断cookie的user的值是否为user，如果是，则获取到user的value值</span></span><br><span class="line">                user=c.getValue();</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (user==<span class="literal">null</span>)&#123;<span class="comment">//如果获取到的cookie的</span></span><br><span class="line">            response.getWriter().println(<span class="string">&quot;user not login&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1845.png" alt="1845"></p>
+<h3 id="Cookie的时效性"><a href="#Cookie的时效性" class="headerlink" title="Cookie的时效性"></a>Cookie的时效性</h3><p><strong>当Cookie没有设置有效期时，Cookie的有效期就是当前的浏览器窗口：</strong></p>
+<p>在上面的例子中，我们先访问了LoginServlet这个Servlet，我们是在这个Servlet中设置增加的Cookie，然后在没有关闭浏览器的情况下，又访问了IndexServlet这个Servlet，在这个Servlet中我们访问了Cookie并获取到Cookie的值</p>
+<p>其实是因为我们没有关闭浏览器，所以在LoginServlet设置Cookie信息会有效，IndexServlet能支持访问到Cookie的信息，但一旦，我们关闭了浏览器，重新打开浏览器，直接访问IndexServlet时，会报错，Cookie失效了</p>
+<p><img src="D:\Documents\1915.png" alt="1915"></p>
+<p>但是这里的报错是空指针异常，就是没有cookie值，cookie数组是空的（因为所有的Cookie信息都失效了），会引发空指针异常</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1921.png" alt="1921"></p>
+<p>可以将上面的程序更改一下，增强健壮性</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1934.png" alt="1934"></p>
+<p>没有访问LoginServlet的情况下，访问IndexServlet，就会输出user not login</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425193558361.png" alt="image-20220425193558361"></p>
+<h4 id="设置Cookie时效性"><a href="#设置Cookie时效性" class="headerlink" title="设置Cookie时效性"></a>设置Cookie时效性</h4><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/2032.png" alt="2032"></p>
+<p>先访问LoginServlet，先让浏览器将cookie信息保存，让后面request请求中带有cookie信息</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425200041766.png" alt="image-20220425200041766"></p>
+<p>关闭浏览器：然后重新启动Tomcat服务，访问IndexServlet：结果是发现Cookie并没有因为关闭浏览器而失效，因为我们把其时效性设置为7天</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425202552895.png" alt="image-20220425202552895"></p>
+<hr>
+<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><ol>
+<li>cookie（大概率）也是浏览器自动创建的，浏览器会在本地创建一个存放所有Cookie对象的列表：然后我们也可以通过<br> Cookie cookie  &#x3D; new Cookie(“user”,”admin”); 自己创建一个cookie，然后通过response.addCookie(cookie); 响应返回浏览器，然后浏览器会把这个返回cookie添加到自己维护的cookie列表中; 然后通过Cookie[] cs &#x3D; request.getCookies(); 获取所有cookie列表</li>
+<li>换句话说，Cookie是浏览器创建和维护的；这是个特殊的Java对象，这些对象有很多属性和方法，我们可以按需调用</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>JavaWeb</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java多态</title>
     <url>/Java%E5%A4%9A%E6%80%81/</url>
     <content><![CDATA[<h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><h2 id="多态的概念"><a href="#多态的概念" class="headerlink" title="多态的概念"></a>多态的概念</h2><ul>
@@ -780,58 +835,497 @@
       </tags>
   </entry>
   <entry>
-    <title>Servlet之cookie</title>
-    <url>/Servlet%E4%B9%8Bcookie/</url>
-    <content><![CDATA[<h2 id="浏览器Cookie"><a href="#浏览器Cookie" class="headerlink" title="浏览器Cookie"></a>浏览器Cookie</h2><ul>
-<li><strong>Cookie（曲奇饼干）是浏览器保存在本地的文本内容</strong></li>
-<li>Cookie常用于保存登录状态、用户资料等小文本</li>
-<li>Cookie具有时效性，Cookie内容会伴随请求发送给Tomcat</li>
-<li>默认没有设置cookie时效性的情况下，cookie的有效期就是为当前浏览器窗口</li>
+    <title>XML之DTD文件与Schema文件</title>
+    <url>/XML%E4%B9%8BDTD%E4%B8%8ESchema%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="XML语义约束"><a href="#XML语义约束" class="headerlink" title="XML语义约束"></a>XML语义约束</h2><ul>
+<li>XML文档结构正确，但可能不是有效的</li>
+<li>例如：员工档案XML中绝对不允许出现”植物品种”标签。XML语义约束就是用于规定XML文档中允许出现哪些元素</li>
+<li>XML语义约束有两种定义方式：DTD与XML Schema</li>
 </ul>
 <span id="more"></span>
 
-<h3 id="Cookie的例子"><a href="#Cookie的例子" class="headerlink" title="Cookie的例子"></a>Cookie的例子</h3><p>例如一个平常登录的一个网站，如果选择”7天内自动登录”，登录后，关闭浏览器；重新打开浏览器，会发现登录状态并没有消失</p>
-<p>底层的原理：利用Cookie技术，存放了用户的登录信息；浏览器二次访问时，浏览器会把Cookie中存放的用户登录信息提取出来，并通知服务器说之前这个用户已经登录过了，并不需要重新登录</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220423212850398.png" alt="image-20220423212850398"></p>
-<h3 id="存放Cookie的文件放在哪里"><a href="#存放Cookie的文件放在哪里" class="headerlink" title="存放Cookie的文件放在哪里"></a>存放Cookie的文件放在哪里</h3><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210105021346629.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210105021449657.png" alt="img"></p>
-<h3 id="设置Cookie示例"><a href="#设置Cookie示例" class="headerlink" title="设置Cookie示例"></a>设置Cookie示例</h3><h4 id="向浏览器发送cookie"><a href="#向浏览器发送cookie" class="headerlink" title="向浏览器发送cookie"></a>向浏览器发送cookie</h4><p>设置Cookie，并将Cookie信息随着response(响应)发回到浏览器端；浏览器将这个Cookie信息保存到本地的文件中；之后每一次请求，request(请求对象)都会包含这个Cookie信息，一并发送到对应的地址上。<strong>所以要先设置发送到浏览器cookie值(respone)，然后的请求就带有cookie值</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginServlet&quot;, value = &quot;/cookies/login&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//cookie的核心方法，第一个参数是cookie的名称，第二个参数是在cookie中要保存的数据</span></span><br><span class="line">        <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cookie</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;admin&quot;</span>);<span class="comment">//创建cookie</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//如果想让Cookie保存在客户端浏览器（中，需要调用下面的addCookie()方法</span></span><br><span class="line">        response.addCookie(cookie);<span class="comment">//在客户端浏览器中增加名字为user值为admin的Cookie</span></span><br><span class="line">        response.getWriter().println(<span class="string">&quot;Login success&quot;</span>);<span class="comment">//页面上输出Login Success</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Doucument-Type-Defintion"><a href="#Doucument-Type-Defintion" class="headerlink" title="Doucument Type Defintion"></a>Doucument Type Defintion</h2><ul>
+<li><p>DTD(Document Type Definition ,文档类型定义)是一种简单易用的语义约束方式</p>
+</li>
+<li><p>DTD文件扩展名为.dtd</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hr.dtd</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salaey,department)&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot;&quot;&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;</span><br><span class="line">…</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="DTD定义节点"><a href="#DTD定义节点" class="headerlink" title="DTD定义节点"></a>DTD定义节点</h3><ul>
+<li><p>利用DTD中的&lt;!ELEMENT&gt;标签，我们可以定义XML文档中允许出现的节点及数量，以hr.xml为例：</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--定义hr(主节点)下只允许出现1个employee子节点--&gt;</span><br><span class="line">hr.dtd</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salaey,department)&gt;&lt;!--employee节点下必须包含以下四个节点，且按顺序出现--&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot;&quot;&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;&lt;!--定义name标签体只能是文本，#PCDATA代表文本元素--&gt;</span><br><span class="line">…</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如某字节点需要多次重复出现，则需要在子节点后增加相应的描述</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--hr节点下最少出现1个employee子节点--&gt;</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!--hr节点下可出现0..n个employee子节点--&gt;</span><br><span class="line">&lt;!ELEMENT hr(employee*)&gt;</span><br><span class="line">&lt;!--hr--&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="XML引用DTD文件"><a href="#XML引用DTD文件" class="headerlink" title="XML引用DTD文件"></a>XML引用DTD文件</h3><ul>
+<li><p>在XML中使用&lt;!DOCTYPE&gt;标签来引用DTD文件</p>
+  <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">书写格式：</span><br><span class="line"><span class="meta">&lt;!DOCTYPE 根节点 <span class="keyword">SYSTEM</span> <span class="string">&quot;dtd文件路径&quot;</span>&gt;</span></span><br><span class="line">示例：</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">hr</span> <span class="keyword">SYSTEM</span> <span class="string">&quot;hr.dtd&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建DTD文件</p>
+  <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">hr</span> <span class="keyword">SYSTEM</span> <span class="string">&quot;hr.dtd&quot;</span>&gt;</span><span class="comment">&lt;!--XML文件引用DTD文件--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--人力资源管理系统--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3309&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>31<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>会计部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B103<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3310&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>李四<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>23<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>工程部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B104<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hr</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220424140611052.png" alt="image-20220424140611052"></p>
-<p>查看Cookie是否生效，在浏览器中F12查看</p>
-<p>可以看到图片中的**user:”admin”**这个的含义是：对于当前的浏览器来说，每次发送请求的时候，都会将user&#x3D;admin随着请求一并发送到Tomcat服务器上</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1401.png" alt="1401"></p>
-<h4 id="服务器获取cookie"><a href="#服务器获取cookie" class="headerlink" title="服务器获取cookie"></a>服务器获取cookie</h4><p>直接上代码演示</p>
-<p>服务器先向浏览器上发送cookie（response），并保存在本地，之后的每一次浏览器请求都带有这个cookie的值，所以必须先登录让浏览器端之后的请求中带有cookie值，然后服务器端才可以获取到cookie的值</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginServlet&quot;, value = &quot;/cookies/login&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//cookie的核心方法，第一个参数是cookie的名称，第二个参数是在cookie中要保存的数据</span></span><br><span class="line">        <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cookie</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;admin&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果想让Cookie保存在客户端浏览器中，需要调用下面的addCookie()方法</span></span><br><span class="line">        response.addCookie(cookie);<span class="comment">//在客户端浏览器中增加名字为user值为admin的Cookie</span></span><br><span class="line">        response.getWriter().println(<span class="string">&quot;Login success&quot;</span>);<span class="comment">//页面上输出Login Success</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;!--dtd文件本质上也是xml文件--&gt;</span><br><span class="line">&lt;!ELEMENT hr (employee+)&gt;&lt;!--可以拥有多个employee元素--&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salary,department)&gt;&lt;!--employee主元素下拥有这四个子元素--&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot; &quot;&gt;&lt;!--定义employee元素中的属性no--&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;&lt;!--定义name子元素为纯文本--&gt;</span><br><span class="line">&lt;!ELEMENT age (#PCDATA)&gt;</span><br><span class="line">&lt;!ELEMENT salary (#PCDATA)&gt;</span><br><span class="line">&lt;!ELEMENT department (dname,address)&gt;&lt;!--定义department元素下拥有两个子元素--&gt;</span><br><span class="line">&lt;!ELEMENT dname (#PCDATA)&gt;&lt;!--定义dname子元素为纯文本--&gt;</span><br><span class="line">&lt;!ELEMENT address (#PCDATA)&gt;&lt;!--定义address子元素为纯文本--&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="XML-Schema"><a href="#XML-Schema" class="headerlink" title="XML Schema"></a>XML Schema</h2><h3 id="XML-Schema的概述"><a href="#XML-Schema的概述" class="headerlink" title="XML Schema的概述"></a>XML Schema的概述</h3><ul>
+<li>XML Schema比DTD更为复杂，提供了更多的功能</li>
+<li>XML Schema提供了数据类型、格式限定、数据范围等特性XMLX</li>
+<li>XML Schema是W3C标准</li>
+</ul>
+<h3 id="XML-Schema文件的具体例子"><a href="#XML-Schema文件的具体例子" class="headerlink" title="XML Schema文件的具体例子"></a>XML Schema文件的具体例子</h3><p>直接上代码：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="comment">&lt;!--人力资源管理系统--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--调用hr-scheam.xsd文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>  <span class="attr">xsi:noNamespaceSchemaLocation</span>=<span class="string">&quot;hr-schema.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3309&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>19<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>会计部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B103<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3310&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>李四<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>23<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>工程部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B104<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hr</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.cookie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;LoginIndexServlet&quot;, value = &quot;/cookies/index&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginIndexServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//getCookies()方法，获取请求中的Cookie信息，集合的形式</span></span><br><span class="line">        Cookie[] cs =request.getCookies();</span><br><span class="line">        String user=<span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">for</span> (Cookie c:cs)&#123;</span><br><span class="line">            <span class="comment">//c.getName():获取Cookie名称；c.getValue:获取Cookie的值</span></span><br><span class="line">            System.out.println(c.getName()+<span class="string">&quot;:&quot;</span>+c.getValue());</span><br><span class="line">            <span class="keyword">if</span> (c.getName().equals(<span class="string">&quot;user&quot;</span>))&#123;<span class="comment">//判断cookie的user的值是否为user，如果是，则获取到user的value值</span></span><br><span class="line">                user=c.getValue();</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (user==<span class="literal">null</span>)&#123;<span class="comment">//如果获取到的cookie的</span></span><br><span class="line">            response.getWriter().println(<span class="string">&quot;user not login&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight xsd"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">xs:schema</span> <span class="attr">xmlns:xs</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;hr&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--complexType标签含义是复杂节点，包含子节点时必须使用这个标签--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--sequence标签包含是子节点必须严格书写，--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;employee&quot;</span>  <span class="attr">maxOccurs</span>=<span class="string">&quot;10&quot;</span>&gt;</span><span class="comment">&lt;!--定义employee节点出现的次数--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span><span class="comment">&lt;!--说明前后顺序--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span><span class="comment">&lt;!--代表的是name子元素是字符串类型，且不能拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;age&quot;</span>&gt;</span></span><br><span class="line">                                <span class="comment">&lt;!--设置age属性的简单类型约束--&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">xs:simpleType</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">&quot;xs:integer&quot;</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:minInclusive</span> <span class="attr">value</span>=<span class="string">&quot;18&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:minInclusive</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:maxInclusive</span> <span class="attr">value</span>=<span class="string">&quot;60&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:maxInclusive</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--代表的是salary只允许输入整型，不能拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;salary&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:integer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--代表的是department，拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;department&quot;</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span><span class="comment">&lt;!--说明含有子节点--&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span><span class="comment">&lt;!--说明前后顺序--&gt;</span></span><br><span class="line">                                        <span class="comment">&lt;!--代表的是：department节点下的两个子节点，且不能含有其他子节点--&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;dname&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;address&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--定义employee的no属性，必须是string类型，required表示的是employee下必须存在的--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">&quot;no&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span> <span class="attr">use</span>=<span class="string">&quot;required&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">xs:attribute</span>&gt;</span><span class="comment">&lt;!--定义节点中的属性，名字与数据类型--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">xs:schema</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1845.png" alt="1845"></p>
-<h3 id="Cookie的时效性"><a href="#Cookie的时效性" class="headerlink" title="Cookie的时效性"></a>Cookie的时效性</h3><p><strong>当Cookie没有设置有效期时，Cookie的有效期就是当前的浏览器窗口：</strong></p>
-<p>在上面的例子中，我们先访问了LoginServlet这个Servlet，我们是在这个Servlet中设置增加的Cookie，然后在没有关闭浏览器的情况下，又访问了IndexServlet这个Servlet，在这个Servlet中我们访问了Cookie并获取到Cookie的值</p>
-<p>其实是因为我们没有关闭浏览器，所以在LoginServlet设置Cookie信息会有效，IndexServlet能支持访问到Cookie的信息，但一旦，我们关闭了浏览器，重新打开浏览器，直接访问IndexServlet时，会报错，Cookie失效了</p>
-<p><img src="D:\Documents\1915.png" alt="1915"></p>
-<p>但是这里的报错是空指针异常，就是没有cookie值，cookie数组是空的（因为所有的Cookie信息都失效了），会引发空指针异常</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1921.png" alt="1921"></p>
-<p>可以将上面的程序更改一下，增强健壮性</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1934.png" alt="1934"></p>
-<p>没有访问LoginServlet的情况下，访问IndexServlet，就会输出user not login</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425193558361.png" alt="image-20220425193558361"></p>
-<h4 id="设置Cookie时效性"><a href="#设置Cookie时效性" class="headerlink" title="设置Cookie时效性"></a>设置Cookie时效性</h4><p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/2032.png" alt="2032"></p>
-<p>先访问LoginServlet，先让浏览器将cookie信息保存，让后面request请求中带有cookie信息</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425200041766.png" alt="image-20220425200041766"></p>
-<p>关闭浏览器：然后重新启动Tomcat服务，访问IndexServlet：结果是发现Cookie并没有因为关闭浏览器而失效，因为我们把其时效性设置为7天</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220425202552895.png" alt="image-20220425202552895"></p>
-<hr>
-<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><ol>
-<li>cookie（大概率）也是浏览器自动创建的，浏览器会在本地创建一个存放所有Cookie对象的列表：然后我们也可以通过<br> Cookie cookie  &#x3D; new Cookie(“user”,”admin”); 自己创建一个cookie，然后通过response.addCookie(cookie); 响应返回浏览器，然后浏览器会把这个返回cookie添加到自己维护的cookie列表中; 然后通过Cookie[] cs &#x3D; request.getCookies(); 获取所有cookie列表</li>
-<li>换句话说，Cookie是浏览器创建和维护的；这是个特殊的Java对象，这些对象有很多属性和方法，我们可以按需调用</li>
-</ol>
+]]></content>
+      <tags>
+        <tag>XML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Servlet之请求与响应</title>
+    <url>/Servlet%E4%B9%8B%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/</url>
+    <content><![CDATA[<h2 id="HTTP请求的结构"><a href="#HTTP请求的结构" class="headerlink" title="HTTP请求的结构"></a>HTTP请求的结构</h2><ul>
+<li><p>HTTP请求包含三部分：请求行、请求头、请求体<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421160256593.png" alt="image-20220421160256593"></p>
+  <span id="more"></span>
+</li>
+<li><p>请求行：说明请求方法，请求的Url，HTTP的版本信息</p>
+</li>
+<li><p>请求头：包含了很多辅助性的信息，可以为程序处理提供额外的数据支持</p>
+<table>
+<thead>
+<tr>
+<th>请求头中的内容</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Accept-Language:zh-CN</td>
+<td>当前浏览器所设置的语言</td>
+</tr>
+<tr>
+<td>User-Agent:Mozilla&#x2F;4.0(compatible;MSIE 8.0;Windows NT 6.1)</td>
+<td>说明浏览器和操作系统的环境</td>
+</tr>
+<tr>
+<td>Content-Length:112</td>
+<td>代表内容的长度</td>
+</tr>
+<tr>
+<td>Cache-Control:no-cache</td>
+<td>缓存的设置</td>
+</tr>
+<tr>
+<td>Cookie:…………</td>
+<td>Cookie的设置</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>请求体：参数：get没有请求体，<strong>需要注意的是get请求，把参数放在URL中，其实是没有请求体的；只有Post请求才有请求体</strong></p>
+</li>
+</ul>
+<h3 id="HTTP的Get请求"><a href="#HTTP的Get请求" class="headerlink" title="HTTP的Get请求"></a>HTTP的Get请求</h3><p>在Tomcat中编写get请求的简单案例</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Servlet文件</span></span><br><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;RequestServlet&quot;, value = &quot;/RequestServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is get method&quot;</span>);<span class="comment">//得到Get请求后，响应后，在页面输出</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is post method&quot;</span>);<span class="comment">//得到Post请求后，响应后，在页面输出</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--html文件--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;RequestServlet&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span><span class="comment">&lt;!--链接RequestServlet文件，发送get请求--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Query String是Get传参的标志</strong></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421185615265.png" alt="image-20220421185615265"></p>
+<h3 id="HTTP的Post请求"><a href="#HTTP的Post请求" class="headerlink" title="HTTP的Post请求"></a>HTTP的Post请求</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Servlet文件</span></span><br><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;RequestServlet&quot;, value = &quot;/RequestServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is get method&quot;</span>);<span class="comment">//得到Get请求后，响应后，在页面输出</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is post method&quot;</span>);<span class="comment">//得到Post请求后，响应后，在页面输出</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--html文件--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;RequestServlet&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span><span class="comment">&lt;!--链接RequestServlet文件，发送get请求--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Form Data是Post请求的标志</strong></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421185950250.png" alt="image-20220421185950250"></p>
+<h2 id="利用请求头开发多端应用"><a href="#利用请求头开发多端应用" class="headerlink" title="利用请求头开发多端应用"></a>利用请求头开发多端应用</h2><p>情况展示：</p>
+<p>平时，同一个网站，在电脑上和手机上显示效果完全不同，这背后的本质就是程序通过读取请求头（<strong>User-Agent</strong>）来判断是手机还是电脑</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104143546137.png" alt="img"></p>
+<p>发现不同版本上的显示效果不同，然后请求头中的User-Agent也不同</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104143833973.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104143934120.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104144052992.png" alt="img"></p>
+<h3 id="获取当前请求头中的User-Agent信息"><a href="#获取当前请求头中的User-Agent信息" class="headerlink" title="获取当前请求头中的User-Agent信息"></a>获取当前请求头中的User-Agent信息</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;UserAgeServlet&quot;, value = &quot;/UserAgeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserAgeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">userAgent</span> <span class="operator">=</span>request.getHeader(<span class="string">&quot;User-Agent&quot;</span>);<span class="comment">//获取请求头中的“User-Agent”的值</span></span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);<span class="comment">//设置响应，让其支持中文</span></span><br><span class="line">        response.getWriter().println(userAgent);<span class="comment">//响应输出页面的值</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104145252480.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104145428246.png" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210104145527288.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzdWNzZ29hdA==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<h3 id="根据User-Agent信息，判断是PC端还是移动端"><a href="#根据User-Agent信息，判断是PC端还是移动端" class="headerlink" title="根据User-Agent信息，判断是PC端还是移动端"></a>根据User-Agent信息，判断是PC端还是移动端</h3><p>判断出是PC端还是移动端，方便后续区别处理</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;UserAgeServlet&quot;, value = &quot;/UserAgeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserAgeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">userAgent</span> <span class="operator">=</span>request.getHeader(<span class="string">&quot;User-Agent&quot;</span>);<span class="comment">//获取请求头中的“User-Agent”的值</span></span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);<span class="comment">//设置响应，让其支持中文</span></span><br><span class="line">        response.getWriter().println(userAgent);<span class="comment">//响应输出页面的值，这里的值为userAgent的值</span></span><br><span class="line">        String output=<span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (userAgent.indexOf(<span class="string">&quot;Windows NT&quot;</span>)!=-<span class="number">1</span>)&#123;<span class="comment">//indexof查找字符串，找到字符串返回的是大于0的数字，所以当不等于-1的时候一定是找到了这个值</span></span><br><span class="line">            output=<span class="string">&quot;&lt;h1&gt;这是PC端首页&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (userAgent.indexOf(<span class="string">&quot;iPhone&quot;</span>)!=-<span class="number">1</span> || userAgent.indexOf(<span class="string">&quot;Android&quot;</span>)!=-<span class="number">1</span>)&#123;</span><br><span class="line">            output=<span class="string">&quot;&lt;h1&gt;这是移动端首页&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        response.getWriter().println(output);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20210104150519944.png" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210104150501475.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzdWNzZ29hdA==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<h2 id="服务器的响应的结构"><a href="#服务器的响应的结构" class="headerlink" title="服务器的响应的结构"></a>服务器的响应的结构</h2><p><strong>请求是浏览器向服务器发送的请求，而响应则是服务器返回给浏览器的显示结果</strong></p>
+<ul>
+<li><p>HTTP响应包含三部分：响应行、响应头、响应体<br>  <img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220421204608353.png" alt="image-20220421204608353"></p>
+</li>
+<li><p>Content-Type：text&#x2F;html表示，把响应体中内容当成text&#x2F;html去解释；浏览器会按照text&#x2F;html的方式去解释响应体中的内容</p>
+</li>
+<li><p>HTTP常见状态码<br>  如url网址输错的时候，会报404；如果Java的代码出了错误，会报500等；浏览器可以根据响应返回状态码，来知道服务器是处理成功还是出现了问题</p>
+<p>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421210137173.png" alt="image-20220421210137173"></p>
+</li>
+<li><p>网页中的响应内容与响应体<br>  <img src="https://img-blog.csdnimg.cn/20210104222445998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzdWNzZ29hdA==,size_16,color_FFFFFF,t_70" alt="img"><br>  <img src="https://img-blog.csdnimg.cn/20210104222555193.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzdWNzZ29hdA==,size_16,color_FFFFFF,t_70" alt="img"><br>  <img src="https://img-blog.csdnimg.cn/20210104222636418.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzdWNzZ29hdA==,size_16,color_FFFFFF,t_70" alt="img"></p>
+</li>
+<li><p>常见状态码演示<br>  404：例如这里我少输出了文件名字<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421212129141.png" alt="image-20220421212129141"></p>
+<p>  500：服务器的内部错误，去寻找java源代码中的错误<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421213310953.png" alt="image-20220421213310953"></p>
+</li>
+</ul>
+<h2 id="ContentType的作用"><a href="#ContentType的作用" class="headerlink" title="ContentType的作用"></a>ContentType的作用</h2><ul>
+<li>ContentType决定浏览器采用何种方式对响应体进行处理<br>  <img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220421214309570.png" alt="image-20220421214309570"></li>
+<li>浏览器可以理解成是一个解释器（解释器响应体中的内容，并体现在浏览器页面上）；Content-Type属性值，就是浏览器对响应体内容采取何种方式；其默认是text&#x2F;html</li>
+</ul>
+<h3 id="ContentType的示例"><a href="#ContentType的示例" class="headerlink" title="ContentType的示例"></a>ContentType的示例</h3><p><strong>Content-Type设置为”text&#x2F;html”</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;ContentTypeServlet&quot;, value = &quot;/ContentTypeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ContentTypeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        String output=<span class="string">&quot;&lt;h1&gt;&lt;a href=&#x27;http://www.baidu.com&#x27;&gt;&lt;span&gt;百度&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);<span class="comment">//设置ContentType的值为text/html</span></span><br><span class="line">        response.getWriter().println(output);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104225755728.png" alt="img"></p>
+<p><strong>Content-Type设置为”text&#x2F;plain”</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;ContentTypeServlet&quot;, value = &quot;/ContentTypeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ContentTypeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        String output=<span class="string">&quot;&lt;h1&gt;&lt;a href=&#x27;http://www.baidu.com&#x27;&gt;&lt;span&gt;百度&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/plain;charset=utf-8&quot;</span>);<span class="comment">//设置ContentType的值为text/plain</span></span><br><span class="line">        response.getWriter().println(output);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104225933866.png" alt="img"></p>
+<p><strong>Content-Type设置为”text&#x2F;xml”</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;ContentTypeServlet&quot;, value = &quot;/ContentTypeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ContentTypeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        String output=<span class="string">&quot;&lt;h1&gt;&lt;a href=&#x27;http://www.baidu.com&#x27;&gt;&lt;span&gt;百度&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/xml;charset=utf-8&quot;</span>);<span class="comment">//设置ContentType的值为text/xml</span></span><br><span class="line">        response.getWriter().println(output);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104230402441.png" alt="img"></p>
+<p><strong>Content-Type设置为”application&#x2F;x-msdownload”</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;ContentTypeServlet&quot;, value = &quot;/ContentTypeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ContentTypeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        String output=<span class="string">&quot;&lt;h1&gt;&lt;a href=&#x27;http://www.baidu.com&#x27;&gt;&lt;span&gt;百度&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/xml;charset=utf-8&quot;</span>);<span class="comment">//设置ContentType的值为application/x-msdownload</span></span><br><span class="line">        response.getWriter().println(output);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104230702761.png" alt="img"></p>
+<h2 id="请求转发与重定向"><a href="#请求转发与重定向" class="headerlink" title="请求转发与重定向"></a>请求转发与重定向</h2><p>以前接触的都是一个Servlet内处理；而实际情况中，是需要多个Servlet之间跳转的，而Servlet之间的跳转方式为：请求转发和响应重定向</p>
+<ul>
+<li>多个Servlet(JSP)之间跳转有两种方式</li>
+<li>request.getRequestDispatcher().forward() - 请求转发</li>
+<li>response.sendRedirect() - 响应重定向</li>
+</ul>
+<h3 id="Servlet请求转发的原理"><a href="#Servlet请求转发的原理" class="headerlink" title="Servlet请求转发的原理"></a>Servlet请求转发的原理</h3><ul>
+<li>请求转发是服务器内部跳转，只会产生一次请求</li>
+<li>请求转发的语句是：request.getRequestDispatcher().forward<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220423220425705.png" alt="image-20220423220425705"></li>
+</ul>
+<h3 id="Servlet请求转发案例"><a href="#Servlet请求转发案例" class="headerlink" title="Servlet请求转发案例"></a>Servlet请求转发案例</h3><p>案例分析：例如在登录这个功能上，在登录界面，输入用户名和密码后并点击登录后；其会跳转到登录成功后的那个界面。这个案例主要是为了说明在实际开发中，Servlet是需要在不同页面上跳转显示的</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/XXKF3TPJFOUMAZ7%7EPIV%257B837.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/T5%60LKD2%7DL4~K8E368IBBK9Y.png" alt="img"></p>
+<p>请求转发的设置</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/123.png" alt="img"></p>
+<p>请求转发的效果</p>
+<p>可以看到地址栏的url没有改变</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104234842566.png" alt="img"></p>
+<p>分析：输入<a href="http://localhost:8080/servlet_advanced/direct/check%E5%90%8E%EF%BC%8C%E4%BC%9A%E5%85%88%E8%BF%9B%E5%85%A5CheckLoginServlet%E8%BF%99%E4%B8%AAServlet%EF%BC%8C%E5%B9%B6%E6%89%93%E5%8D%B0&quot;%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F&quot;">http://localhost:8080/servlet_advanced/direct/check后，会先进入CheckLoginServlet这个Servlet，并打印&quot;用户登录成功&quot;</a></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220423172143698.png" alt="image-20220423172143698"></p>
+<p>然后请求转发到IndexServlet的这个Servlet上，并触发了IndexServlet中的输出语句：This is index page！</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220423185815451.png" alt="image-20220423185815451"></p>
+<h3 id="Servlet响应重定向的原理"><a href="#Servlet响应重定向的原理" class="headerlink" title="Servlet响应重定向的原理"></a>Servlet响应重定向的原理</h3><ul>
+<li>重定向则是浏览器端跳转，会产生两次请求</li>
+<li>响应重定向语句是：response.sendRedirect()<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1933.png" alt="1933"></li>
+</ul>
+<h2 id="设置请求自定义属性"><a href="#设置请求自定义属性" class="headerlink" title="设置请求自定义属性"></a>设置请求自定义属性</h2><ul>
+<li>请求允许创建自定义属性</li>
+<li>设置请求属性：request.setAttribute(属性名，属性值)</li>
+<li>获取请求属性：Object attr &#x3D; request.getAttribute(属性名)</li>
+</ul>
+<h3 id="请求转发的情况下，获取自定义属性示例"><a href="#请求转发的情况下，获取自定义属性示例" class="headerlink" title="请求转发的情况下，获取自定义属性示例"></a>请求转发的情况下，获取自定义属性示例</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.direction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;CheckLoginServlet&quot;, value = &quot;/direct/check&quot;)</span><span class="comment">//文件名CheckLoginServlet，路径/direct/check</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CheckLoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line">        request.setAttribute(<span class="string">&quot;username&quot;</span>,<span class="string">&quot;admin&quot;</span>);<span class="comment">//请求转发的情况下设置属性名和属性值</span></span><br><span class="line">        <span class="comment">//request.getRequestDispatcher()方法相当于是一个请求分发器</span></span><br><span class="line">        <span class="comment">//实现了请求转发的功能,/direct/check会跳转到/direct/index下</span></span><br><span class="line">        request.getRequestDispatcher(<span class="string">&quot;/direct/index&quot;</span>).forward(request,response);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.direction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;IndexServlet&quot;, value = &quot;/direct/index&quot;)</span><span class="comment">//文件名IndexServlet，路径/direct/index</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">IndexServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is index page!&quot;</span>+name);</span><br><span class="line">        String username= (String) request.getAttribute(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/2014.png" alt="img"></p>
+<h3 id="响应重定向的情况下，获取自定义属性示例"><a href="#响应重定向的情况下，获取自定义属性示例" class="headerlink" title="响应重定向的情况下，获取自定义属性示例"></a>响应重定向的情况下，获取自定义属性示例</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.direction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;CheckLoginServlet&quot;, value = &quot;/direct/check&quot;)</span><span class="comment">//文件名CheckLoginServlet，路径/direct/check</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CheckLoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line">        request.setAttribute(<span class="string">&quot;username&quot;</span>,<span class="string">&quot;admin&quot;</span>);<span class="comment">//请求转发的情况下设置属性名和属性值</span></span><br><span class="line">	    response.sendRedirect(<span class="string">&quot;/servlet/direct/index&quot;</span>);<span class="comment">//响应重定向需要增加contextPath(即上下文路径)</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.direction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;IndexServlet&quot;, value = &quot;/direct/index&quot;)</span><span class="comment">//文件名IndexServlet，路径/direct/index</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">IndexServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is index page!&quot;</span>+name);</span><br><span class="line">        String username= (String) request.getAttribute(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/2025.png" alt="img"></p>
 ]]></content>
       <tags>
         <tag>JavaWeb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式</title>
+    <url>/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="什么是正则表达式"><a href="#什么是正则表达式" class="headerlink" title="什么是正则表达式"></a>什么是正则表达式</h2><ul>
+<li>正则表达式是检查、匹配字符串的表达式</li>
+<li>正则表达式是描述规则，主流语言都有良好的支持</li>
+<li>字符串校验，查找与替换是正则表达式主要使用场景</li>
+</ul>
+<p>注：正则表达式是检查字符串的规则，比如是不是字母开头，长度是否超过八位，是否包括大写字母等等……可以采用传统的Java代码(或JavaScript代码)，来进行挨个判断处理，但会很低效，为了解决这类问题，正则表达式是一个很好的工具，Java提供了对正则表达式这个工具的支持</p>
+<span id="more"></span>
+
+<h3 id="正则表达式的案例"><a href="#正则表达式的案例" class="headerlink" title="正则表达式的案例"></a>正则表达式的案例</h3><ul>
+<li>检查输入的身份证号码是否合法（15位，18位）</li>
+<li>示例：13010220200328091x</li>
+<li>正则表达式(^\d{15}$)|(^\d{18}$)|(^\d{17}$)|(^\d{X}$)</li>
+</ul>
+<h2 id="正则表达式之字符范围匹配"><a href="#正则表达式之字符范围匹配" class="headerlink" title="正则表达式之字符范围匹配"></a>正则表达式之字符范围匹配</h2><table>
+<thead>
+<tr>
+<th>正则表达式</th>
+<th>说明</th>
+<th>正确</th>
+<th>错误</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>精准匹配单个字符</td>
+<td>A</td>
+<td>a</td>
+</tr>
+<tr>
+<td>x|y</td>
+<td>允许出现的2个字符</td>
+<td>y</td>
+<td>n</td>
+</tr>
+<tr>
+<td>[xyz]</td>
+<td>字符集合，允许出现集合内任意单个字符</td>
+<td>z</td>
+<td>c</td>
+</tr>
+<tr>
+<td>[a-z],[A-Z],[0-9]</td>
+<td>字符范围</td>
+<td>a,D,8</td>
+<td>A,a,A</td>
+</tr>
+<tr>
+<td>[^xyz],[^0-9</td>
+<td>集合内字符不允许出现</td>
+<td>0,A</td>
+<td>y,8</td>
+</tr>
+</tbody></table>
+<p>注：</p>
+<p>(1)正则表达式规定了匹配条件；</p>
+<p>(2)会根据正则表达式定义的匹配条件，逐个字符的检验原字符串的字符，符合匹配条件的字符就匹配出来，不符合匹配条件的字符就匹配不出来；</p>
+<p>(3)<a href="https://tool.oschina.net/regex:%E5%BC%80%E6%BA%90%E4%B8%AD%E5%9B%BD%E6%8F%90%E4%BE%9B%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E6%B5%8B%E8%AF%95%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">https://tool.oschina.net/regex:开源中国提供的正则表达式测试工具，可以用来测试正则表达式</a></p>
+<h3 id="正则表达式的匹配条件是单个字符"><a href="#正则表达式的匹配条件是单个字符" class="headerlink" title="正则表达式的匹配条件是单个字符"></a>正则表达式的匹配条件是单个字符</h3><p>单次匹配的结果也是单个字符，自然一个包含多个字符的字符串可以匹配成功多次</p>
+<p>输入A，其意思是在字符串中找出A这个字符</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz.png" alt="javazz"></p>
+<h3 id="正则表达式的匹配条件是两个字符都可以"><a href="#正则表达式的匹配条件是两个字符都可以" class="headerlink" title="正则表达式的匹配条件是两个字符都可以"></a>正则表达式的匹配条件是两个字符都可以</h3><p>如果输入的是A|C，其意思是分别匹配这两个单字符。</p>
+<p>这里就是匹配字符串中的A和C</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz1.png" alt="javazz1"></p>
+<h3 id="正则表达式的匹配条件是一个字符集合"><a href="#正则表达式的匹配条件是一个字符集合" class="headerlink" title="正则表达式的匹配条件是一个字符集合"></a>正则表达式的匹配条件是一个字符集合</h3><p>字符集合中的每个元素的单独匹配</p>
+<p>如果输入[Ajd]，其意思是匹配字符串中的A，j，d这三个字符</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz2.png" alt="javazz2"></p>
+<h3 id="正则表达式的匹配条件是一个字符集合，集合可以写成如0-9的范围"><a href="#正则表达式的匹配条件是一个字符集合，集合可以写成如0-9的范围" class="headerlink" title="正则表达式的匹配条件是一个字符集合，集合可以写成如0-9的范围"></a>正则表达式的匹配条件是一个字符集合，集合可以写成如0-9的范围</h3><p>这个按照情况多用于0-9，a-z，A-Z这些；</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz3.png" alt="javazz3"></p>
+<h3 id="正则表达式的匹配条件的匹配条件是不希望出现某些字符"><a href="#正则表达式的匹配条件的匹配条件是不希望出现某些字符" class="headerlink" title="正则表达式的匹配条件的匹配条件是不希望出现某些字符"></a>正则表达式的匹配条件的匹配条件是不希望出现某些字符</h3><p>只是在[^]在中括号中多写一个^即可</p>
+<p>下面的这个例子是，匹配出字符串中所有不是u字符的字符</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz4.png" alt="javazz4"></p>
+<h3 id="字符范围匹配的案例"><a href="#字符范围匹配的案例" class="headerlink" title="字符范围匹配的案例"></a>字符范围匹配的案例</h3><h4 id="1-精准匹配”hello”或者”hallo”"><a href="#1-精准匹配”hello”或者”hallo”" class="headerlink" title="(1)精准匹配”hello”或者”hallo”"></a>(1)精准匹配”hello”或者”hallo”</h4><p>通过单个字符匹配与字符集合匹配来实现精准匹配，这个用法说白了就是”字符串匹配”，即正则表达式的匹配条件是一个字符串，只是在这些字符串中有些字符没有定死</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz5.png" alt="javazz5"></p>
+<h4 id="2-精准匹配0570-0579"><a href="#2-精准匹配0570-0579" class="headerlink" title="(2)精准匹配0570-0579"></a>(2)精准匹配0570-0579</h4><p>通过正则表达式057[0-9]来实现用法</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz6.png" alt="javazz6"></p>
+<h4 id="3-匹配ABCD中任意一个字符"><a href="#3-匹配ABCD中任意一个字符" class="headerlink" title="(3)匹配ABCD中任意一个字符"></a>(3)匹配ABCD中任意一个字符</h4><p>可以使用[A-D]或者[A-D]这两个正则表达式都可以达到想要的效果</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz7.png" alt="javazz7"></p>
+<p>(4)正则表达式是一个字符串的时候，是完全匹配，注意这种形式</p>
+<p>例如正则表达式为ff的时候，这时候只会找到ff这个字符串</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz8.png" alt="javazz8"></p>
+<h2 id="正则表达式之元字符匹配"><a href="#正则表达式之元字符匹配" class="headerlink" title="正则表达式之元字符匹配"></a>正则表达式之元字符匹配</h2><p>好好理解下元的含义！元可以看出是一种指代，是后续基础基础性的东西</p>
+<table>
+<thead>
+<tr>
+<th>正则表达式</th>
+<th>说明</th>
+<th>正确</th>
+<th>错误</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\d</td>
+<td>匹配任意单个数字</td>
+<td>8</td>
+<td>i</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>匹配\d规则之外的任意单个字符</td>
+<td>i</td>
+<td>8</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配任意单个字母，数字，下划线</td>
+<td>Y</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>匹配\w之外的任意单个字符</td>
+<td>&amp;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配单个空格</td>
+<td></td>
+<td>x</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>匹配单个换行符</td>
+<td>\r\n</td>
+<td>x</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配任意单个字符(换行符除外)</td>
+<td>_</td>
+<td>\r\n</td>
+</tr>
+<tr>
+<td>\.</td>
+<td>特殊字符，只匹配.</td>
+<td>.</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h3 id="元字符范围匹配的案例"><a href="#元字符范围匹配的案例" class="headerlink" title="元字符范围匹配的案例"></a>元字符范围匹配的案例</h3><p>下面的几个例子，正则表达式的匹配条件都是字符串，只是这些字符串的某些字符可能是没有定死而已，而是使用了元字符去指代；自然，如果正则表达式的匹配条件是字符串的话，其匹配条件是字符串的话，其匹配结果也会是字符串，这种字符串形式应该是现在最常用的形式</p>
+<h4 id="1-匹配四位整数六位小数的一个数字，如3467-798789："><a href="#1-匹配四位整数六位小数的一个数字，如3467-798789：" class="headerlink" title="(1)匹配四位整数六位小数的一个数字，如3467.798789："></a>(1)匹配四位整数六位小数的一个数字，如3467.798789：</h4><p>\d\d\d\d.\d\d\d\d\d\d其意思为匹配字符串中的前四位的数字然后匹配小数点，最后匹配小数点后面的6位的数字</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz9.png" alt="javazz9"></p>
+<h4 id="2-匹配杭州与宁波的座机号码-0571-0574-XXXXXXXXXXXX"><a href="#2-匹配杭州与宁波的座机号码-0571-0574-XXXXXXXXXXXX" class="headerlink" title="(2)匹配杭州与宁波的座机号码(0571|0574-XXXXXXXXXXXX)"></a>(2)匹配杭州与宁波的座机号码(0571|0574-XXXXXXXXXXXX)</h4><p>正则表达式：057[1-4]-\d\d\d\d\d\d\d\d\d</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz10.png" alt="javazz10"></p>
+<h4 id="3-匹配十八位身份证号："><a href="#3-匹配十八位身份证号：" class="headerlink" title="(3)匹配十八位身份证号："></a>(3)匹配十八位身份证号：</h4><p>身份证号码的规则是前面有17位数字，最后一个可能是数字也可能是X或者x</p>
+<p>身份证号的第一位的范围是1234568这几个数字</p>
+<p>可以采用正则表达式可以是:[1234568]\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d[0-9xX]</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz11.png" alt="javazz11"></p>
+<h2 id="正则表达式之多次重复匹配"><a href="#正则表达式之多次重复匹配" class="headerlink" title="正则表达式之多次重复匹配"></a>正则表达式之多次重复匹配</h2><p>{},*,+,?是一个多次重复匹配修饰符，跟在其他字符后面，用来和其他字符组合使用</p>
+<table>
+<thead>
+<tr>
+<th>正则表达式</th>
+<th>说明</th>
+<th>正确</th>
+<th>错误</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A{N}</td>
+<td>精准匹配N次匹配</td>
+<td>AAA……</td>
+<td>AA</td>
+</tr>
+<tr>
+<td>A{N，}</td>
+<td>最少出现N次</td>
+<td>AAA……</td>
+<td>AA</td>
+</tr>
+<tr>
+<td>\d{N，N+n}</td>
+<td>约定出现的最少次数与最大次数</td>
+<td>1234</td>
+<td>12</td>
+</tr>
+<tr>
+<td>\d*</td>
+<td>可以出现零次至无限次，相当于{0,}</td>
+<td>1234</td>
+<td>12</td>
+</tr>
+<tr>
+<td>\d+</td>
+<td>最少出现一次，相当于{1,}</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>\d？</td>
+<td>最多出现一次，相当于{0,1}</td>
+<td>1</td>
+<td>12</td>
+</tr>
+</tbody></table>
+<h3 id="多次重复匹配的案例"><a href="#多次重复匹配的案例" class="headerlink" title="多次重复匹配的案例"></a>多次重复匹配的案例</h3><h4 id="1-匹配十八位身份证号"><a href="#1-匹配十八位身份证号" class="headerlink" title="(1)匹配十八位身份证号"></a>(1)匹配十八位身份证号</h4><p>同样是上面案例中的身份证号的匹配也可以使用：[1234568]\d{16}[0-9Xx]</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz12.png" alt="javazz12"></p>
+<h4 id="2-验证短信验证码-6位数字"><a href="#2-验证短信验证码-6位数字" class="headerlink" title="(2)验证短信验证码(6位数字)"></a>(2)验证短信验证码(6位数字)</h4><p>使用正则表达式：\d{6}</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz13.png" alt="javazz13"></p>
+<h4 id="3-匹配全国座机号"><a href="#3-匹配全国座机号" class="headerlink" title="(3)匹配全国座机号"></a>(3)匹配全国座机号</h4><p>区号3或者4位-电话号码7或8位</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz14.png" alt="javazz14"></p>
+<h4 id="4-匹配英文姓名"><a href="#4-匹配英文姓名" class="headerlink" title="(4)匹配英文姓名"></a>(4)匹配英文姓名</h4><p>如：Gavin Wang：前面是名后面是姓，两个首字母大写，全部都是英文字母；名字多为多个英文字母，但姓有时候是可以简写为欸一个英文字母，如上面的可以简写为Gavin W</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz15.png" alt="javazz15"></p>
+<h2 id="正则表达式之定位匹配"><a href="#正则表达式之定位匹配" class="headerlink" title="正则表达式之定位匹配"></a>正则表达式之定位匹配</h2><p>某个字符串以什么字符开头，以什么字符结尾，需要用到定位匹配</p>
+<p>.：小数点代表任意单个字符    *：星号代表0-无限</p>
+<table>
+<thead>
+<tr>
+<th>正则表达式</th>
+<th>说明</th>
+<th>正确</th>
+<th>错误</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>^A.*</td>
+<td>头匹配</td>
+<td>ABC……</td>
+<td>CBA……</td>
+</tr>
+<tr>
+<td>.*A$</td>
+<td>尾匹配</td>
+<td>CB……A</td>
+<td>AB……C</td>
+</tr>
+<tr>
+<td>^A.*A$</td>
+<td>全字匹配</td>
+<td>ACCC……A</td>
+<td>ACCC……B</td>
+</tr>
+</tbody></table>
+<h3 id="定位匹配的案例"><a href="#定位匹配的案例" class="headerlink" title="定位匹配的案例"></a>定位匹配的案例</h3><p>默认的正则表达式是在原始字符串中依次查找；；找到了以后符合的子字符串，会继续查找，所以下面查找到4个子字符串ab</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz16.png" alt="javazz16"></p>
+<p>如果只输出^ab.*，这里只会匹配到开头的ab后面的字符就是.&#x2F;匹配到的内容</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz17.png" alt="javazz17"></p>
+<p>有的场景是需要限制字符数量</p>
+<p>如：[a-z]{3}ab$：匹配[a-z]的字符三次，最后以ab结尾的字符串</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz18.png" alt="javazz18"></p>
+<p>在实际工作中，头尾同时匹配也很常见</p>
+<p>^ab.*ab$：以ab开头与结尾，中间匹配任意字符</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz19.png" alt="javazz19"></p>
+<h2 id="正则表达式之贪婪模式-amp-非贪婪模式"><a href="#正则表达式之贪婪模式-amp-非贪婪模式" class="headerlink" title="正则表达式之贪婪模式&amp;非贪婪模式"></a>正则表达式之贪婪模式&amp;非贪婪模式</h2><h3 id="贪婪模式"><a href="#贪婪模式" class="headerlink" title="贪婪模式"></a>贪婪模式</h3><ul>
+<li>在满足条件的情况下尽可能多匹配到字符串</li>
+<li>示例：111222333  正则：\d{6,9}</li>
+<li>贪婪模式下会尽可能地多匹配，所以会匹配9个</li>
+</ul>
+<h3 id="非贪婪模式"><a href="#非贪婪模式" class="headerlink" title="非贪婪模式"></a>非贪婪模式</h3><ul>
+<li>在满足条件地情况下尽可能减少匹配到地字符串，在正则表达式后增加?，则代表采用非贪婪模式</li>
+<li>示例：111222333  正则：\d{6,9}?</li>
+<li>非贪婪模式会尽可能少匹配，所以会匹配6个</li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;www.baidu.com&quot;</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;www.sina.com&quot;</span>&gt;</span>新浪<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>要求是提取出其中地网址</p>
+<p>正则表达式：”.*”,其意为” “中地任意字符匹配，这种写法是贪婪模式</p>
+<p>会将中间地””也匹配出来</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz20.png" alt="javazz20"></p>
+<p>将正则表达式后增加?,更改为非贪婪模式，就会得到我们想要地结果</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz21.png" alt="javazz21"></p>
+<h2 id="正则表达式之表达式分组"><a href="#正则表达式之表达式分组" class="headerlink" title="正则表达式之表达式分组"></a>正则表达式之表达式分组</h2><p>将一个完整地正则表达式分组为多个子表达式的使用方法；利用表达式分组可以将一个大的表达式进行拆分</p>
+<ul>
+<li>分组将正则分组为多个子表达式</li>
+<li>示例：abababcdcdcd</li>
+<li>正则表达式：(ab){3}(cd){3}</li>
+</ul>
+<p>可以发现，通过表达式分组可以组合成更加复杂的[正则表达式的字符串]，从而可以匹配出更加复杂的字符串；同时表达式分组也可以让正则表达式更加清晰，可读性更高</p>
+<h3 id="表达式分组的案例"><a href="#表达式分组的案例" class="headerlink" title="表达式分组的案例"></a>表达式分组的案例</h3><h4 id="1-匹配验证码"><a href="#1-匹配验证码" class="headerlink" title="(1)匹配验证码"></a>(1)匹配验证码</h4><p>这个例子主要体现：表达式分组和|符号的组合使用</p>
+<p>正则表达式：^\d{4}$|^\d{6}$其意为开头为数字且结尾也是数字的字符串，|的意思是|两边二选一，所以这可以匹配4位验证码或者6位验证码</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz22.png" alt="javazz22"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javaz23.png" alt="javaz23"></p>
+<h4 id="2-匹配车牌号"><a href="#2-匹配车牌号" class="headerlink" title="(2)匹配车牌号"></a>(2)匹配车牌号</h4><p><strong>这个例子主要体现：表达式分组可以让正则表达式更加清晰；</strong></p>
+<p>车牌号规范是：一个汉字，一个大写字母，一个横杠 ；然后有5个字母和数字的组合；</p>
+<p>可以采用：^([[鲁黑晋豫]][A-Z][A-Z])-([A-Z0-9]{5})$,这样写将前面匹配的，与后面匹配的字符串分隔开来可读性高</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz24.png" alt="javazz24"></p>
+<h4 id="3-匹配中文或英文名字"><a href="#3-匹配中文或英文名字" class="headerlink" title="(3)匹配中文或英文名字"></a>(3)匹配中文或英文名字</h4><p>这个例子主要体现：表达式分组可以应对更加复杂的情况</p>
+<p>英文姓名：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz25.png" alt="javazz25"></p>
+<p>匹配中文可以采用\u4e00-\u9afa5：Unicode编码中文汉字编码区间，可以判断是不是中文</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz26.png" alt="javazz26"></p>
+<p>将匹配中文和英文利用|符号，这样就可以判断中文或者英文</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz27.png" alt="javazz27"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/javazz28.png" alt="javazz28"></p>
+]]></content>
+      <tags>
+        <tag>正则表达式</tag>
       </tags>
   </entry>
   <entry>
@@ -1075,208 +1569,6 @@
 ]]></content>
       <tags>
         <tag>JavaWeb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Servlet之请求与响应</title>
-    <url>/Servlet%E4%B9%8B%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/</url>
-    <content><![CDATA[<h2 id="HTTP请求的结构"><a href="#HTTP请求的结构" class="headerlink" title="HTTP请求的结构"></a>HTTP请求的结构</h2><ul>
-<li><p>HTTP请求包含三部分：请求行、请求头、请求体<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421160256593.png" alt="image-20220421160256593"></p>
-  <span id="more"></span>
-</li>
-<li><p>请求行：说明请求方法，请求的Url，HTTP的版本信息</p>
-</li>
-<li><p>请求头：包含了很多辅助性的信息，可以为程序处理提供额外的数据支持</p>
-<table>
-<thead>
-<tr>
-<th>请求头中的内容</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Accept-Language:zh-CN</td>
-<td>当前浏览器所设置的语言</td>
-</tr>
-<tr>
-<td>User-Agent:Mozilla&#x2F;4.0(compatible;MSIE 8.0;Windows NT 6.1)</td>
-<td>说明浏览器和操作系统的环境</td>
-</tr>
-<tr>
-<td>Content-Length:112</td>
-<td>代表内容的长度</td>
-</tr>
-<tr>
-<td>Cache-Control:no-cache</td>
-<td>缓存的设置</td>
-</tr>
-<tr>
-<td>Cookie:…………</td>
-<td>Cookie的设置</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>请求体：参数：get没有请求体，<strong>需要注意的是get请求，把参数放在URL中，其实是没有请求体的；只有Post请求才有请求体</strong></p>
-</li>
-</ul>
-<h3 id="HTTP的Get请求"><a href="#HTTP的Get请求" class="headerlink" title="HTTP的Get请求"></a>HTTP的Get请求</h3><p>在Tomcat中编写get请求的简单案例</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Servlet文件</span></span><br><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;RequestServlet&quot;, value = &quot;/RequestServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is get method&quot;</span>);<span class="comment">//得到Get请求后，响应后，在页面输出</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is post method&quot;</span>);<span class="comment">//得到Post请求后，响应后，在页面输出</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--html文件--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;RequestServlet&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span><span class="comment">&lt;!--链接RequestServlet文件，发送get请求--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>Query String是Get传参的标志</strong></p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421185615265.png" alt="image-20220421185615265"></p>
-<h3 id="HTTP的Post请求"><a href="#HTTP的Post请求" class="headerlink" title="HTTP的Post请求"></a>HTTP的Post请求</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Servlet文件</span></span><br><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;RequestServlet&quot;, value = &quot;/RequestServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is get method&quot;</span>);<span class="comment">//得到Get请求后，响应后，在页面输出</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is post method&quot;</span>);<span class="comment">//得到Post请求后，响应后，在页面输出</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--html文件--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;RequestServlet&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span><span class="comment">&lt;!--链接RequestServlet文件，发送get请求--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>Form Data是Post请求的标志</strong></p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421185950250.png" alt="image-20220421185950250"></p>
-<h2 id="利用请求头开发多端应用"><a href="#利用请求头开发多端应用" class="headerlink" title="利用请求头开发多端应用"></a>利用请求头开发多端应用</h2><p>情况展示：</p>
-<p>平时，同一个网站，在电脑上和手机上显示效果完全不同，这背后的本质就是程序通过读取请求头（<strong>User-Agent</strong>）来判断是手机还是电脑</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104143546137.png" alt="img"></p>
-<p>发现不同版本上的显示效果不同，然后请求头中的User-Agent也不同</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104143833973.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104143934120.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104144052992.png" alt="img"></p>
-<h3 id="获取当前请求头中的User-Agent信息"><a href="#获取当前请求头中的User-Agent信息" class="headerlink" title="获取当前请求头中的User-Agent信息"></a>获取当前请求头中的User-Agent信息</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;UserAgeServlet&quot;, value = &quot;/UserAgeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserAgeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">userAgent</span> <span class="operator">=</span>request.getHeader(<span class="string">&quot;User-Agent&quot;</span>);<span class="comment">//获取请求头中的“User-Agent”的值</span></span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);<span class="comment">//设置响应，让其支持中文</span></span><br><span class="line">        response.getWriter().println(userAgent);<span class="comment">//响应输出页面的值</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104145252480.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104145428246.png" alt="img"></p>
-<p><img src="https://img-blog.csdnimg.cn/20210104145527288.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzdWNzZ29hdA==,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h3 id="根据User-Agent信息，判断是PC端还是移动端"><a href="#根据User-Agent信息，判断是PC端还是移动端" class="headerlink" title="根据User-Agent信息，判断是PC端还是移动端"></a>根据User-Agent信息，判断是PC端还是移动端</h3><p>判断出是PC端还是移动端，方便后续区别处理</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;UserAgeServlet&quot;, value = &quot;/UserAgeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserAgeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">userAgent</span> <span class="operator">=</span>request.getHeader(<span class="string">&quot;User-Agent&quot;</span>);<span class="comment">//获取请求头中的“User-Agent”的值</span></span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);<span class="comment">//设置响应，让其支持中文</span></span><br><span class="line">        response.getWriter().println(userAgent);<span class="comment">//响应输出页面的值，这里的值为userAgent的值</span></span><br><span class="line">        String output=<span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (userAgent.indexOf(<span class="string">&quot;Windows NT&quot;</span>)!=-<span class="number">1</span>)&#123;<span class="comment">//indexof查找字符串，找到字符串返回的是大于0的数字，所以当不等于-1的时候一定是找到了这个值</span></span><br><span class="line">            output=<span class="string">&quot;&lt;h1&gt;这是PC端首页&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (userAgent.indexOf(<span class="string">&quot;iPhone&quot;</span>)!=-<span class="number">1</span> || userAgent.indexOf(<span class="string">&quot;Android&quot;</span>)!=-<span class="number">1</span>)&#123;</span><br><span class="line">            output=<span class="string">&quot;&lt;h1&gt;这是移动端首页&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        response.getWriter().println(output);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20210104150519944.png" alt="img"></p>
-<p><img src="https://img-blog.csdnimg.cn/20210104150501475.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzdWNzZ29hdA==,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="服务器的响应的结构"><a href="#服务器的响应的结构" class="headerlink" title="服务器的响应的结构"></a>服务器的响应的结构</h2><p><strong>请求是浏览器向服务器发送的请求，而响应则是服务器返回给浏览器的显示结果</strong></p>
-<ul>
-<li><p>HTTP响应包含三部分：响应行、响应头、响应体<br>  <img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220421204608353.png" alt="image-20220421204608353"></p>
-</li>
-<li><p>Content-Type：text&#x2F;html表示，把响应体中内容当成text&#x2F;html去解释；浏览器会按照text&#x2F;html的方式去解释响应体中的内容</p>
-</li>
-<li><p>HTTP常见状态码<br>  如url网址输错的时候，会报404；如果Java的代码出了错误，会报500等；浏览器可以根据响应返回状态码，来知道服务器是处理成功还是出现了问题</p>
-<p>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421210137173.png" alt="image-20220421210137173"></p>
-</li>
-<li><p>网页中的响应内容与响应体<br>  <img src="https://img-blog.csdnimg.cn/20210104222445998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzdWNzZ29hdA==,size_16,color_FFFFFF,t_70" alt="img"><br>  <img src="https://img-blog.csdnimg.cn/20210104222555193.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzdWNzZ29hdA==,size_16,color_FFFFFF,t_70" alt="img"><br>  <img src="https://img-blog.csdnimg.cn/20210104222636418.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzdWNzZ29hdA==,size_16,color_FFFFFF,t_70" alt="img"></p>
-</li>
-<li><p>常见状态码演示<br>  404：例如这里我少输出了文件名字<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421212129141.png" alt="image-20220421212129141"></p>
-<p>  500：服务器的内部错误，去寻找java源代码中的错误<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220421213310953.png" alt="image-20220421213310953"></p>
-</li>
-</ul>
-<h2 id="ContentType的作用"><a href="#ContentType的作用" class="headerlink" title="ContentType的作用"></a>ContentType的作用</h2><ul>
-<li>ContentType决定浏览器采用何种方式对响应体进行处理<br>  <img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20220421214309570.png" alt="image-20220421214309570"></li>
-<li>浏览器可以理解成是一个解释器（解释器响应体中的内容，并体现在浏览器页面上）；Content-Type属性值，就是浏览器对响应体内容采取何种方式；其默认是text&#x2F;html</li>
-</ul>
-<h3 id="ContentType的示例"><a href="#ContentType的示例" class="headerlink" title="ContentType的示例"></a>ContentType的示例</h3><p><strong>Content-Type设置为”text&#x2F;html”</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;ContentTypeServlet&quot;, value = &quot;/ContentTypeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ContentTypeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        String output=<span class="string">&quot;&lt;h1&gt;&lt;a href=&#x27;http://www.baidu.com&#x27;&gt;&lt;span&gt;百度&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);<span class="comment">//设置ContentType的值为text/html</span></span><br><span class="line">        response.getWriter().println(output);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104225755728.png" alt="img"></p>
-<p><strong>Content-Type设置为”text&#x2F;plain”</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;ContentTypeServlet&quot;, value = &quot;/ContentTypeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ContentTypeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        String output=<span class="string">&quot;&lt;h1&gt;&lt;a href=&#x27;http://www.baidu.com&#x27;&gt;&lt;span&gt;百度&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/plain;charset=utf-8&quot;</span>);<span class="comment">//设置ContentType的值为text/plain</span></span><br><span class="line">        response.getWriter().println(output);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104225933866.png" alt="img"></p>
-<p><strong>Content-Type设置为”text&#x2F;xml”</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;ContentTypeServlet&quot;, value = &quot;/ContentTypeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ContentTypeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        String output=<span class="string">&quot;&lt;h1&gt;&lt;a href=&#x27;http://www.baidu.com&#x27;&gt;&lt;span&gt;百度&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/xml;charset=utf-8&quot;</span>);<span class="comment">//设置ContentType的值为text/xml</span></span><br><span class="line">        response.getWriter().println(output);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104230402441.png" alt="img"></p>
-<p><strong>Content-Type设置为”application&#x2F;x-msdownload”</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;ContentTypeServlet&quot;, value = &quot;/ContentTypeServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ContentTypeServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        String output=<span class="string">&quot;&lt;h1&gt;&lt;a href=&#x27;http://www.baidu.com&#x27;&gt;&lt;span&gt;百度&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&quot;</span>;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/xml;charset=utf-8&quot;</span>);<span class="comment">//设置ContentType的值为application/x-msdownload</span></span><br><span class="line">        response.getWriter().println(output);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104230702761.png" alt="img"></p>
-<h2 id="请求转发与重定向"><a href="#请求转发与重定向" class="headerlink" title="请求转发与重定向"></a>请求转发与重定向</h2><p>以前接触的都是一个Servlet内处理；而实际情况中，是需要多个Servlet之间跳转的，而Servlet之间的跳转方式为：请求转发和响应重定向</p>
-<ul>
-<li>多个Servlet(JSP)之间跳转有两种方式</li>
-<li>request.getRequestDispatcher().forward() - 请求转发</li>
-<li>response.sendRedirect() - 响应重定向</li>
-</ul>
-<h3 id="Servlet请求转发的原理"><a href="#Servlet请求转发的原理" class="headerlink" title="Servlet请求转发的原理"></a>Servlet请求转发的原理</h3><ul>
-<li>请求转发是服务器内部跳转，只会产生一次请求</li>
-<li>请求转发的语句是：request.getRequestDispatcher().forward<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220423220425705.png" alt="image-20220423220425705"></li>
-</ul>
-<h3 id="Servlet请求转发案例"><a href="#Servlet请求转发案例" class="headerlink" title="Servlet请求转发案例"></a>Servlet请求转发案例</h3><p>案例分析：例如在登录这个功能上，在登录界面，输入用户名和密码后并点击登录后；其会跳转到登录成功后的那个界面。这个案例主要是为了说明在实际开发中，Servlet是需要在不同页面上跳转显示的</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/XXKF3TPJFOUMAZ7%7EPIV%257B837.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/T5%60LKD2%7DL4~K8E368IBBK9Y.png" alt="img"></p>
-<p>请求转发的设置</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/123.png" alt="img"></p>
-<p>请求转发的效果</p>
-<p>可以看到地址栏的url没有改变</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/20210104234842566.png" alt="img"></p>
-<p>分析：输入<a href="http://localhost:8080/servlet_advanced/direct/check%E5%90%8E%EF%BC%8C%E4%BC%9A%E5%85%88%E8%BF%9B%E5%85%A5CheckLoginServlet%E8%BF%99%E4%B8%AAServlet%EF%BC%8C%E5%B9%B6%E6%89%93%E5%8D%B0&quot;%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F&quot;">http://localhost:8080/servlet_advanced/direct/check后，会先进入CheckLoginServlet这个Servlet，并打印&quot;用户登录成功&quot;</a></p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220423172143698.png" alt="image-20220423172143698"></p>
-<p>然后请求转发到IndexServlet的这个Servlet上，并触发了IndexServlet中的输出语句：This is index page！</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220423185815451.png" alt="image-20220423185815451"></p>
-<h3 id="Servlet响应重定向的原理"><a href="#Servlet响应重定向的原理" class="headerlink" title="Servlet响应重定向的原理"></a>Servlet响应重定向的原理</h3><ul>
-<li>重定向则是浏览器端跳转，会产生两次请求</li>
-<li>响应重定向语句是：response.sendRedirect()<br>  <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/1933.png" alt="1933"></li>
-</ul>
-<h2 id="设置请求自定义属性"><a href="#设置请求自定义属性" class="headerlink" title="设置请求自定义属性"></a>设置请求自定义属性</h2><ul>
-<li>请求允许创建自定义属性</li>
-<li>设置请求属性：request.setAttribute(属性名，属性值)</li>
-<li>获取请求属性：Object attr &#x3D; request.getAttribute(属性名)</li>
-</ul>
-<h3 id="请求转发的情况下，获取自定义属性示例"><a href="#请求转发的情况下，获取自定义属性示例" class="headerlink" title="请求转发的情况下，获取自定义属性示例"></a>请求转发的情况下，获取自定义属性示例</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.direction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;CheckLoginServlet&quot;, value = &quot;/direct/check&quot;)</span><span class="comment">//文件名CheckLoginServlet，路径/direct/check</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CheckLoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line">        request.setAttribute(<span class="string">&quot;username&quot;</span>,<span class="string">&quot;admin&quot;</span>);<span class="comment">//请求转发的情况下设置属性名和属性值</span></span><br><span class="line">        <span class="comment">//request.getRequestDispatcher()方法相当于是一个请求分发器</span></span><br><span class="line">        <span class="comment">//实现了请求转发的功能,/direct/check会跳转到/direct/index下</span></span><br><span class="line">        request.getRequestDispatcher(<span class="string">&quot;/direct/index&quot;</span>).forward(request,response);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.direction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;IndexServlet&quot;, value = &quot;/direct/index&quot;)</span><span class="comment">//文件名IndexServlet，路径/direct/index</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">IndexServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is index page!&quot;</span>+name);</span><br><span class="line">        String username= (String) request.getAttribute(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/2014.png" alt="img"></p>
-<h3 id="响应重定向的情况下，获取自定义属性示例"><a href="#响应重定向的情况下，获取自定义属性示例" class="headerlink" title="响应重定向的情况下，获取自定义属性示例"></a>响应重定向的情况下，获取自定义属性示例</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.direction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;CheckLoginServlet&quot;, value = &quot;/direct/check&quot;)</span><span class="comment">//文件名CheckLoginServlet，路径/direct/check</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CheckLoginServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;用户登录成功&quot;</span>);</span><br><span class="line">        request.setAttribute(<span class="string">&quot;username&quot;</span>,<span class="string">&quot;admin&quot;</span>);<span class="comment">//请求转发的情况下设置属性名和属性值</span></span><br><span class="line">	    response.sendRedirect(<span class="string">&quot;/servlet/direct/index&quot;</span>);<span class="comment">//响应重定向需要增加contextPath(即上下文路径)</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.servlet.direction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;IndexServlet&quot;, value = &quot;/direct/index&quot;)</span><span class="comment">//文件名IndexServlet，路径/direct/index</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">IndexServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.getWriter().println(<span class="string">&quot;This is index page!&quot;</span>+name);</span><br><span class="line">        String username= (String) request.getAttribute(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/2025.png" alt="img"></p>
-]]></content>
-      <tags>
-        <tag>JavaWeb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>XML之DTD文件与Schema文件</title>
-    <url>/XML%E4%B9%8BDTD%E4%B8%8ESchema%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="XML语义约束"><a href="#XML语义约束" class="headerlink" title="XML语义约束"></a>XML语义约束</h2><ul>
-<li>XML文档结构正确，但可能不是有效的</li>
-<li>例如：员工档案XML中绝对不允许出现”植物品种”标签。XML语义约束就是用于规定XML文档中允许出现哪些元素</li>
-<li>XML语义约束有两种定义方式：DTD与XML Schema</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="Doucument-Type-Defintion"><a href="#Doucument-Type-Defintion" class="headerlink" title="Doucument Type Defintion"></a>Doucument Type Defintion</h2><ul>
-<li><p>DTD(Document Type Definition ,文档类型定义)是一种简单易用的语义约束方式</p>
-</li>
-<li><p>DTD文件扩展名为.dtd</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hr.dtd</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salaey,department)&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot;&quot;&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;</span><br><span class="line">…</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="DTD定义节点"><a href="#DTD定义节点" class="headerlink" title="DTD定义节点"></a>DTD定义节点</h3><ul>
-<li><p>利用DTD中的&lt;!ELEMENT&gt;标签，我们可以定义XML文档中允许出现的节点及数量，以hr.xml为例：</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--定义hr(主节点)下只允许出现1个employee子节点--&gt;</span><br><span class="line">hr.dtd</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salaey,department)&gt;&lt;!--employee节点下必须包含以下四个节点，且按顺序出现--&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot;&quot;&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;&lt;!--定义name标签体只能是文本，#PCDATA代表文本元素--&gt;</span><br><span class="line">…</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如某字节点需要多次重复出现，则需要在子节点后增加相应的描述</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--hr节点下最少出现1个employee子节点--&gt;</span><br><span class="line">&lt;!ELEMENT hr(employee+)&gt;</span><br><span class="line">&lt;!--hr节点下可出现0..n个employee子节点--&gt;</span><br><span class="line">&lt;!ELEMENT hr(employee*)&gt;</span><br><span class="line">&lt;!--hr--&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="XML引用DTD文件"><a href="#XML引用DTD文件" class="headerlink" title="XML引用DTD文件"></a>XML引用DTD文件</h3><ul>
-<li><p>在XML中使用&lt;!DOCTYPE&gt;标签来引用DTD文件</p>
-  <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">书写格式：</span><br><span class="line"><span class="meta">&lt;!DOCTYPE 根节点 <span class="keyword">SYSTEM</span> <span class="string">&quot;dtd文件路径&quot;</span>&gt;</span></span><br><span class="line">示例：</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">hr</span> <span class="keyword">SYSTEM</span> <span class="string">&quot;hr.dtd&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建DTD文件</p>
-  <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">hr</span> <span class="keyword">SYSTEM</span> <span class="string">&quot;hr.dtd&quot;</span>&gt;</span><span class="comment">&lt;!--XML文件引用DTD文件--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--人力资源管理系统--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3309&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>31<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>会计部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B103<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3310&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>李四<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>23<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>工程部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B104<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hr</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;!--dtd文件本质上也是xml文件--&gt;</span><br><span class="line">&lt;!ELEMENT hr (employee+)&gt;&lt;!--可以拥有多个employee元素--&gt;</span><br><span class="line">&lt;!ELEMENT employee (name,age,salary,department)&gt;&lt;!--employee主元素下拥有这四个子元素--&gt;</span><br><span class="line">&lt;!ATTLIST employee no CDATA &quot; &quot;&gt;&lt;!--定义employee元素中的属性no--&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;&lt;!--定义name子元素为纯文本--&gt;</span><br><span class="line">&lt;!ELEMENT age (#PCDATA)&gt;</span><br><span class="line">&lt;!ELEMENT salary (#PCDATA)&gt;</span><br><span class="line">&lt;!ELEMENT department (dname,address)&gt;&lt;!--定义department元素下拥有两个子元素--&gt;</span><br><span class="line">&lt;!ELEMENT dname (#PCDATA)&gt;&lt;!--定义dname子元素为纯文本--&gt;</span><br><span class="line">&lt;!ELEMENT address (#PCDATA)&gt;&lt;!--定义address子元素为纯文本--&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="XML-Schema"><a href="#XML-Schema" class="headerlink" title="XML Schema"></a>XML Schema</h2><h3 id="XML-Schema的概述"><a href="#XML-Schema的概述" class="headerlink" title="XML Schema的概述"></a>XML Schema的概述</h3><ul>
-<li>XML Schema比DTD更为复杂，提供了更多的功能</li>
-<li>XML Schema提供了数据类型、格式限定、数据范围等特性XMLX</li>
-<li>XML Schema是W3C标准</li>
-</ul>
-<h3 id="XML-Schema文件的具体例子"><a href="#XML-Schema文件的具体例子" class="headerlink" title="XML Schema文件的具体例子"></a>XML Schema文件的具体例子</h3><p>直接上代码：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="comment">&lt;!--人力资源管理系统--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--调用hr-scheam.xsd文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>  <span class="attr">xsi:noNamespaceSchemaLocation</span>=<span class="string">&quot;hr-schema.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3309&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>19<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>会计部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B103<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">employee</span> <span class="attr">no</span>=<span class="string">&quot;3310&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>李四<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>23<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">salary</span>&gt;</span>4000<span class="tag">&lt;/<span class="name">salary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">department</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dname</span>&gt;</span>工程部<span class="tag">&lt;/<span class="name">dname</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">address</span>&gt;</span>XX大厦-B104<span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">department</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">employee</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hr</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xsd"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">xs:schema</span> <span class="attr">xmlns:xs</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;hr&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--complexType标签含义是复杂节点，包含子节点时必须使用这个标签--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--sequence标签包含是子节点必须严格书写，--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;employee&quot;</span>  <span class="attr">maxOccurs</span>=<span class="string">&quot;10&quot;</span>&gt;</span><span class="comment">&lt;!--定义employee节点出现的次数--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span><span class="comment">&lt;!--说明前后顺序--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span><span class="comment">&lt;!--代表的是name子元素是字符串类型，且不能拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;age&quot;</span>&gt;</span></span><br><span class="line">                                <span class="comment">&lt;!--设置age属性的简单类型约束--&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">xs:simpleType</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">&quot;xs:integer&quot;</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:minInclusive</span> <span class="attr">value</span>=<span class="string">&quot;18&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:minInclusive</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:maxInclusive</span> <span class="attr">value</span>=<span class="string">&quot;60&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:maxInclusive</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--代表的是salary只允许输入整型，不能拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;salary&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:integer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!--代表的是department，拥有子节点--&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;department&quot;</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span><span class="comment">&lt;!--说明含有子节点--&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span><span class="comment">&lt;!--说明前后顺序--&gt;</span></span><br><span class="line">                                        <span class="comment">&lt;!--代表的是：department节点下的两个子节点，且不能含有其他子节点--&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;dname&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">&quot;address&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--定义employee的no属性，必须是string类型，required表示的是employee下必须存在的--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">&quot;no&quot;</span> <span class="attr">type</span>=<span class="string">&quot;xs:string&quot;</span> <span class="attr">use</span>=<span class="string">&quot;required&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">xs:attribute</span>&gt;</span><span class="comment">&lt;!--定义节点中的属性，名字与数据类型--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">xs:schema</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>XML</tag>
       </tags>
   </entry>
 </search>
