@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>jQuery对Ajax的支持 |  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="null" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="about-jQuery对Ajax的支持"
+  class="article article-type-about"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  jQuery对Ajax的支持
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/jQuery%E5%AF%B9Ajax%E7%9A%84%E6%94%AF%E6%8C%81/" class="article-date">
+  <time datetime="2022-05-26T12:32:10.000Z" itemprop="datePublished">2022-05-26</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">3.5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">15 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>已经知道，JavaScript是一种浏览器脚本语言，Ajax是一种内嵌到浏览器中的一种技术</p>
+<p>jQuery是一个以JavaScript为基础的plugin，即jQuery可以简化JavaScript开发；jQuery也可以简化Ajax的开发</p>
+<p>Ajax的流程包括创建XmlHttpRequest对象，发送Ajax请求，处理服务器响应三个步骤；比较麻烦；jQuery也提供了对Ajax的支持；在jQuery中对Ajax进行了大幅度的简化和封装</p>
+<span id="more"></span>
+
+<h2 id="jQuery对Ajax的支持"><a href="#jQuery对Ajax的支持" class="headerlink" title="jQuery对Ajax的支持"></a>jQuery对Ajax的支持</h2><ul>
+<li><p>jQuery对Ajax进行封装，提供了$.ajax()方法</p>
+</li>
+<li><p>语法：$.ajax(options)；即在引入jQuery文件后，在html文件的<script></script>标签中，就可以使用$.ajax(方法中书写一个json表达式，使用Ajax)之所以这么简单，背后是jQuery的简化的”plugin”</p>
+</li>
+<li><p>在设计之初，Ajax是使用XML作为对象或数据传输的表达方式的，这也是Ajax最后一个x的含义；但后来发现利用JSON来进行数据传输更加简单，目前基本使用JSON进行数据交互</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>json常用设置项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>url</td>
+<td>发送请求地址</td>
+</tr>
+<tr>
+<td>type</td>
+<td>请求的类型 get | post</td>
+</tr>
+<tr>
+<td>data</td>
+<td>向服务器传递的参数</td>
+</tr>
+<tr>
+<td>dataType</td>
+<td>服务器响应的数据类型：text | json | xml | html | jsonp | script</td>
+</tr>
+<tr>
+<td>success</td>
+<td>接受响应时的处理函数</td>
+</tr>
+<tr>
+<td>error</td>
+<td>请求失败时的处理函数</td>
+</tr>
+</tbody></table>
+<p>  说明：</p>
+<p>  success：在把响应数据接受到了以后，会使用success函数进行数据处理</p>
+<p>  error：如果请求失败，或者服务器出现问题的时候，会使用error函数来对请求视频进行处理</p>
+<p>  jsonp：用来解决跨域访问问题，因为在实际开发中，浏览器有一种内置安全机制，这种机制如禁止从<a target="_blank" rel="noopener" href="http://www.abc.com向www.bcd.com发送ajax请求,因为其域名不同;为了解决上述的问题,jquery提供了一种jsonp的传输方式,其利用script块跨域的特性,解决了数据跨域传输的问题,简单来说如果使用ajax的时候,涉及到了再两个不同域名应用进行数据交换,就需要使用jsonp了/">www.abc.com向www.bcd.com发送Ajax请求，因为其域名不同；为了解决上述的问题，jQuery提供了一种jsonp的传输方式，其利用script块跨域的特性，解决了数据跨域传输的问题，简单来说如果使用Ajax的时候，涉及到了再两个不同域名应用进行数据交换，就需要使用jsonp了</a></p>
+</li>
+</ul>
+<h2 id="简单示例"><a href="#简单示例" class="headerlink" title="简单示例"></a>简单示例</h2><p>为了使用jQuery需要先引入jQuery文件导入</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jajax1.png" alt="jajax1"></p>
+<p>NewListServlet类：稍微修改一下</p>
+<p>(1)后台处理后的数据向前台传的时候，需要转成JSON字符串；这需要引入fastjson的jar包</p>
+<p>(2)这个Servlet并没有主动重定向至news.html；而是在这儿默默的等待，等待news.html的Ajax的XmlHttpServlet主动去请求访问这个servlet</p>
+<p>(3)这个Servlet通过，response.getWritwe().println(newsJsonStr);将JSON字符串回显到html中</p>
+<p>(4)为了演示$.ajax()中的data传递参数，servlet中设置了if()else if()判断语句；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;NewsListServlet&quot;, value = &quot;/news_list&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">NewsListServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">type</span> <span class="operator">=</span> request.getParameter(<span class="string">&quot;t&quot;</span>);<span class="comment">//获取发送请求中的参数t(key)</span></span><br><span class="line">        List&lt;News&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;News&gt;();<span class="comment">//创建集合对象list</span></span><br><span class="line">        <span class="keyword">if</span>(type !=<span class="literal">null</span> &amp;&amp; type.equals(<span class="string">&quot;tiobe&quot;</span>)) &#123;<span class="comment">//如果有带参且参数的值匹配字符串tiobe，增加下列的集合</span></span><br><span class="line">            list.add(<span class="keyword">new</span> <span class="title class_">News</span>(<span class="string">&quot;标题1&quot;</span>, <span class="string">&quot;2022-1-1&quot;</span>, <span class="string">&quot;TIOBE&quot;</span>, <span class="string">&quot;内容1&quot;</span>));<span class="comment">//在集合中增加内容</span></span><br><span class="line">            list.add(<span class="keyword">new</span> <span class="title class_">News</span>(<span class="string">&quot;标题2&quot;</span>, <span class="string">&quot;2022-1-2&quot;</span>, <span class="string">&quot;TIOBE&quot;</span>, <span class="string">&quot;内容2&quot;</span>));</span><br><span class="line">            list.add(<span class="keyword">new</span> <span class="title class_">News</span>(<span class="string">&quot;标题3&quot;</span>, <span class="string">&quot;2022-1-3&quot;</span>, <span class="string">&quot;TIOBE&quot;</span>, <span class="string">&quot;内容3&quot;</span>));</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type == <span class="literal">null</span> || type.equals(<span class="string">&quot;pypl&quot;</span>)) &#123;<span class="comment">//如果上面的不匹配，不带参数或者带参的值为pypl，增加下列集合中的内容</span></span><br><span class="line">            list.add(<span class="keyword">new</span> <span class="title class_">News</span>(<span class="string">&quot;标题1&quot;</span>,<span class="string">&quot;2021-1-1&quot;</span>,<span class="string">&quot;TIOBE&quot;</span>,<span class="string">&quot;内容1&quot;</span>));</span><br><span class="line">            list.add(<span class="keyword">new</span> <span class="title class_">News</span>(<span class="string">&quot;标题2&quot;</span>,<span class="string">&quot;2021-1-2&quot;</span>,<span class="string">&quot;TIOBE&quot;</span>,<span class="string">&quot;内容2&quot;</span>));</span><br><span class="line">            list.add(<span class="keyword">new</span> <span class="title class_">News</span>(<span class="string">&quot;标题3&quot;</span>,<span class="string">&quot;2021-1-3&quot;</span>,<span class="string">&quot;TIOBE&quot;</span>,<span class="string">&quot;内容3&quot;</span>));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//在Servlet处理后，对外进行字符串序列化的时候，一律将其转化为JSON：通过JSON，可以对数据进行有效的描述</span></span><br><span class="line">        <span class="comment">//然后在前端的html中，再通过javaScript自带的JSON处理方式，将从这儿发送过去的数据进行解析</span></span><br><span class="line">        <span class="comment">//将集合对象list转成JSON需要，引入fastjson包，可以这样想回显是需要字符串的</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">newsjsonstr</span> <span class="operator">=</span> JSON.toJSONString(list);</span><br><span class="line">        System.out.println(newsjsonstr);</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=UTF-8&quot;</span>);<span class="comment">//json字符串中包含中文需要设置编码</span></span><br><span class="line">        response.getWriter().println(newsjsonstr);<span class="comment">//回显从list集合对象序列化成json字符串,回显到html中</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>新增jquery_news.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Inset title here<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;JS/jquery-3.6.0.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        $(<span class="keyword">function</span> (<span class="params"></span>)&#123;<span class="comment">//创建一个页面就绪函数，其用途是在页面加载完毕后，执行这个function里面的代码</span></span></span><br><span class="line"><span class="language-javascript">            $.<span class="title function_">ajax</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;url&quot;</span>:<span class="string">&quot;/ajax/news_list&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;type&quot;</span>:<span class="string">&quot;get&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;data&quot;</span>:<span class="string">&quot;t=pypl&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;dataType&quot;</span>:<span class="string">&quot;json&quot;</span>,<span class="comment">//服务器响应的数据类型为json，也就说这里将回显的JSON字符串转变为JOSN对象</span></span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;success&quot;</span>:<span class="keyword">function</span> (<span class="params">json</span>)&#123;<span class="comment">//这里的json只是一个变量，用来接受服务器返回的数据,也就是说这里接受到从JSON字符串转变的JSON对象</span></span></span><br><span class="line"><span class="language-javascript">                    <span class="variable language_">console</span>.<span class="title function_">log</span>(json);</span></span><br><span class="line"><span class="language-javascript">                    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;json.<span class="property">length</span>;i++)&#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="comment">//append()作用可以将append()中的html代码追加到div中</span></span></span><br><span class="line"><span class="language-javascript">                        $(<span class="string">&quot;#container&quot;</span>).<span class="title function_">append</span>(<span class="string">&quot;&lt;h1&gt;&quot;</span>+json[i].<span class="property">title</span>+<span class="string">&quot;&lt;/h1&gt;&quot;</span>)</span></span><br><span class="line"><span class="language-javascript">                    &#125;</span></span><br><span class="line"><span class="language-javascript">                &#125;</span></span><br><span class="line"><span class="language-javascript">            &#125;)</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;container&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>效果：在div中输出JSON对象调用的title属性，在控制台中输出接受服务器的数据也就是JSON对象</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jajax2.png" alt="jajax2"></p>
+<h2 id="ajax-中的JSON表达式添加error项"><a href="#ajax-中的JSON表达式添加error项" class="headerlink" title="$.ajax({})中的JSON表达式添加error项"></a>$.ajax({})中的JSON表达式添加error项</h2><p>jquery_news.html文件中的$.ajax({})的JSON表达式添加error项。为了演示执行error内容的效果，，故意将JSON表达式中的type改成了post，而Servlet中是get方式，所以会报错，会执行error的部分</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Inset title here<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;JS/jquery-3.6.0.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        $(<span class="keyword">function</span> (<span class="params"></span>)&#123;<span class="comment">//创建一个页面就绪函数，其用途是在页面加载完毕后，执行这个function里面的代码</span></span></span><br><span class="line"><span class="language-javascript">            $.<span class="title function_">ajax</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;url&quot;</span>:<span class="string">&quot;/ajax/news_list&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;type&quot;</span>:<span class="string">&quot;post&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;data&quot;</span>:<span class="string">&quot;t=pypl&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;dataType&quot;</span>:<span class="string">&quot;json&quot;</span>,<span class="comment">//服务器响应的数据类型为json，也就说这里将回显的JSON字符串转变为JOSN对象</span></span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;success&quot;</span>:<span class="keyword">function</span> (<span class="params">json</span>)&#123;<span class="comment">//这里的json只是一个变量，用来接受服务器返回的数据,也就是说这里接受到从JSON字符串转变的JSON对象</span></span></span><br><span class="line"><span class="language-javascript">                    <span class="variable language_">console</span>.<span class="title function_">log</span>(json);</span></span><br><span class="line"><span class="language-javascript">                    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;json.<span class="property">length</span>;i++)&#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="comment">//append()作用可以将append()中的html代码追加到div中</span></span></span><br><span class="line"><span class="language-javascript">                        $(<span class="string">&quot;#container&quot;</span>).<span class="title function_">append</span>(<span class="string">&quot;&lt;h1&gt;&quot;</span>+json[i].<span class="property">title</span>+<span class="string">&quot;&lt;/h1&gt;&quot;</span>)</span></span><br><span class="line"><span class="language-javascript">                    &#125;</span></span><br><span class="line"><span class="language-javascript">                &#125;,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;error&quot;</span>:<span class="keyword">function</span> (<span class="params">xmlhttp,errorText</span>)&#123;<span class="comment">//xmlhttp代表的是XmlHttpRequest对象，errorText代表的是错误的代码文本，这里jquery自动创建XmlHttpRrquest对象实例 名字叫xmlhttp</span></span></span><br><span class="line"><span class="language-javascript">                    <span class="variable language_">console</span>.<span class="title function_">log</span>(xmlhttp);</span></span><br><span class="line"><span class="language-javascript">                    <span class="variable language_">console</span>.<span class="title function_">log</span>(errorText);</span></span><br><span class="line"><span class="language-javascript">                    <span class="keyword">if</span> (xmlhttp.<span class="property">status</span> == <span class="string">&quot;405&quot;</span>)&#123;<span class="comment">//如果XmlHttpRequest对象(接受后台与服务器交换的数据)，这里监视数据的状态，如果状态为405</span></span></span><br><span class="line"><span class="language-javascript">                        <span class="title function_">alert</span>(<span class="string">&quot;无效的请求方式&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (xmlhttp.<span class="property">status</span> == <span class="string">&quot;404&quot;</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="title function_">alert</span>(<span class="string">&quot;未找到url资源&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (xmlhttp.<span class="property">status</span> == <span class="string">&quot;500&quot;</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="title function_">alert</span>(<span class="string">&quot;服务器内部错误&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">                    &#125;<span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="title function_">alert</span>(<span class="string">&quot;其他异常&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">                    &#125;</span></span><br><span class="line"><span class="language-javascript">                &#125;</span></span><br><span class="line"><span class="language-javascript">            &#125;)</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;container&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>此时执行的效果：</p>
+<p>执行error部分，因为是请求方式错误，故错误码为405，所以会执行error中的alert(“无效的请求方式”)；部分</p>
+<p>在上面的示例中，针对不同的错误，只是打印了一些简单的信息，在实际中，会更加复杂，会根据实际业务不同，针对不同的错误情况做出不同的处理</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jajax3.png" alt="jajax3"></p>
+<p>data参数最好采用json的形式；这样更好看</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="string">&quot;data&quot;</span>:&#123;<span class="string">&quot;t&quot;</span>:<span class="string">&quot;pypl&quot;</span>,<span class="string">&quot;abc&quot;</span>:<span class="string">&quot;123&quot;</span>&#125;,<span class="comment">//data最好使用json的形式书写；其实在程序在编译时会将json格式转化成下面的这种传统的方式</span></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//&quot;data&quot;:&quot;t=pypl&amp;abc=123&quot;</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jajax4.png" alt="jajax4"></p>
+<h2 id="jQuery利用Ajax实现二级联动菜单"><a href="#jQuery利用Ajax实现二级联动菜单" class="headerlink" title="jQuery利用Ajax实现二级联动菜单"></a>jQuery利用Ajax实现二级联动菜单</h2><p>二级联动菜单的形式多种多样，在实际开发中十分常见</p>
+<p>下面就是真实网站中的二级联动菜单</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220521192649781.png" alt="image-20220521192649781"></p>
+<h3 id="下面就使用Ajax来实现二级联动菜单的案例"><a href="#下面就使用Ajax来实现二级联动菜单的案例" class="headerlink" title="下面就使用Ajax来实现二级联动菜单的案例"></a>下面就使用Ajax来实现二级联动菜单的案例</h3><p>自然使用jQuery脚本来提供Ajax的简化</p>
+<p>实现二级联动菜单的主要内容：JavaBean，Servlet类，html</p>
+<h4 id="Channel类：JavaBean"><a href="#Channel类：JavaBean" class="headerlink" title="Channel类：JavaBean"></a>Channel类：JavaBean</h4><p>利用java实现封装，写入无参与有参的构造方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Channel</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String code;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">public</span> <span class="title function_">Channel</span><span class="params">()</span>&#123;&#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Channel</span><span class="params">(String code, String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.code = code;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getCode</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setCode</span><span class="params">(String code)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.code = code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="ChannelServlet类：Servlet"><a href="#ChannelServlet类：Servlet" class="headerlink" title="ChannelServlet类：Servlet"></a>ChannelServlet类：Servlet</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;ChannelServlet&quot;, value = &quot;/channel&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ChannelServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">level</span>  <span class="operator">=</span> request.getParameter(<span class="string">&quot;level&quot;</span>);<span class="comment">//获取到请求中的level属性并赋予字符串level,level=1:对应第一级菜单，level=2：对应二级菜单</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">parent</span> <span class="operator">=</span> request.getParameter(<span class="string">&quot;parent&quot;</span>);<span class="comment">//获取到请求中的parent属性并赋予字符串parent,对应一级菜单选项&lt;option&gt;的value值</span></span><br><span class="line">        <span class="type">List</span> <span class="variable">chlist</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (level.equals(<span class="string">&quot;1&quot;</span>))&#123;<span class="comment">//Ajax传入的参数</span></span><br><span class="line">            chlist.add(<span class="keyword">new</span> <span class="title class_">Channel</span>(<span class="string">&quot;ai&quot;</span>,<span class="string">&quot;前沿/区块链/人工智能&quot;</span>));</span><br><span class="line">            chlist.add(<span class="keyword">new</span> <span class="title class_">Channel</span>(<span class="string">&quot;web&quot;</span>,<span class="string">&quot;前端/小程序/JS&quot;</span>));</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (level.equals(<span class="string">&quot;2&quot;</span>)) &#123;</span><br><span class="line">            <span class="keyword">if</span> (parent.equals(<span class="string">&quot;ai&quot;</span>))&#123;</span><br><span class="line">                chlist.add(<span class="keyword">new</span> <span class="title class_">Channel</span>(<span class="string">&quot;mirco&quot;</span>,<span class="string">&quot;微服务&quot;</span>));</span><br><span class="line">                chlist.add(<span class="keyword">new</span> <span class="title class_">Channel</span>(<span class="string">&quot;blockchain&quot;</span>,<span class="string">&quot;区块链&quot;</span>));</span><br><span class="line">                chlist.add(<span class="keyword">new</span> <span class="title class_">Channel</span>(<span class="string">&quot;other&quot;</span>,<span class="string">&quot;……&quot;</span>));</span><br><span class="line"></span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span> (parent.equals(<span class="string">&quot;web&quot;</span>))&#123;</span><br><span class="line">                chlist.add(<span class="keyword">new</span> <span class="title class_">Channel</span>(<span class="string">&quot;html&quot;</span>,<span class="string">&quot;HTML&quot;</span>));</span><br><span class="line">                chlist.add(<span class="keyword">new</span> <span class="title class_">Channel</span>(<span class="string">&quot;css&quot;</span>,<span class="string">&quot;CSS&quot;</span>));</span><br><span class="line">                chlist.add(<span class="keyword">new</span> <span class="title class_">Channel</span>(<span class="string">&quot;other&quot;</span>,<span class="string">&quot;……&quot;</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">String</span> <span class="variable">json</span> <span class="operator">=</span> JSON.toJSONString(chlist);<span class="comment">//利用fastjson将将集合转变为JSON字符串</span></span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line">        response.getWriter().println(json);<span class="comment">//回显到前端中的JSON字符串</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="channel-html：html"><a href="#channel-html：html" class="headerlink" title="channel.html：html"></a>channel.html：html</h4><p>执行流程：</p>
+<p>首先，第一个初始化函数会初始化第一级菜单；即data的参数是level&#x3D;1，此时会执行servlet中的if(level.equals(“1”)){}；的部分；</p>
+<p>即执行完第一个初始化函数后，会调用一次Servlet，最后的结果就是浏览器上的第一级菜单初始化了；此时，浏览器上的第一级菜单就会存下Servlet返回的结果，并在浏览器的页面上显示出来</p>
+<p>其次，当第一级菜单发生change的时候(也就是选择第一级菜单的时候)，会调用第二个初始化函数；此时的data参数是{“level”:”2”,”parent”:parent};其中parent是第一级菜单的option的key值，这个值是从浏览器中获取到的，然后去调用Servlet增加到chlist中，然后添加到二级菜单中，仍然会从头到尾执行，自然Servlet中的chlist需要重新创建</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Ajax实现二级菜单联动<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;JS/jquery-3.6.0.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    $(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="comment">//页面就绪函数完成第一阶段，页面初始化的时候，加载出第一级菜单</span></span></span><br><span class="line"><span class="language-javascript">        $.<span class="title function_">ajax</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;url&quot;</span>:<span class="string">&quot;/ajax/channel&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;type&quot;</span>:<span class="string">&quot;get&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;data&quot;</span>:&#123;<span class="string">&quot;level&quot;</span>:<span class="string">&quot;1&quot;</span>&#125;,</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;dataType&quot;</span>:<span class="string">&quot;json&quot;</span>,<span class="comment">//将服务器回显到前端中JSON字符串转变为JSON对象</span></span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;success&quot;</span>:<span class="keyword">function</span> (<span class="params">json</span>)&#123;<span class="comment">//json只是存放变量的变量名字</span></span></span><br><span class="line"><span class="language-javascript">                <span class="variable language_">console</span>.<span class="title function_">log</span>(json);</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;json.<span class="property">length</span>;i++)&#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="keyword">var</span> ch = json[i];</span></span><br><span class="line"><span class="language-javascript">                    $(<span class="string">&quot;#lv1&quot;</span>).<span class="title function_">append</span>(<span class="string">&quot;&lt;option value=&#x27;&quot;</span>+ch.<span class="property">code</span>+<span class="string">&quot;&#x27;&gt;&quot;</span>+ch.<span class="property">name</span>+<span class="string">&quot;&lt;/option&gt;&quot;</span>)</span></span><br><span class="line"><span class="language-javascript">                &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">    &#125;)</span></span><br><span class="line"><span class="language-javascript">    $(<span class="keyword">function</span> (<span class="params"></span>) &#123;<span class="comment">//jquery允许出现多个页面就绪函数，执行是从上到下依次执行，每一个页面就绪函数最好是一个独立的功能</span></span></span><br><span class="line"><span class="language-javascript">        $(<span class="string">&quot;#lv1&quot;</span>).<span class="title function_">on</span>(<span class="string">&quot;change&quot;</span>,<span class="keyword">function</span> (<span class="params"></span>)&#123;<span class="comment">//on()方法的作用是用来绑定事件</span></span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">var</span> parent=$(<span class="variable language_">this</span>).<span class="title function_">val</span>();<span class="comment">//this()代表的是当前触发事件的对象(也就是一级菜单)，val()，其作用是获取输入项的值(这里获取到了一级菜单中的key值)，同样可以用在下拉框中，这里是获取到一级菜单中的key值</span></span></span><br><span class="line"><span class="language-javascript">            $.<span class="title function_">ajax</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;url&quot;</span>:<span class="string">&quot;/ajax/channel&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;type&quot;</span>:<span class="string">&quot;get&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;data&quot;</span>:&#123;<span class="string">&quot;level&quot;</span>:<span class="string">&quot;2&quot;</span>,<span class="string">&quot;parent&quot;</span>:parent&#125;,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;dataType&quot;</span>:<span class="string">&quot;json&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;success&quot;</span>:<span class="keyword">function</span> (<span class="params">json</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="variable language_">console</span>.<span class="title function_">log</span>(json);</span></span><br><span class="line"><span class="language-javascript">                    $(<span class="string">&quot;#lv2&gt;option&quot;</span>).<span class="title function_">remove</span>();<span class="comment">//移除所有lv2下的原始option选项,这里使用了jQuery中的子选择器</span></span></span><br><span class="line"><span class="language-javascript">                    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;json.<span class="property">length</span>;i++)&#123;</span></span><br><span class="line"><span class="language-javascript">                        <span class="keyword">var</span> ch=json[i];</span></span><br><span class="line"><span class="language-javascript">                        $(<span class="string">&quot;#lv2&quot;</span>).<span class="title function_">append</span>(<span class="string">&quot;&lt;option value=&#x27;&quot;</span>+ch.<span class="property">code</span>+<span class="string">&quot;&#x27;&gt;&quot;</span>+ch.<span class="property">name</span>+<span class="string">&quot;&lt;/option&gt;&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">                    &#125;</span></span><br><span class="line"><span class="language-javascript">                &#125;</span></span><br><span class="line"><span class="language-javascript">            &#125;)</span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">    &#125;)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;lv1&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 200px;height: 30px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">selected</span>=<span class="string">&quot;selected&quot;</span>&gt;</span>请选择<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;lv2&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 200px;height: 30px&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果：可以根据一级菜单的不同，实现不同内容的二级菜单</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jajax5.png" alt="jajax5"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jajax6.png" alt="jajax6"></p>
+<hr>
+<p>整体来看，Ajax的应用场景十分广泛，明白Ajax的作用，实际中很多业务场景适合使用Ajax</p>
+<p>在实现某种业务问题时，具体的实现方式和实现策略，需要多看多写实际的例子</p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xfy-z.github.io/jQuery%E5%AF%B9Ajax%E7%9A%84%E6%94%AF%E6%8C%81/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/Ajax%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Ajax工具介绍</div>
+      </a>
+    
+  </nav>
+
+  
+   
+    
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022
+        <i class="ri-heart-fill heart_icon"></i> XFY-Z
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt=""></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="86"
+        src="//music.163.com/outchain/player?type=2&id=1359818052&auto=1&height=66"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>

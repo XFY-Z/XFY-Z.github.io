@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-05-24T14:20:16.884Z</updated>
+  <updated>2022-05-26T12:39:52.827Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jQuery对Ajax的支持</title>
+    <link href="https://xfy-z.github.io/jQuery%E5%AF%B9Ajax%E7%9A%84%E6%94%AF%E6%8C%81/"/>
+    <id>https://xfy-z.github.io/jQuery%E5%AF%B9Ajax%E7%9A%84%E6%94%AF%E6%8C%81/</id>
+    <published>2022-05-26T12:32:10.000Z</published>
+    <updated>2022-05-26T12:39:52.827Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;已经知道，JavaScript是一种浏览器脚本语言，Ajax是一种内嵌到浏览器中的一种技术&lt;/p&gt;
+&lt;p&gt;jQuery是一个以JavaScript为基础的plugin，即jQuery可以简化JavaScript开发；jQuery也可以简化Ajax的开发&lt;/p&gt;
+&lt;p&gt;Ajax的流程包括创建XmlHttpRequest对象，发送Ajax请求，处理服务器响应三个步骤；比较麻烦；jQuery也提供了对Ajax的支持；在jQuery中对Ajax进行了大幅度的简化和封装&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>Ajax工具介绍</title>
