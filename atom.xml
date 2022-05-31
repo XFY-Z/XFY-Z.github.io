@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-05-26T12:39:52.827Z</updated>
+  <updated>2022-05-31T14:09:06.308Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jQuery选择器</title>
+    <link href="https://xfy-z.github.io/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/"/>
+    <id>https://xfy-z.github.io/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/</id>
+    <published>2022-05-31T14:08:29.000Z</published>
+    <updated>2022-05-31T14:09:06.308Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;jQuery选择器&quot;&gt;&lt;a href=&quot;#jQuery选择器&quot; class=&quot;headerlink&quot; title=&quot;jQuery选择器&quot;&gt;&lt;/a&gt;jQuery选择器&lt;/h1&gt;&lt;h2 id=&quot;web开发的两个要素&quot;&gt;&lt;a href=&quot;#web开发的两个要素&quot; class=&quot;headerlink&quot; title=&quot;web开发的两个要素&quot;&gt;&lt;/a&gt;web开发的两个要素&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在使用HTML开发页面时，有两个基本点&lt;/li&gt;
+&lt;li&gt;选择HTML页面上的哪些元素&lt;/li&gt;
+&lt;li&gt;在这些元素上做哪些动作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在JavaScript中有document.getElementById()等方式获取元素，但这种方式太古老。麻烦、局限&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>jQuery对Ajax的支持</title>

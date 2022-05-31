@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>jQuery选择器 |  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="null" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="about-jQuery选择器"
+  class="article article-type-about"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  jQuery选择器
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" class="article-date">
+  <time datetime="2022-05-31T14:08:29.000Z" itemprop="datePublished">2022-05-31</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.9k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">7 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="jQuery选择器"><a href="#jQuery选择器" class="headerlink" title="jQuery选择器"></a>jQuery选择器</h1><h2 id="web开发的两个要素"><a href="#web开发的两个要素" class="headerlink" title="web开发的两个要素"></a>web开发的两个要素</h2><ul>
+<li>在使用HTML开发页面时，有两个基本点</li>
+<li>选择HTML页面上的哪些元素</li>
+<li>在这些元素上做哪些动作</li>
+</ul>
+<p>在JavaScript中有document.getElementById()等方式获取元素，但这种方式太古老。麻烦、局限</p>
+<span id="more"></span>
+
+<h2 id="jQuery选择器-1"><a href="#jQuery选择器-1" class="headerlink" title="jQuery选择器"></a>jQuery选择器</h2><ul>
+<li>jQuery选择器用于选择器用于选中需要操作的页面元素</li>
+<li>语法1：jQuery（选择器表达式）</li>
+<li>语法2：$（选择器表达式）</li>
+</ul>
+<p>jQuery选择器是一种更加快捷高效的方式：</p>
+<p>上面的语法1和语法2是等价的，当在页面中引入jQuery文件后，使用jQuery关键字和$是完全等价的；符合需求，高效准确地选择器表达式是关键</p>
+<h2 id="jQuery基本选择器"><a href="#jQuery基本选择器" class="headerlink" title="jQuery基本选择器"></a>jQuery基本选择器</h2><ul>
+<li><p>基本选择器是jQuery最基础也是最常用的选择器表达式</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$(“#id”)</td>
+<td>ID选择器，指定id元素的对象</td>
+</tr>
+<tr>
+<td>$(“标签”)</td>
+<td>元素选择器，选择指定标签名的选择器（例如a标签等）</td>
+</tr>
+<tr>
+<td>$(“.class”)</td>
+<td>类选择器，选中拥有指定的CSS类的元素</td>
+</tr>
+<tr>
+<td>$(“S1,S2,SN”)</td>
+<td>组合选择器，对元素进行组合</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>id选择器和类选择器最常用：</p>
+<p>标签选择器有点提示页面元素间的耦合性，所以可能用的也不多；</p>
+<h3 id="jQuery基本选择器的范例"><a href="#jQuery基本选择器的范例" class="headerlink" title="jQuery基本选择器的范例"></a>jQuery基本选择器的范例</h3><p>我们使用前面做过的jQuery的简单案例来试一下组合选择器</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery3.png" alt="jquery3"></p>
+<h2 id="jQuery层叠选择器"><a href="#jQuery层叠选择器" class="headerlink" title="jQuery层叠选择器"></a>jQuery层叠选择器</h2><ul>
+<li><p>层叠选择器睡觉哦根据元素的位置关系来获取元素的选择器表达式<br>  选中某一个节点的所有后代节点，后代节点包括子节点、子节点的子节点</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$(“ancestor descendant”)</td>
+<td>后代选择器</td>
+</tr>
+<tr>
+<td>$(“ancestor &gt; descendant”)</td>
+<td>子选择器</td>
+</tr>
+<tr>
+<td>$(“ancestor ~ descendant”)</td>
+<td>兄弟选择器</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="jQuery后代选择器示例1"><a href="#jQuery后代选择器示例1" class="headerlink" title="jQuery后代选择器示例1"></a>jQuery后代选择器示例1</h3><p>选择a标签，这个a标签必须是li标签的后代标签：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery4.png" alt="jquery4"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jsquery5.png" alt="jquery5"></p>
+<h3 id="jQuery后代选择器示例2："><a href="#jQuery后代选择器示例2：" class="headerlink" title="jQuery后代选择器示例2："></a>jQuery后代选择器示例2：</h3><p>即使a标签不是div标签的直接子标签，但是后代选择器依旧能够选中</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery6.png" alt="jquery6"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery7.png" alt="jquery7"></p>
+<h3 id="jQuery后代选择器示例3"><a href="#jQuery后代选择器示例3" class="headerlink" title="jQuery后代选择器示例3"></a>jQuery后代选择器示例3</h3><p>span后的a标签</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery8.png" alt="jquery8"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery9.png" alt="jquery9"></p>
+<h3 id="jQuery子选择器示例1"><a href="#jQuery子选择器示例1" class="headerlink" title="jQuery子选择器示例1"></a>jQuery子选择器示例1</h3><p>必须是直接子节点才会选中；</p>
+<p>例如在这个jQuery简单案例中：a标签必须是li标签的直接子标签才会被选中</p>
+<p>在这里是只有li标签后的a标签被选中然后jquery，span后的a标签不会被选中</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery10.png" alt="jquery10"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery11.png" alt="jquery11"></p>
+<h3 id="jQuery兄弟选择器示例1"><a href="#jQuery兄弟选择器示例1" class="headerlink" title="jQuery兄弟选择器示例1"></a>jQuery兄弟选择器示例1</h3><p>选择p标签，这个p标签需要是span标签的兄弟标签，是平级节点；</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery12.png" alt="jquery12"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery13.png" alt="jquery13"></p>
+<h2 id="jQuery属性选择器"><a href="#jQuery属性选择器" class="headerlink" title="jQuery属性选择器"></a>jQuery属性选择器</h2><ul>
+<li><p>属性选择器是根据元素的属性值来选择元素的选择器表达式</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$(“selector[attribute&#x3D;value]”)</td>
+<td>选中的属性值完全等于具体值得组件</td>
+</tr>
+<tr>
+<td>$(“selector[attribute^&#x3D;’value’]”)</td>
+<td>选中得属性值以某值开头得组件</td>
+</tr>
+<tr>
+<td>$(“selector[attribute$&#x3D;’value’]”)</td>
+<td>选中属性值以某值结尾得组件</td>
+</tr>
+<tr>
+<td>$(“selector[attribute*&#x3D;’value’]”)</td>
+<td>选中属性值包含某值得组件</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>比如当前得需求是：获取超链接地址为”网易”的元素</p>
+<p>属性选择器中，selector是前面讲到的选择器表达式，其他选择器后面跟着[]，[]中的是某个属性的属性值，相当于是再原有选择器的基础上二次筛选</p>
+<h3 id="jQuery属性选择器示例：完全匹配"><a href="#jQuery属性选择器示例：完全匹配" class="headerlink" title="jQuery属性选择器示例：完全匹配"></a>jQuery属性选择器示例：完全匹配</h3><p>完全匹配：a[href&#x3D;”<a href="http://www.baidu.com&quot;]:是选中a标签，这个a标签的href属性值是&quot;http://www.baidu.com&quot;；">http://www.baidu.com&quot;]:是选中a标签，这个a标签的href属性值是&quot;http://www.baidu.com&quot;；</a></p>
+<p>所以这里只有百度的标签是高亮的</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery14.png" alt="jquery14"></p>
+<h3 id="jQuery属性选择器示例2：开头匹配"><a href="#jQuery属性选择器示例2：开头匹配" class="headerlink" title="jQuery属性选择器示例2：开头匹配"></a>jQuery属性选择器示例2：开头匹配</h3><p>拿到所有邮箱的超链接：a[href^&#x3D;’<a target="_blank" rel="noopener" href="http://mail&/#39;]">http://mail&#39;]</a></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery15.png" alt="jquery15"></p>
+<h3 id="jQuery属性选择器示例3：结尾匹配"><a href="#jQuery属性选择器示例3：结尾匹配" class="headerlink" title="jQuery属性选择器示例3：结尾匹配"></a>jQuery属性选择器示例3：结尾匹配</h3><p>拿到所有中国名校的超链接：a[href$&#x3D;’edu.cn’]</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery16.png" alt="jquery16"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery17.png" alt="jquery17"></p>
+<h3 id="jQuery属性选择器示例4：包含匹配"><a href="#jQuery属性选择器示例4：包含匹配" class="headerlink" title="jQuery属性选择器示例4：包含匹配"></a>jQuery属性选择器示例4：包含匹配</h3><p>拿到所有包含”edu.cn”字段的标签属性并增加css样式：a[href*&#x3D;’edu.cn’]</p>
+<p><img src="D:\Documents\typora_photo\jquery16.png" alt="jquery16"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery18.png" alt="jquery18"></p>
+<h3 id="jQuery属性选择器说明"><a href="#jQuery属性选择器说明" class="headerlink" title="jQuery属性选择器说明"></a>jQuery属性选择器说明</h3><p>说明1：属性选择器中，属性可以是其他任何属性不止只有上面的a标签可以用，页面中的input属性也是可以用的：input[type&#x3D;’text’];这个意思是选择input标签，且器type属性为text的元素</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery19.png" alt="jquery19"></p>
+<p>说明2：如上input[type&#x3D;’text’];为什么选择左边的那个文本框，而不是选择右边的文本框呢？这是因为，属性选择器明确书写了某个属性的元素：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery20.png" alt="jquery20"></p>
+<p>说明3：如上input[type&#x3D;”text”];形如这个，其需要用单引号的；</p>
+<p>很显然是因为：$(“input[type&#x3D;”text]”).addClass(“highlight”);所以需要使用单引号</p>
+<h2 id="jQuery位置选择器"><a href="#jQuery位置选择器" class="headerlink" title="jQuery位置选择器"></a>jQuery位置选择器</h2><ul>
+<li><p>位置选择器是指通过位置获取指定的元素，例如”获取第三个元素”</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$(“selector:first”)</td>
+<td>获取第一个元素</td>
+</tr>
+<tr>
+<td>$(“selector:last”)</td>
+<td>获取最后一个元素</td>
+</tr>
+<tr>
+<td>$(“selector:even”)</td>
+<td>获取偶数位置的元素(从0开始)</td>
+</tr>
+<tr>
+<td>$(“selector:odd”)</td>
+<td>获取奇数位置的元素(从0开始)</td>
+</tr>
+<tr>
+<td>$(“selector:eq(n)”)</td>
+<td>获取指定位置的元素(从0凯斯)</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="jQuery位置选择器示例1：获取第一个元素"><a href="#jQuery位置选择器示例1：获取第一个元素" class="headerlink" title="jQuery位置选择器示例1：获取第一个元素"></a>jQuery位置选择器示例1：获取第一个元素</h3><p>获取class&#x3D;”myclass”的第一个元素：.myclass:first</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery21.png" alt="jquery21"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery22.png" alt="jquery22"></p>
+<h2 id="jQuery表单选择器"><a href="#jQuery表单选择器" class="headerlink" title="jQuery表单选择器"></a>jQuery表单选择器</h2><ul>
+<li><p>表单选择器是获取表单元素的简化形式，例如：获取所有的文本框</p>
+</li>
+<li><p>之所以叫表单选择器，是因为这个选择器是直接针对表单中的元素进行选择的</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$(“selector:input”)</td>
+<td>所有表单输入的集合元素</td>
+</tr>
+<tr>
+<td>$(“slector:text”)</td>
+<td>获取表单汇总文本框</td>
+</tr>
+<tr>
+<td>$(“selector:password”)</td>
+<td>获取表单中密码框</td>
+</tr>
+<tr>
+<td>$(“welector:submit”)</td>
+<td>获取提交的按钮</td>
+</tr>
+<tr>
+<td>$(“selecrror”)</td>
+<td>获取重置的按钮</td>
+</tr>
+<tr>
+<td>……</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="jQuery表单选择器示例1-获取表单中输入框中的值"><a href="#jQuery表单选择器示例1-获取表单中输入框中的值" class="headerlink" title="jQuery表单选择器示例1:获取表单中输入框中的值"></a>jQuery表单选择器示例1:获取表单中输入框中的值</h3><p>:input是选择页面中的所有输入框中的值</p>
+<p>​                               <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery23.png" alt="jquery23"></p>
+<p>​                                             </p>
+<h3 id="jQuery表单选择器示例2：获取表单汇总文本框"><a href="#jQuery表单选择器示例2：获取表单汇总文本框" class="headerlink" title="jQuery表单选择器示例2：获取表单汇总文本框"></a>jQuery表单选择器示例2：获取表单汇总文本框</h3><p>​                                                                                    <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery24.png" alt="jquery24"></p>
+<p>​                                                             <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery25.png" alt="jquery25"></p>
+<h3 id="jQuery表单选择器总结"><a href="#jQuery表单选择器总结" class="headerlink" title="jQuery表单选择器总结"></a>jQuery表单选择器总结</h3><p>(1):input选取所有input、textarea、select和button元素-集合元素；</p>
+<p>(2):text选择所有单行文本框，即type&#x3D;text-集合元素；</p>
+<p>(3):password选择所有密码框，即type&#x3D;password-集合元素；</p>
+<p>(4):radio选择所有单选框，即type&#x3D;radio-集合元素；</p>
+<p>(5):checkbox选择所有复选框，即type&#x3D;checkbox-集合元素；</p>
+<p>(6):submit选取所有提交按钮，即type&#x3D;submit-集合元素；</p>
+<p>(7):reset选取所有重置按钮，即type&#x3D;reset-集合元素；</p>
+<p>(8):image选取所有图像按钮，即type&#x3D;image-集合元素；</p>
+<p>(9):button选择所有普通按钮，即button元素-集合元素；</p>
+<p>(10):file选择所有文件按钮，即type&#x3D;file-集合元素；</p>
+<p>(11):hidden选择所有不可见字段，即 type&#x3D;hidden-集合元素；</p>
+<h2 id="标签选择器和表单选择器的区别"><a href="#标签选择器和表单选择器的区别" class="headerlink" title="标签选择器和表单选择器的区别"></a>标签选择器和表单选择器的区别</h2><p>经过测试：如果使用input标签选择器时候，其会选中所有的input标签，不是input的标签不会被选中；即使标签选择器很严谨，也很明确；使用：input表单选择器的时候，会选取所有input、textarea、select和button元素；即其范围会大一些</p>
+<p>所以目前可以暂时认为：（1）标签选择器和表单选择器作用基本类似，但在某些情况下。表单选择器可能范围更大一些；（2）感觉标签选择器更加明确，在实际业务中，当然更倾向标签选择器；</p>
+<h3 id="不同选择器的可以组合使用"><a href="#不同选择器的可以组合使用" class="headerlink" title="不同选择器的可以组合使用"></a>不同选择器的可以组合使用</h3><p>尤其是其他选择器和位置选择器的组合，以应对某些特别的需求</p>
+<h4 id="示例1："><a href="#示例1：" class="headerlink" title="示例1："></a>示例1：</h4><p>如：:input:last先使用表单选择器选中input，然后通过位置选择器二次筛选，选中最后一个</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery26.png" alt="jquery26"></p>
+<h4 id="示例2："><a href="#示例2：" class="headerlink" title="示例2："></a>示例2：</h4><p>li a:last；先使用层叠选择器选中li标签的后代a标签，然后选择最后一个</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery27.png" alt="jquery27"></p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xfy-z.github.io/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/jQuery%E5%AF%B9Ajax%E7%9A%84%E6%94%AF%E6%8C%81/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">jQuery对Ajax的支持</div>
+      </a>
+    
+  </nav>
+
+  
+   
+    
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022
+        <i class="ri-heart-fill heart_icon"></i> XFY-Z
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt=""></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="86"
+        src="//music.163.com/outchain/player?type=2&id=1359818052&auto=1&height=66"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>
