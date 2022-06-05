@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-05-31T14:09:06.308Z</updated>
+  <updated>2022-06-05T14:02:23.384Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>监听器综合案例-请求流量分析</title>
+    <link href="https://xfy-z.github.io/%E7%9B%91%E5%90%AC%E5%99%A8%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E8%AF%B7%E6%B1%82%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/"/>
+    <id>https://xfy-z.github.io/%E7%9B%91%E5%90%AC%E5%99%A8%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E8%AF%B7%E6%B1%82%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/</id>
+    <published>2022-06-05T14:00:17.000Z</published>
+    <updated>2022-06-05T14:02:23.384Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;需求描述&quot;&gt;&lt;a href=&quot;#需求描述&quot; class=&quot;headerlink&quot; title=&quot;需求描述&quot;&gt;&lt;/a&gt;需求描述&lt;/h2&gt;&lt;p&gt;某一个域名所对应的网站在某个时间段，浏览的变化情况：针对波峰和波谷的变化，就可以针对性地对网站进行优化和调整&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/XFY-Z/img/main/img/total1.png&quot; alt=&quot;total1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;此案例包括两个部分：利用监听器实现对网站访问的量的获取，图表信息的展示&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="JavaWeb" scheme="https://xfy-z.github.io/tags/JavaWeb/"/>
+    
+  </entry>
+  
+  <entry>
     <title>jQuery选择器</title>
     <link href="https://xfy-z.github.io/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/"/>
     <id>https://xfy-z.github.io/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/</id>
     <published>2022-05-31T14:08:29.000Z</published>
-    <updated>2022-05-31T14:09:06.308Z</updated>
+    <updated>2022-06-05T14:01:08.898Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;jQuery选择器&quot;&gt;&lt;a href=&quot;#jQuery选择器&quot; class=&quot;headerlink&quot; title=&quot;jQuery选择器&quot;&gt;&lt;/a&gt;jQuery选择器&lt;/h1&gt;&lt;h2 id=&quot;web开发的两个要素&quot;&gt;&lt;a href=&quot;#web开发的两个要素&quot; class=&quot;headerlink&quot; title=&quot;web开发的两个要素&quot;&gt;&lt;/a&gt;web开发的两个要素&lt;/h2&gt;&lt;ul&gt;
@@ -34,7 +53,7 @@
     
     
     
-    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
+    <category term="JavaWeb" scheme="https://xfy-z.github.io/tags/JavaWeb/"/>
     
   </entry>
   
@@ -43,7 +62,7 @@
     <link href="https://xfy-z.github.io/jQuery%E5%AF%B9Ajax%E7%9A%84%E6%94%AF%E6%8C%81/"/>
     <id>https://xfy-z.github.io/jQuery%E5%AF%B9Ajax%E7%9A%84%E6%94%AF%E6%8C%81/</id>
     <published>2022-05-26T12:32:10.000Z</published>
-    <updated>2022-05-26T12:39:52.827Z</updated>
+    <updated>2022-06-05T14:01:03.680Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;已经知道，JavaScript是一种浏览器脚本语言，Ajax是一种内嵌到浏览器中的一种技术&lt;/p&gt;
@@ -53,7 +72,7 @@
     
     
     
-    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
+    <category term="JavaWeb" scheme="https://xfy-z.github.io/tags/JavaWeb/"/>
     
   </entry>
   
@@ -62,7 +81,7 @@
     <link href="https://xfy-z.github.io/Ajax%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/"/>
     <id>https://xfy-z.github.io/Ajax%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/</id>
     <published>2022-05-24T14:17:57.000Z</published>
-    <updated>2022-05-24T14:20:16.884Z</updated>
+    <updated>2022-06-05T14:00:53.748Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;Ajax介绍&quot;&gt;&lt;a href=&quot;#Ajax介绍&quot; class=&quot;headerlink&quot; title=&quot;Ajax介绍&quot;&gt;&lt;/a&gt;Ajax介绍&lt;/h2&gt;&lt;p&gt;Ajax主要作用：在不刷新网页的情况下，与后台数据进行交互，从而实现页面局部刷新的功能&lt;/p&gt;
@@ -76,7 +95,7 @@
     
     
     
-    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
+    <category term="JavaWeb" scheme="https://xfy-z.github.io/tags/JavaWeb/"/>
     
   </entry>
   
@@ -103,7 +122,7 @@
     <link href="https://xfy-z.github.io/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/"/>
     <id>https://xfy-z.github.io/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/</id>
     <published>2022-05-24T13:58:41.000Z</published>
-    <updated>2022-05-24T14:17:04.915Z</updated>
+    <updated>2022-06-05T14:01:14.060Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;JavaScript访问JSON&quot;&gt;&lt;a href=&quot;#JavaScript访问JSON&quot; class=&quot;headerlink&quot; title=&quot;JavaScript访问JSON&quot;&gt;&lt;/a&gt;JavaScript访问JSON&lt;/h2&gt;&lt;p&gt;疑问：JSON主要用于数据传递和数据表示上，程序势必要和JSON数据进行交互；那么JavaScript如何访问JSON文件的呢&lt;/p&gt;
@@ -114,7 +133,7 @@
     
     
     
-    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
+    <category term="JavaWeb" scheme="https://xfy-z.github.io/tags/JavaWeb/"/>
     
   </entry>
   
@@ -145,7 +164,7 @@
     <link href="https://xfy-z.github.io/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99-1/"/>
     <id>https://xfy-z.github.io/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99-1/</id>
     <published>2022-05-10T14:11:02.000Z</published>
-    <updated>2022-05-10T14:12:12.224Z</updated>
+    <updated>2022-06-05T14:01:23.744Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;JSON简介&quot;&gt;&lt;a href=&quot;#JSON简介&quot; class=&quot;headerlink&quot; title=&quot;JSON简介&quot;&gt;&lt;/a&gt;JSON简介&lt;/h2&gt;&lt;ul&gt;
@@ -161,7 +180,7 @@
     
     
     
-    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
+    <category term="JavaWeb" scheme="https://xfy-z.github.io/tags/JavaWeb/"/>
     
   </entry>
   
@@ -170,7 +189,7 @@
     <link href="https://xfy-z.github.io/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/"/>
     <id>https://xfy-z.github.io/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</id>
     <published>2022-05-07T11:58:07.000Z</published>
-    <updated>2022-05-24T14:17:25.396Z</updated>
+    <updated>2022-06-05T14:01:29.540Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;JSON简介&quot;&gt;&lt;a href=&quot;#JSON简介&quot; class=&quot;headerlink&quot; title=&quot;JSON简介&quot;&gt;&lt;/a&gt;JSON简介&lt;/h2&gt;&lt;ul&gt;
@@ -188,7 +207,7 @@
     
     
     
-    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
+    <category term="JavaWeb" scheme="https://xfy-z.github.io/tags/JavaWeb/"/>
     
   </entry>
   
@@ -452,26 +471,6 @@
     
     
     <category term="CSS" scheme="https://xfy-z.github.io/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java多态</title>
-    <link href="https://xfy-z.github.io/Java%E5%A4%9A%E6%80%81/"/>
-    <id>https://xfy-z.github.io/Java%E5%A4%9A%E6%80%81/</id>
-    <published>2022-04-01T06:37:20.000Z</published>
-    <updated>2022-04-23T07:03:06.776Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;多态&quot;&gt;&lt;a href=&quot;#多态&quot; class=&quot;headerlink&quot; title=&quot;多态&quot;&gt;&lt;/a&gt;多态&lt;/h1&gt;&lt;h2 id=&quot;多态的概念&quot;&gt;&lt;a href=&quot;#多态的概念&quot; class=&quot;headerlink&quot; title=&quot;多态的概念&quot;&gt;&lt;/a&gt;多态的概念&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;多态性，是面向对象中最重要的概念，在java中的体现，对象的多态性：父类的引用指向子类的对象（向上转型），是可以直接应用抽象类和接口中上&lt;/li&gt;
-&lt;li&gt;Java引用变量有两个类型：编译时类型和运行时类型。编译时类型声明该变量时使用的类型决定，运行时类型由实际赋给该变量的对象决定。简称：编译时，看左边；运行时，看右边&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    
-    <category term="Java" scheme="https://xfy-z.github.io/tags/Java/"/>
     
   </entry>
   
