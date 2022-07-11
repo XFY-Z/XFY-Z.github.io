@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-06-05T14:02:23.384Z</updated>
+  <updated>2022-07-11T13:36:13.145Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用JDBC获取数据库连接</title>
+    <link href="https://xfy-z.github.io/%E5%88%A9%E7%94%A8JDBC%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/"/>
+    <id>https://xfy-z.github.io/%E5%88%A9%E7%94%A8JDBC%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/</id>
+    <published>2022-07-11T13:34:12.000Z</published>
+    <updated>2022-07-11T13:36:13.145Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;获取数据库连接&quot;&gt;&lt;a href=&quot;#获取数据库连接&quot; class=&quot;headerlink&quot; title=&quot;获取数据库连接&quot;&gt;&lt;/a&gt;获取数据库连接&lt;/h1&gt;&lt;h2 id=&quot;2-1要素一-Driver接口的实现类&quot;&gt;&lt;a href=&quot;#2-1要素一-Driver接口的实现类&quot; class=&quot;headerlink&quot; title=&quot;2.1要素一:Driver接口的实现类&quot;&gt;&lt;/a&gt;2.1要素一:Driver接口的实现类&lt;/h2&gt;&lt;h3 id=&quot;2-1-1Driver接口介绍&quot;&gt;&lt;a href=&quot;#2-1-1Driver接口介绍&quot; class=&quot;headerlink&quot; title=&quot;2.1.1Driver接口介绍&quot;&gt;&lt;/a&gt;2.1.1Driver接口介绍&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;java.sql.Driver接口是所有JDBC驱动程序需要实现的接口。这个接口是提供给数据库厂商使用的，不同数据库厂商提供不同的实现，也就是说要调用jdbc的jar，必须需要实现driver接口&lt;/li&gt;
+&lt;li&gt;在程序中不需要直接去访问实现了Driver接口的类，而是由驱动程序管理类(java.sql.DriverManager)去调用这些Driver实现&lt;br&gt;  1.Oracle的驱动：oracle.jdbc.driver.OracleDriver&lt;br&gt;  2.mySql的驱动：com.mysql.jdbc.Driver&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="JDBC" scheme="https://xfy-z.github.io/tags/JDBC/"/>
+    
+  </entry>
   
   <entry>
     <title>监听器综合案例-请求流量分析</title>
@@ -445,26 +465,6 @@
 &lt;li&gt;absolute（绝对的）&lt;/li&gt;
 &lt;li&gt;static（无定位的）&lt;/li&gt;
 &lt;li&gt;fixed（固定的）&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    
-    <category term="CSS" scheme="https://xfy-z.github.io/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Div标签与CSS浮动</title>
-    <link href="https://xfy-z.github.io/Div%E6%A0%87%E7%AD%BE%E4%B8%8ECSS%E6%B5%AE%E5%8A%A8/"/>
-    <id>https://xfy-z.github.io/Div%E6%A0%87%E7%AD%BE%E4%B8%8ECSS%E6%B5%AE%E5%8A%A8/</id>
-    <published>2022-04-05T06:43:09.000Z</published>
-    <updated>2022-04-23T07:03:19.628Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;Div简介&quot;&gt;&lt;a href=&quot;#Div简介&quot; class=&quot;headerlink&quot; title=&quot;Div简介&quot;&gt;&lt;/a&gt;Div简介&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Div是层叠样式表中的定位技术，全称DIVision&lt;/li&gt;
-&lt;li&gt;有时把div称为2图层，更多的时候称为块&lt;/li&gt;
 &lt;/ul&gt;</summary>
     
     
