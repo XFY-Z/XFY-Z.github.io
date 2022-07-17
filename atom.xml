@@ -6,7 +6,7 @@
   <link href="https://xfy-z.github.io/atom.xml" rel="self"/>
   
   <link href="https://xfy-z.github.io/"/>
-  <updated>2022-07-11T13:36:13.145Z</updated>
+  <updated>2022-07-17T15:18:22.906Z</updated>
   <id>https://xfy-z.github.io/</id>
   
   <author>
@@ -15,6 +15,94 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java中的Set接口</title>
+    <link href="https://xfy-z.github.io/Java%E4%B8%AD%E7%9A%84Set%E6%8E%A5%E5%8F%A3/"/>
+    <id>https://xfy-z.github.io/Java%E4%B8%AD%E7%9A%84Set%E6%8E%A5%E5%8F%A3/</id>
+    <published>2022-07-17T15:14:40.000Z</published>
+    <updated>2022-07-17T15:18:22.906Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Set接口&quot;&gt;&lt;a href=&quot;#Set接口&quot; class=&quot;headerlink&quot; title=&quot;Set接口&quot;&gt;&lt;/a&gt;Set接口&lt;/h1&gt;&lt;h2 id=&quot;set接口存储&quot;&gt;&lt;a href=&quot;#set接口存储&quot; class=&quot;headerlink&quot; title=&quot;set接口存储&quot;&gt;&lt;/a&gt;set接口存储&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;存储的数据特点：无序的、不可重复的元素&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;具体的：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;以HashSet为例说明：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;1.无序性：不等于随机性。存储的数据在底层数组中并非照数组索引的顺序添加，而是根据数据的哈希值决定的&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;2.不可重复性：保证添加新的元素照equals()判断时，判断的值为Hashcode的值,不能返回true，即：相同的元素只能添加一个&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;如果HashSet集合中存储的是自定义类的对象(JavaBean)，需要重写equals()，HashCode方法，利用HashCode()算出Hash值后，按照不同的情况利用equals()方法判断其中的值是否相同，然后做出不同的判断，因为HashSet集合中是没有重复的数据的&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+    <category term="Java" scheme="https://xfy-z.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java中的List接口</title>
+    <link href="https://xfy-z.github.io/Java%E4%B8%AD%E7%9A%84List%E6%8E%A5%E5%8F%A3/"/>
+    <id>https://xfy-z.github.io/Java%E4%B8%AD%E7%9A%84List%E6%8E%A5%E5%8F%A3/</id>
+    <published>2022-07-17T15:14:30.000Z</published>
+    <updated>2022-07-17T15:17:45.938Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;List接口&quot;&gt;&lt;a href=&quot;#List接口&quot; class=&quot;headerlink&quot; title=&quot;List接口&quot;&gt;&lt;/a&gt;List接口&lt;/h1&gt;&lt;h2 id=&quot;List接口概述&quot;&gt;&lt;a href=&quot;#List接口概述&quot; class=&quot;headerlink&quot; title=&quot;List接口概述&quot;&gt;&lt;/a&gt;List接口概述&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;鉴于Java中数组用来存储数据的局限性·，我们通常使用List代替数组&lt;/li&gt;
+&lt;li&gt;List集合类中元素有序。且可重复，集合中的每个怨怒苏都有其对应的顺序索引&lt;/li&gt;
+&lt;li&gt;List容器中的元素都对应一个整数型的序号记载其在容器中的位置，可以根据序号存储容器中的元素&lt;/li&gt;
+&lt;li&gt;JDK API中的List接口的实现类常用的有： ArrayList、LinkedList和Vector&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="Java" scheme="https://xfy-z.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java中的Collection接口</title>
+    <link href="https://xfy-z.github.io/Java%E4%B8%AD%E7%9A%84Collection%E6%8E%A5%E5%8F%A3/"/>
+    <id>https://xfy-z.github.io/Java%E4%B8%AD%E7%9A%84Collection%E6%8E%A5%E5%8F%A3/</id>
+    <published>2022-07-17T15:14:19.000Z</published>
+    <updated>2022-07-17T15:17:17.958Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;单列集合框架结构&quot;&gt;&lt;a href=&quot;#单列集合框架结构&quot; class=&quot;headerlink&quot; title=&quot;单列集合框架结构&quot;&gt;&lt;/a&gt;单列集合框架结构&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Collection接口：单列集合，用来存储一个一个对象&lt;ul&gt;
+&lt;li&gt;List接口：存储有序的。可重复的数据    –&amp;gt;”动态”数组&lt;/li&gt;
+&lt;li&gt;ArrayList、LinkedList、vector&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Set接口：存储无序的、不可重复的数据  –&amp;gt;高中讲的”集合”&lt;ul&gt;
+&lt;li&gt;HashSet、LinkedHashSet、TreeSet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/XFY-Z/img/main/img/image-20220715163516340.png&quot; alt=&quot;image-20220715163516340&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Java" scheme="https://xfy-z.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java中的反射机制</title>
+    <link href="https://xfy-z.github.io/Java%E4%B8%AD%E7%9A%84%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/"/>
+    <id>https://xfy-z.github.io/Java%E4%B8%AD%E7%9A%84%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/</id>
+    <published>2022-07-17T15:13:42.000Z</published>
+    <updated>2022-07-17T15:16:50.893Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Java反射机制&quot;&gt;&lt;a href=&quot;#Java反射机制&quot; class=&quot;headerlink&quot; title=&quot;Java反射机制&quot;&gt;&lt;/a&gt;Java反射机制&lt;/h1&gt;&lt;h2 id=&quot;java反射机制概述&quot;&gt;&lt;a href=&quot;#java反射机制概述&quot; class=&quot;headerlink&quot; title=&quot;java反射机制概述&quot;&gt;&lt;/a&gt;java反射机制概述&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Reflection（反射）是被视为&lt;strong&gt;动态语言&lt;/strong&gt;的关键，反射机制允许程序在执行期借助于Reflection API（反射接口）取得任何类的内部信息，并能直接操作任何对象的内部属性及方法&lt;/li&gt;
+&lt;li&gt;加载完类之后，在堆内存的方法区中就产生了一个Class类型的对象（一个类只有一个Class对象），这个对象就包含了完整的类的结构信息。我们可以通过这个对象看到类的结构。这个对象就像一面镜子，透过这个镜子看到类的结构，所以，我们形象的称为：反射。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/XFY-Z/img/main/img/reflection1.png&quot; alt=&quot;reflection1&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Java" scheme="https://xfy-z.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>利用JDBC获取数据库连接</title>
@@ -390,87 +478,6 @@
     
     
     <category term="XML" scheme="https://xfy-z.github.io/tags/XML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS数组与DOM对表单的设置</title>
-    <link href="https://xfy-z.github.io/JS%E6%95%B0%E7%BB%84%E4%B8%8EDOM%E5%AF%B9%E8%A1%A8%E5%8D%95%E7%9A%84%E8%AE%BE%E7%BD%AE/"/>
-    <id>https://xfy-z.github.io/JS%E6%95%B0%E7%BB%84%E4%B8%8EDOM%E5%AF%B9%E8%A1%A8%E5%8D%95%E7%9A%84%E8%AE%BE%E7%BD%AE/</id>
-    <published>2022-04-08T14:03:14.000Z</published>
-    <updated>2022-04-23T07:02:51.556Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;JS数组&quot;&gt;&lt;a href=&quot;#JS数组&quot; class=&quot;headerlink&quot; title=&quot;JS数组&quot;&gt;&lt;/a&gt;JS数组&lt;/h2&gt;&lt;h3 id=&quot;声明与创建数组&quot;&gt;&lt;a href=&quot;#声明与创建数组&quot; class=&quot;headerlink&quot; title=&quot;声明与创建数组&quot;&gt;&lt;/a&gt;声明与创建数组&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//声明或创建一个不指定长度的数组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arrayObj=&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;Array&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//声明或创建一个数组并指定长度的数组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arrayObj=&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;Array&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//声明或创建一个带有默认值的数组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arrayObj=&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;Array&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;zz&amp;quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;123a&amp;quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;q&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//创建一个数组并赋值的简写，又称为隐式创建数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arrayObj1=[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;zz&amp;quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;123a&amp;quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;q&amp;quot;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    
-    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS事件与DOM总结</title>
-    <link href="https://xfy-z.github.io/JS%E4%BA%8B%E4%BB%B6%E4%B8%8EDOM%E6%80%BB%E7%BB%93/"/>
-    <id>https://xfy-z.github.io/JS%E4%BA%8B%E4%BB%B6%E4%B8%8EDOM%E6%80%BB%E7%BB%93/</id>
-    <published>2022-04-08T14:02:14.000Z</published>
-    <updated>2022-04-23T07:02:59.389Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;JS事件与DOM总结&quot;&gt;&lt;a href=&quot;#JS事件与DOM总结&quot; class=&quot;headerlink&quot; title=&quot;JS事件与DOM总结&quot;&gt;&lt;/a&gt;JS事件与DOM总结&lt;/h2&gt;&lt;h3 id=&quot;什么是事件&quot;&gt;&lt;a href=&quot;#什么是事件&quot; class=&quot;headerlink&quot; title=&quot;什么是事件&quot;&gt;&lt;/a&gt;什么是事件&lt;/h3&gt;&lt;p&gt;事件是指被程序发现的行为或发生的事情，而且它可以能会被程序处理&lt;/p&gt;
-&lt;h3 id=&quot;事件的特点&quot;&gt;&lt;a href=&quot;#事件的特点&quot; class=&quot;headerlink&quot; title=&quot;事件的特点&quot;&gt;&lt;/a&gt;事件的特点&lt;/h3&gt;&lt;p&gt;js的事件，都是以on开头，有onclick、onchange、onload……&lt;/p&gt;
-&lt;h3 id=&quot;事件的分类&quot;&gt;&lt;a href=&quot;#事件的分类&quot; class=&quot;headerlink&quot; title=&quot;事件的分类&quot;&gt;&lt;/a&gt;事件的分类&lt;/h3&gt;&lt;p&gt;键盘事件、鼠标事件、表单事件……&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS概述及基本使用</title>
-    <link href="https://xfy-z.github.io/JS%E6%A6%82%E8%BF%B0%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>https://xfy-z.github.io/JS%E6%A6%82%E8%BF%B0%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
-    <published>2022-04-05T07:41:32.000Z</published>
-    <updated>2022-04-23T07:03:02.939Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;JS简介&quot;&gt;&lt;a href=&quot;#JS简介&quot; class=&quot;headerlink&quot; title=&quot;JS简介&quot;&gt;&lt;/a&gt;JS简介&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;什么是JS-Java-Script的简称，是一种脚本语言&lt;/li&gt;
-&lt;li&gt;什么是动态页面、静态页面（以人机交互做为区分的）&lt;/li&gt;
-&lt;li&gt;JS不需要安装就可以使用了&lt;/li&gt;
-&lt;li&gt;BOM（浏览器对象模型），DOM（文档对象模型）&lt;/li&gt;
-&lt;li&gt;可以运用在html结构中任意一个地方&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    
-    <category term="JavaScript" scheme="https://xfy-z.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS定位</title>
-    <link href="https://xfy-z.github.io/CSS%E5%AE%9A%E4%BD%8D/"/>
-    <id>https://xfy-z.github.io/CSS%E5%AE%9A%E4%BD%8D/</id>
-    <published>2022-04-05T06:47:29.000Z</published>
-    <updated>2022-04-23T07:03:27.313Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;CSS定位及相对定位&quot;&gt;&lt;a href=&quot;#CSS定位及相对定位&quot; class=&quot;headerlink&quot; title=&quot;CSS定位及相对定位&quot;&gt;&lt;/a&gt;CSS定位及相对定位&lt;/h2&gt;&lt;h3 id=&quot;CSS定位的属性&quot;&gt;&lt;a href=&quot;#CSS定位的属性&quot; class=&quot;headerlink&quot; title=&quot;CSS定位的属性&quot;&gt;&lt;/a&gt;CSS定位的属性&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;relative（相对的）&lt;/li&gt;
-&lt;li&gt;absolute（绝对的）&lt;/li&gt;
-&lt;li&gt;static（无定位的）&lt;/li&gt;
-&lt;li&gt;fixed（固定的）&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    
-    <category term="CSS" scheme="https://xfy-z.github.io/tags/CSS/"/>
     
   </entry>
   
