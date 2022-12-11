@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSS定位 | XFY-Z</title><meta name="keywords" content="CSS"><meta name="author" content="XFY-Z"><meta name="copyright" content="XFY-Z"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="CSS定位及相对定位CSS定位的属性 relative（相对的） absolute（绝对的） static（无定位的） fixed（固定的）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS定位">
+<meta property="og:url" content="https://xfy-z.github.io/2022/04/05/CSS%E5%AE%9A%E4%BD%8D/index.html">
+<meta property="og:site_name" content="XFY-Z">
+<meta property="og:description" content="CSS定位及相对定位CSS定位的属性 relative（相对的） absolute（绝对的） static（无定位的） fixed（固定的）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo5.png">
+<meta property="article:published_time" content="2022-04-05T06:47:29.000Z">
+<meta property="article:modified_time" content="2022-04-23T07:03:28.000Z">
+<meta property="article:author" content="XFY-Z">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo5.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xfy-z.github.io/2022/04/05/CSS%E5%AE%9A%E4%BD%8D/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-23 15:03:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo5.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">XFY-Z</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">CSS定位</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-05T06:47:29.000Z" title="发表于 2022-04-05 14:47:29">2022-04-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-23T07:03:28.000Z" title="更新于 2022-04-23 15:03:28">2022-04-23</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="CSS定位"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="CSS定位及相对定位"><a href="#CSS定位及相对定位" class="headerlink" title="CSS定位及相对定位"></a>CSS定位及相对定位</h2><h3 id="CSS定位的属性"><a href="#CSS定位的属性" class="headerlink" title="CSS定位的属性"></a>CSS定位的属性</h3><ul>
+<li>relative（相对的）</li>
+<li>absolute（绝对的）</li>
+<li>static（无定位的）</li>
+<li>fixed（固定的）</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="相对定位"><a href="#相对定位" class="headerlink" title="相对定位"></a>相对定位</h3><h4 id="相对定位的概念"><a href="#相对定位的概念" class="headerlink" title="相对定位的概念"></a>相对定位的概念</h4><p>相对定位是一个非常容易掌握的概念。如果对一个元素进行相对定位，它将出现在它所在的位置上，然后，可以通过设置垂直或水平位置，让这个元素”相对于”<strong>它自身的起点进行移动</strong>，参考元素为本身</p>
+<h4 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">position</span>:relative;</span><br><span class="line"><span class="attribute">top</span>: <span class="number">20px</span>;</span><br><span class="line"><span class="attribute">left</span>: <span class="number">30px</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h3><h4 id="绝对定位的概念"><a href="#绝对定位的概念" class="headerlink" title="绝对定位的概念"></a>绝对定位的概念</h4><p>相对于已定位的最近的祖先元素，如果没有已定位的最近的祖先元素，那么它的位置就相对于最初的包含块（如body），参考的元素为祖先元素,类型float，产生浮动的效果（脱离文档流）</p>
+<h4 id="主要代码-1"><a href="#主要代码-1" class="headerlink" title="主要代码"></a>主要代码</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">position</span>:absolute</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="相对定位与绝对定位的使用依据"><a href="#相对定位与绝对定位的使用依据" class="headerlink" title="相对定位与绝对定位的使用依据"></a>相对定位与绝对定位的使用依据</h4><p><strong>使用绝对定位还是相对定位的一个判断依据就是文档流是否需要被破坏：绝对定位会破坏文档流——产生浮动效果</strong></p>
+<h3 id="绝对定位与相对定位的区别"><a href="#绝对定位与相对定位的区别" class="headerlink" title="绝对定位与相对定位的区别"></a>绝对定位与相对定位的区别</h3><p>绝对定位的参照物是最近的祖先元素，如没有已定位的最近的祖先元素，参照物是body</p>
+<p>相对定位的参照物是元素是元素本身</p>
+<ol>
+<li>绝对定位元素相对的元素是它最近的一个祖先，该祖先满足：position的值必须是：relative、absolute、fixed，若没有这样的祖先则相对于body进行定位，<br> 所以当父类的position的值为relative，absolute或者fixed时，子类的绝对定位以父类为基准。当父类的position的值使用默认的static时，子类的绝对定位以body为基准</li>
+<li>判断里面的块状元素的定位可以参考其父级元素和祖先元素的定位</li>
+</ol>
+<h2 id="相对和绝对定位与浮动之间的关系"><a href="#相对和绝对定位与浮动之间的关系" class="headerlink" title="相对和绝对定位与浮动之间的关系"></a>相对和绝对定位与浮动之间的关系</h2><ol>
+<li><p>在不设置定位（也就是默认定位static的情况下，对块级元素设置top&#x2F;left等属性，无效）</p>
+</li>
+<li><p><strong>使用绝对定位还是相对定位的一个判断依据就是文档流师傅需要被破坏：绝对定位会破坏文档流&#x3D;&#x3D;》产生浮动的效果</strong><br> 如底下代码，本来是想实现3个方块竖排紧贴在一起，实际效果：第二个覆盖第一个，第三个覆盖第二个，最终显示的只是第三个方块</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">       <span class="selector-tag">div</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">       &#125;</span></span><br><span class="line"><span class="language-css">       <span class="selector-class">.test1</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">background-color</span>: red;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">position</span>: absolute;<span class="comment">/*绝对定位产生浮动*/</span></span></span><br><span class="line"><span class="language-css">        <span class="attribute">top</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">left</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">       &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.test2</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">background-color</span>: green;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">position</span>: absolute;<span class="comment">/*绝对定位产生浮动*/</span></span></span><br><span class="line"><span class="language-css">        <span class="attribute">top</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">left</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">       &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.test3</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">background-color</span>: blue;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">position</span>: absolute;<span class="comment">/*绝对定位产生浮动*/</span></span></span><br><span class="line"><span class="language-css">        <span class="attribute">top</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">left</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">       &#125;</span></span><br><span class="line"><span class="language-css">     </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;test1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;test2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;test3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>作为父容器时，是使用相对定位还是绝对定位：<br> 当父一级div中只有一组子元素的时候，使用relative(相对定位)或absolute(绝对定位)都可以达到移动效果<br> 但当父容器中还有其他组的子元素时，就要考虑是否破坏文档流（是否使用absolute进行页面布局，浮动会导致文档流顶格）</p>
+</li>
+</ol>
+<h3 id="绝对定位与浮动"><a href="#绝对定位与浮动" class="headerlink" title="绝对定位与浮动"></a>绝对定位与浮动</h3><h4 id="绝对定位-absolute-与浮动-float-的对比"><a href="#绝对定位-absolute-与浮动-float-的对比" class="headerlink" title="绝对定位(absolute)与浮动(float)的对比"></a>绝对定位(absolute)与浮动(float)的对比</h4><p>相同点：都会产生浮动，都会破坏文档流</p>
+<p>不同点：float定位后，文档流其他文档会被绕开，不会遮挡。但是绝对定位会覆盖其他的内容</p>
+<p>截图是float的演示效果（如果是相对定位，就直接部分文字被覆盖）</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/202204041640373.png" alt="image-20220404164009253"></p>
+<h3 id="相对定位与浮动"><a href="#相对定位与浮动" class="headerlink" title="相对定位与浮动"></a>相对定位与浮动</h3><p><strong>float和relative同时使用，会同时具有各自的特点</strong></p>
+<p>float——浮动，且文档流中的其他文档会被绕开，不会被遮掩</p>
+<p>relative——定义容器四周的边距</p>
+<h2 id="z-index的使用"><a href="#z-index的使用" class="headerlink" title="z-index的使用"></a>z-index的使用</h2><p>z-index用于改变层叠的顺序，数字大的先显示（稍后运行，显示在最外层）</p>
+<h3 id="主要代码-2"><a href="#主要代码-2" class="headerlink" title="主要代码"></a>主要代码</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">z-index</span>：<span class="number">1</span>;<span class="comment">/*数字可以是任意的，但是为了以后修改方便，最好将前期的基础index的值，设置的较大一些，以便于后期插入新的元素（例如10、100的整倍数）*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div1</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">10</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div2</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">30</span>;<span class="comment">/*数字最大，所以最后运行在层叠样式的最外面*/</span></span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">120px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">40px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div3</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">20</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">140px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">60px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/202204041706398.png" alt="image-20220404170654316"></p>
+<h2 id="固定定位"><a href="#固定定位" class="headerlink" title="固定定位"></a>固定定位</h2><h3 id="固定定位的作用"><a href="#固定定位的作用" class="headerlink" title="固定定位的作用"></a>固定定位的作用</h3><p>固定定位：现对于浏览器窗口进行定位（固定元素不会随，页面的翻滚而滚动）</p>
+<h3 id="主要代码-3"><a href="#主要代码-3" class="headerlink" title="主要代码"></a>主要代码</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">position</span>:fixed;</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">XFY-Z</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xfy-z.github.io/2022/04/05/CSS%E5%AE%9A%E4%BD%8D/">https://xfy-z.github.io/2022/04/05/CSS定位/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xfy-z.github.io" target="_blank">XFY-Z</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CSS/">CSS</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo5.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/04/05/Div标签与CSS浮动/" title="Div标签与CSS浮动"><img class="cover" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo11.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-05</div><div class="title">Div标签与CSS浮动</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">XFY-Z</div><div class="author-info__description">一个专注于后端学习的博客</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/XFY-Z" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1983107554@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E5%AE%9A%E4%BD%8D%E5%8F%8A%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="toc-number">1.</span> <span class="toc-text">CSS定位及相对定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E5%AE%9A%E4%BD%8D%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text">CSS定位的属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="toc-number">1.2.</span> <span class="toc-text">相对定位</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.1.</span> <span class="toc-text">相对定位的概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.2.</span> <span class="toc-text">主要代码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="toc-number">1.3.</span> <span class="toc-text">绝对定位</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.3.1.</span> <span class="toc-text">绝对定位的概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E4%BB%A3%E7%A0%81-1"><span class="toc-number">1.3.2.</span> <span class="toc-text">主要代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D%E4%B8%8E%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E7%9A%84%E4%BD%BF%E7%94%A8%E4%BE%9D%E6%8D%AE"><span class="toc-number">1.3.3.</span> <span class="toc-text">相对定位与绝对定位的使用依据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E4%B8%8E%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.4.</span> <span class="toc-text">绝对定位与相对定位的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E5%92%8C%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%B5%AE%E5%8A%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">2.</span> <span class="toc-text">相对和绝对定位与浮动之间的关系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%B5%AE%E5%8A%A8"><span class="toc-number">2.1.</span> <span class="toc-text">绝对定位与浮动</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D-absolute-%E4%B8%8E%E6%B5%AE%E5%8A%A8-float-%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-number">2.1.1.</span> <span class="toc-text">绝对定位(absolute)与浮动(float)的对比</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%B5%AE%E5%8A%A8"><span class="toc-number">2.2.</span> <span class="toc-text">相对定位与浮动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#z-index%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">z-index的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E4%BB%A3%E7%A0%81-2"><span class="toc-number">3.1.</span> <span class="toc-text">主要代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%BE%8B"><span class="toc-number">3.2.</span> <span class="toc-text">举例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8D"><span class="toc-number">4.</span> <span class="toc-text">固定定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8D%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">4.1.</span> <span class="toc-text">固定定位的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E4%BB%A3%E7%A0%81-3"><span class="toc-number">4.2.</span> <span class="toc-text">主要代码</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/%E7%9B%91%E5%90%AC%E5%99%A8%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E8%AF%B7%E6%B1%82%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/" title="监听器案例"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo11.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="监听器案例"/></a><div class="content"><a class="title" href="/2022/12/11/%E7%9B%91%E5%90%AC%E5%99%A8%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E8%AF%B7%E6%B1%82%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/" title="监听器案例">监听器案例</a><time datetime="2022-12-11T05:47:54.300Z" title="发表于 2022-12-11 13:47:54">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/09/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" title="瑞吉外卖项目总结"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo12.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="瑞吉外卖项目总结"/></a><div class="content"><a class="title" href="/2022/12/09/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" title="瑞吉外卖项目总结">瑞吉外卖项目总结</a><time datetime="2022-12-09T13:05:13.251Z" title="发表于 2022-12-09 21:05:13">2022-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Set%E6%8E%A5%E5%8F%A3/" title="Java中的Set接口"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java中的Set接口"/></a><div class="content"><a class="title" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Set%E6%8E%A5%E5%8F%A3/" title="Java中的Set接口">Java中的Set接口</a><time datetime="2022-07-17T15:14:40.000Z" title="发表于 2022-07-17 23:14:40">2022-07-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84List%E6%8E%A5%E5%8F%A3/" title="Java中的List接口"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java中的List接口"/></a><div class="content"><a class="title" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84List%E6%8E%A5%E5%8F%A3/" title="Java中的List接口">Java中的List接口</a><time datetime="2022-07-17T15:14:30.000Z" title="发表于 2022-07-17 23:14:30">2022-07-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Collection%E6%8E%A5%E5%8F%A3/" title="Java中的Collection接口"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java中的Collection接口"/></a><div class="content"><a class="title" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Collection%E6%8E%A5%E5%8F%A3/" title="Java中的Collection接口">Java中的Collection接口</a><time datetime="2022-07-17T15:14:19.000Z" title="发表于 2022-07-17 23:14:19">2022-07-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By XFY-Z</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://my-twikoo-sigma.vercel.app',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://my-twikoo-sigma.vercel.app',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

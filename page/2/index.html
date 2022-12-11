@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>XFY-Z</title><meta name="author" content="XFY-Z"><meta name="copyright" content="XFY-Z"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一个专注于后端学习的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XFY-Z">
+<meta property="og:url" content="https://xfy-z.github.io/page/2/index.html">
+<meta property="og:site_name" content="XFY-Z">
+<meta property="og:description" content="一个专注于后端学习的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/avatar.jpg">
+<meta property="article:author" content="XFY-Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xfy-z.github.io/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-12-11 21:31:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo14.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">XFY-Z</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">XFY-Z</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/XFY-Z" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1983107554@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/05/24/FastJson%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" title="FastJson工具使用及案例分析">     <img class="post_bg" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo12.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FastJson工具使用及案例分析"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/05/24/FastJson%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" title="FastJson工具使用及案例分析">FastJson工具使用及案例分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-24T14:11:04.000Z" title="发表于 2022-05-24 22:11:04">2022-05-24</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-05-24T14:16:56.000Z" title="更新于 2022-05-24 22:16:56">2022-05-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2022/05/24/FastJson%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/#post-comment"></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Java对象转换为JSON字符串案例主要内容是Java中利用FastJson对JSON工具的序列化
+序列化：简单来说序列化就是用来处理对象流的机制，所谓对象流也就是将对象的内容进行流化，流的概念这里不用多说(就是I&#x2F;O)，我们可以对流化后的对象进行读写操作，也可将流化后的对象传输于网络之间(注：想要将对象传输于网络必须进行流化）在对对象流进行读写操作时会引发一些问题，而序列化机制也正是用来解决这些问题
+
+
+示例：利用FastJson将java对象转变为JSON字符串创建一个Java类程序，使其后面的赋值更加方便
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061package com.java.json;import java.util.Date;public class Employee &#123;    private Integer empno;    private String ename; ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/05/24/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/" title="JS访问JSON并输出">     <img class="post_bg" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JS访问JSON并输出"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/05/24/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/" title="JS访问JSON并输出">JS访问JSON并输出</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-24T13:58:41.000Z" title="发表于 2022-05-24 21:58:41">2022-05-24</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-05T14:01:16.000Z" title="更新于 2022-06-05 22:01:16">2022-06-05</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2022/05/24/JS%E8%AE%BF%E9%97%AEJSON%E5%B9%B6%E8%BE%93%E5%87%BA/#post-comment"></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">JavaScript访问JSON疑问：JSON主要用于数据传递和数据表示上，程序势必要和JSON数据进行交互；那么JavaScript如何访问JSON文件的呢
+JavaScript天生就具备JSON数据的处理能力
+在web目录下创建sample.html
+
+
+
+直接将emp.json中的内容，赋值给变量json；JavaScript可以将其作为一个数组进行解析
+1234567891011121314151617181920212223242526272829303132333435363738394041424344&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;Insert title here&lt;/title&gt;    &lt;script type=&quot;text/javascript&quot;&gt;        var json=[//将JSON中的内容设置为J ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/05/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">     <img class="post_bg" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/05/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-24T13:52:13.000Z" title="发表于 2022-05-24 21:52:13">2022-05-24</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-11T05:51:48.614Z" title="更新于 2022-12-11 13:51:48">2022-12-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2022/05/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/#post-comment"></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">什么是正则表达式
+正则表达式是检查、匹配字符串的表达式
+正则表达式是描述规则，主流语言都有良好的支持
+字符串校验，查找与替换是正则表达式主要使用场景
+
+注：正则表达式是检查字符串的规则，比如是不是字母开头，长度是否超过八位，是否包括大写字母等等……可以采用传统的Java代码(或JavaScript代码)，来进行挨个判断处理，但会很低效，为了解决这类问题，正则表达式是一个很好的工具，Java提供了对正则表达式这个工具的支持
+
+
+正则表达式的案例
+检查输入的身份证号码是否合法（15位，18位）
+示例：13010220200328091x
+正则表达式(^\d{15}$)|(^\d{18}$)|(^\d{17}$)|(^\d{X}$)
+
+正则表达式之字符范围匹配
+
+
+正则表达式
+说明
+正确
+错误
+
+
+
+A
+精准匹配单个字符
+A
+a
+
+
+x|y
+允许出现的2个字符
+y
+n
+
+
+[xyz]
+字符集合，允许出现集合内任意单个字符
+z
+c
+
+
+[a-z],[A-Z],[0-9]
+字符范围
+a,D,8
+A,a,A
+
+
+[^xyz],[^0-9
+集合内字符不允许出现
+0,A
+y,8
+
+
+注：
+(1)正则表 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/05/10/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99-1/" title="JSON简介与语法规则">     <img class="post_bg" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo7.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JSON简介与语法规则"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/05/10/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99-1/" title="JSON简介与语法规则">JSON简介与语法规则</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-10T14:11:02.000Z" title="发表于 2022-05-10 22:11:02">2022-05-10</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-05T14:01:24.000Z" title="更新于 2022-06-05 22:01:24">2022-06-05</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2022/05/10/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99-1/#post-comment"></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">JSON简介
+JavaScript Object Notation(JavaScript 对象表示法)
+
+JSON是轻量级的文本数据交换格式
+
+JSON独立于语言，具有自我描述性，更易理解
+  1234567&#123;    &quot;sites&quot;[     &#123;&quot;name&quot;:&quot;百度&quot;,&quot;url&quot;:&quot;www.baidu.com&quot;&#125;,	 &#123;&quot;name&quot;:&quot;b站&quot;,&quot;url&quot;:&quot;www.bilibili.com&quot;&#125;,	 &#123;&quot;name&quot;:&quot;网易&quot;,&quot;url&quot;:&quot;www.163.com&quot;&#125;	]&#125;
+
+  JSON对于人来说，阅读体验很好；JSON规则清晰，容易被计算机解析，JSON已经越来越多的用在数据传递和数据表上，JSON已经逐渐替代了XML，成为了软件开发的主流数据表达形式 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/05/07/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/" title="JSON简介与语法规则">     <img class="post_bg" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo10.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JSON简介与语法规则"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/05/07/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/" title="JSON简介与语法规则">JSON简介与语法规则</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-07T11:58:07.000Z" title="发表于 2022-05-07 19:58:07">2022-05-07</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-05T14:01:30.000Z" title="更新于 2022-06-05 22:01:30">2022-06-05</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2022/05/07/JSON%E7%AE%80%E4%BB%8B%E4%B8%8E%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/#post-comment"></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">JSON简介
+JavaScript Object Notation(JavaScript 对象表示法)
+
+JSON是轻量级的文本数据交换格式
+
+JSON独立于语言，具有自我描述性，更易理解
+  1234567&#123;    &quot;sites&quot;[     &#123;&quot;name&quot;:&quot;百度&quot;,&quot;url&quot;:&quot;www.baidu.com&quot;&#125;,	 &#123;&quot;name&quot;:&quot;b站&quot;,&quot;url&quot;:&quot;www.bilibili.com&quot;&#125;,	 &#123;&quot;name&quot;:&quot;网易&quot;,&quot;url&quot;:&quot;www.163.com&quot;&#125;	]&#125;
+
+  JSON对于人来说，阅读体验很好；JSON规则清晰，容易被计算机解析，JSON已经越来越多的用在数据传递和数据表上，JSON已经逐渐替代了XML，成为了软件开发的主流数据表达形式 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/05/02/JSP%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" title="JSP九大内置对象">     <img class="post_bg" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo8.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JSP九大内置对象"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/05/02/JSP%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" title="JSP九大内置对象">JSP九大内置对象</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-02T14:07:30.000Z" title="发表于 2022-05-02 22:07:30">2022-05-02</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-05-02T14:09:28.000Z" title="更新于 2022-05-02 22:09:28">2022-05-02</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2022/05/02/JSP%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/#post-comment"></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">JSP九大内置对象Java九大内置对象：request和out对象用的多点，其他的用的很少
+
+
+
+内置对象
+描述
+
+
+
+request
+请求对象 - HttpServletRequest
+
+
+response
+响应对象 - HttpServletResponse
+
+
+session
+用户对象 - HttpSession
+
+
+application
+应用全局对象 - ServletContext
+
+
+out
+输出对象 - PrintWriter
+
+
+page
+当前页面对象 - this
+
+
+pageContext
+页面上下文对象 - PageContext
+
+
+config
+应用配置对象 - ServletConfig
+
+
+exception
+应用异常对象 - Throwable
+
+
+
+
+JSP本身就是Servlet，我们知道Serblet中有很多对象，JSP为了简化操作，在JSP中设置了九大内置对象，这些对象与Servlet中的对象一 一对应；即当我们使用JSP内置对象的时候，其背后实际上会去调用Servlet中对应的对象（具体怎么调用的，无需关心，这是JSP背后默默在奉献……）；如， ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/04/26/Servlet%E4%B9%8Bcookie/" title="Servlet之cookie">     <img class="post_bg" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Servlet之cookie"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/26/Servlet%E4%B9%8Bcookie/" title="Servlet之cookie">Servlet之cookie</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-26T14:09:38.000Z" title="发表于 2022-04-26 22:09:38">2022-04-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-26T14:11:34.000Z" title="更新于 2022-04-26 22:11:34">2022-04-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2022/04/26/Servlet%E4%B9%8Bcookie/#post-comment"></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">浏览器Cookie
+Cookie（曲奇饼干）是浏览器保存在本地的文本内容
+Cookie常用于保存登录状态、用户资料等小文本
+Cookie具有时效性，Cookie内容会伴随请求发送给Tomcat
+默认没有设置cookie时效性的情况下，cookie的有效期就是为当前浏览器窗口
+
+
+
+Cookie的例子例如一个平常登录的一个网站，如果选择”7天内自动登录”，登录后，关闭浏览器；重新打开浏览器，会发现登录状态并没有消失
+底层的原理：利用Cookie技术，存放了用户的登录信息；浏览器二次访问时，浏览器会把Cookie中存放的用户登录信息提取出来，并通知服务器说之前这个用户已经登录过了，并不需要重新登录
+
+存放Cookie的文件放在哪里
+
+设置Cookie示例向浏览器发送cookie设置Cookie，并将Cookie信息随着response(响应)发回到浏览器端；浏览器将这个Cookie信息保存到本地的文件中；之后每一次请求，request(请求对象)都会包含这个Cookie信息，一并发送到对应的地址上。所以要先设置发送到浏览器cookie值(respone)，然后的请求就带有cookie值
+1 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/04/23/Servlet%E4%B9%8B%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/" title="Servlet之请求与响应">     <img class="post_bg" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo8.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Servlet之请求与响应"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/23/Servlet%E4%B9%8B%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/" title="Servlet之请求与响应">Servlet之请求与响应</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-23T13:56:26.000Z" title="发表于 2022-04-23 21:56:26">2022-04-23</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-23T14:08:10.000Z" title="更新于 2022-04-23 22:08:10">2022-04-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2022/04/23/Servlet%E4%B9%8B%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/#post-comment"></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">HTTP请求的结构
+HTTP请求包含三部分：请求行、请求头、请求体  
+  
+
+请求行：说明请求方法，请求的Url，HTTP的版本信息
+
+请求头：包含了很多辅助性的信息，可以为程序处理提供额外的数据支持
+
+
+
+请求头中的内容
+作用
+
+
+
+Accept-Language:zh-CN
+当前浏览器所设置的语言
+
+
+User-Agent:Mozilla&#x2F;4.0(compatible;MSIE 8.0;Windows NT 6.1)
+说明浏览器和操作系统的环境
+
+
+Content-Length:112
+代表内容的长度
+
+
+Cache-Control:no-cache
+缓存的设置
+
+
+Cookie:…………
+Cookie的设置
+
+
+
+请求体：参数：get没有请求体，需要注意的是get请求，把参数放在URL中，其实是没有请求体的；只有Post请求才有请求体
+
+
+HTTP的Get请求在Tomcat中编写get请求的简单案例
+1234567891011121314151617181920//Servlet文件package com.java.servlet;import javax.servl ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/04/18/Servlet%E5%85%A5%E9%97%A8/" title="Servlet入门">     <img class="post_bg" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo12.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Servlet入门"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/18/Servlet%E5%85%A5%E9%97%A8/" title="Servlet入门">Servlet入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-18T13:40:01.000Z" title="发表于 2022-04-18 21:40:01">2022-04-18</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-23T07:02:30.000Z" title="更新于 2022-04-23 15:02:30">2022-04-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2022/04/18/Servlet%E5%85%A5%E9%97%A8/#post-comment"></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">软件结构发展史
+单击模式-桌面应用
+联机时代(Client-Server模式)
+互联网时代(Browser-Server模式)
+
+
+
+单击时代-桌面应用
+桌面应用俗称单机应用，软件所有数据都保存在电脑本地硬盘中
+优点：易于使用，结构简单
+缺点：数据难以共享、安全性差、更新不及时
+
+联机时代(Client-Server模式)
+Client&#x2F;Server结构(C&#x2F;S结构)是指客户端和服务器结构
+优点：数据方便共享，安全性高
+缺点：必须安装客户端，升级与维护困难
+
+互联网时代(Browser-Server模式)
+Browser-Server(B&#x2F;S)模式即浏览器和服务器结构模式
+优点：开发简单，无需安装客户端，数据易于共享
+缺点：相较于C&#x2F;S模式，执行速度与用户体验相对较弱
+
+B&#x2F;S模式执行流程
+
+请求与响应
+从浏览器发出送个服务器的数据包称为”请求(Request)”
+从服务器返回给浏览器的结果称为”响应(Response)”
+
+
+JavaEEJavaEE是什么
+JavaEE是J2EE的新名称
+开发BS(Web)应用程序就是JavaEE最核 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/04/14/Dom4j%E4%B8%8EXpath/" title="Dom4j与Xpath">     <img class="post_bg" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/pgoto4.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Dom4j与Xpath"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/14/Dom4j%E4%B8%8EXpath/" title="Dom4j与Xpath">Dom4j与Xpath</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-14T14:30:09.000Z" title="发表于 2022-04-14 22:30:09">2022-04-14</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-23T07:03:14.000Z" title="更新于 2022-04-23 15:03:14">2022-04-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2022/04/14/Dom4j%E4%B8%8EXpath/#post-comment"></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">DOM文档对象模型
+DOM（Document Object Model）定义了访问和操作XML文档的标准方法，DOM把XML文档作为树结构来查看，能够通过DOM树来读写所有的元素  
+
+
+
+Dom4j的概念
+Dom4j是一个易用的、开源的库，用于解析XML，它应用于Java平台，具有性能优异、功能强大和极其亿使用的特点
+Dom4j将XML视为Document对象
+XML标签被Dom4j定义为Element（元素）对象
+
+Dom4j解析读取XML文件实例在idea中创建java工程，导入dom4j的jar包
+在idea中：文件→项目结构→模块→依赖→导入jar包
+
+ 创建xml文件
+1234567891011121314151617181920212223&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;!--人力资源管理系统--&gt;&lt;hr xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;  xsi:noNames ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">XFY-Z</div><div class="author-info__description">一个专注于后端学习的博客</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/XFY-Z" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1983107554@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/%E7%9B%91%E5%90%AC%E5%99%A8%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E8%AF%B7%E6%B1%82%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/" title="监听器案例"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo11.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="监听器案例"/></a><div class="content"><a class="title" href="/2022/12/11/%E7%9B%91%E5%90%AC%E5%99%A8%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E8%AF%B7%E6%B1%82%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/" title="监听器案例">监听器案例</a><time datetime="2022-12-11T05:47:54.300Z" title="发表于 2022-12-11 13:47:54">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/09/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" title="瑞吉外卖项目总结"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo12.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="瑞吉外卖项目总结"/></a><div class="content"><a class="title" href="/2022/12/09/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" title="瑞吉外卖项目总结">瑞吉外卖项目总结</a><time datetime="2022-12-09T13:05:13.251Z" title="发表于 2022-12-09 21:05:13">2022-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Set%E6%8E%A5%E5%8F%A3/" title="Java中的Set接口"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java中的Set接口"/></a><div class="content"><a class="title" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Set%E6%8E%A5%E5%8F%A3/" title="Java中的Set接口">Java中的Set接口</a><time datetime="2022-07-17T15:14:40.000Z" title="发表于 2022-07-17 23:14:40">2022-07-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84List%E6%8E%A5%E5%8F%A3/" title="Java中的List接口"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java中的List接口"/></a><div class="content"><a class="title" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84List%E6%8E%A5%E5%8F%A3/" title="Java中的List接口">Java中的List接口</a><time datetime="2022-07-17T15:14:30.000Z" title="发表于 2022-07-17 23:14:30">2022-07-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Collection%E6%8E%A5%E5%8F%A3/" title="Java中的Collection接口"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java中的Collection接口"/></a><div class="content"><a class="title" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Collection%E6%8E%A5%E5%8F%A3/" title="Java中的Collection接口">Java中的Collection接口</a><time datetime="2022-07-17T15:14:19.000Z" title="发表于 2022-07-17 23:14:19">2022-07-17</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-bolt"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/CSS/" style="font-size: 1.2em; color: #999da3">CSS</a> <a href="/tags/JDBC/" style="font-size: 1.1em; color: #999">JDBC</a> <a href="/tags/Java/" style="font-size: 1.4em; color: #99a5b6">Java</a> <a href="/tags/JavaScript/" style="font-size: 1.3em; color: #99a1ac">JavaScript</a> <a href="/tags/JavaWeb/" style="font-size: 1.5em; color: #99a9bf">JavaWeb</a> <a href="/tags/XML/" style="font-size: 1.2em; color: #999da3">XML</a> <a href="/tags/javaWeb/" style="font-size: 1.1em; color: #999">javaWeb</a> <a href="/tags/ssm/" style="font-size: 1.1em; color: #999">ssm</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 1.1em; color: #999">正则表达式</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">11</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">27</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-11-11T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">52.2k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-12-11T13:31:08.855Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By XFY-Z</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(() => { 
+  const getCommentUrl = () => {
+    const eleGroup = document.querySelectorAll('#recent-posts .article-title')
+    let urlArray = []
+    eleGroup.forEach(i=>{
+      urlArray.push(i.getAttribute('href'))
+    })
+    return urlArray
+  }
+
+  const getCount = () => {
+    const runTwikoo = () => {
+      twikoo.getCommentsCount({
+        envId: 'https://my-twikoo-sigma.vercel.app',
+        region: '',
+        urls: getCommentUrl(),
+        includeReply: false
+      }).then(function (res) {
+        document.querySelectorAll('#recent-posts .twikoo-count').forEach((item,index) => {
+          item.innerText = res[index].count
+        })
+      }).catch(function (err) {
+        console.log(err)
+      })
+    }
+
+      if (typeof twikoo === 'object') {
+        runTwikoo()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+      }
+  }
+
+  window.pjax ? getCount() : window.addEventListener('load', getCount)
+
+})()</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>jQuery选择器 | XFY-Z</title><meta name="keywords" content="JavaWeb"><meta name="author" content="XFY-Z"><meta name="copyright" content="XFY-Z"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="jQuery选择器web开发的两个要素 在使用HTML开发页面时，有两个基本点 选择HTML页面上的哪些元素 在这些元素上做哪些动作  在JavaScript中有document.getElementById()等方式获取元素，但这种方式太古老。麻烦、局限">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery选择器">
+<meta property="og:url" content="https://xfy-z.github.io/2022/05/31/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/index.html">
+<meta property="og:site_name" content="XFY-Z">
+<meta property="og:description" content="jQuery选择器web开发的两个要素 在使用HTML开发页面时，有两个基本点 选择HTML页面上的哪些元素 在这些元素上做哪些动作  在JavaScript中有document.getElementById()等方式获取元素，但这种方式太古老。麻烦、局限">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo11.png">
+<meta property="article:published_time" content="2022-05-31T14:08:29.000Z">
+<meta property="article:modified_time" content="2022-06-05T14:01:10.000Z">
+<meta property="article:author" content="XFY-Z">
+<meta property="article:tag" content="JavaWeb">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo11.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xfy-z.github.io/2022/05/31/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-05 22:01:10'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo11.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">XFY-Z</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">jQuery选择器</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-31T14:08:29.000Z" title="发表于 2022-05-31 22:08:29">2022-05-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-05T14:01:10.000Z" title="更新于 2022-06-05 22:01:10">2022-06-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">838</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="jQuery选择器"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="jQuery选择器"><a href="#jQuery选择器" class="headerlink" title="jQuery选择器"></a>jQuery选择器</h1><h2 id="web开发的两个要素"><a href="#web开发的两个要素" class="headerlink" title="web开发的两个要素"></a>web开发的两个要素</h2><ul>
+<li>在使用HTML开发页面时，有两个基本点</li>
+<li>选择HTML页面上的哪些元素</li>
+<li>在这些元素上做哪些动作</li>
+</ul>
+<p>在JavaScript中有document.getElementById()等方式获取元素，但这种方式太古老。麻烦、局限</p>
+<span id="more"></span>
+
+<h2 id="jQuery选择器-1"><a href="#jQuery选择器-1" class="headerlink" title="jQuery选择器"></a>jQuery选择器</h2><ul>
+<li>jQuery选择器用于选择器用于选中需要操作的页面元素</li>
+<li>语法1：jQuery（选择器表达式）</li>
+<li>语法2：$（选择器表达式）</li>
+</ul>
+<p>jQuery选择器是一种更加快捷高效的方式：</p>
+<p>上面的语法1和语法2是等价的，当在页面中引入jQuery文件后，使用jQuery关键字和$是完全等价的；符合需求，高效准确地选择器表达式是关键</p>
+<h2 id="jQuery基本选择器"><a href="#jQuery基本选择器" class="headerlink" title="jQuery基本选择器"></a>jQuery基本选择器</h2><ul>
+<li><p>基本选择器是jQuery最基础也是最常用的选择器表达式</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$(“#id”)</td>
+<td>ID选择器，指定id元素的对象</td>
+</tr>
+<tr>
+<td>$(“标签”)</td>
+<td>元素选择器，选择指定标签名的选择器（例如a标签等）</td>
+</tr>
+<tr>
+<td>$(“.class”)</td>
+<td>类选择器，选中拥有指定的CSS类的元素</td>
+</tr>
+<tr>
+<td>$(“S1,S2,SN”)</td>
+<td>组合选择器，对元素进行组合</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>id选择器和类选择器最常用：</p>
+<p>标签选择器有点提示页面元素间的耦合性，所以可能用的也不多；</p>
+<h3 id="jQuery基本选择器的范例"><a href="#jQuery基本选择器的范例" class="headerlink" title="jQuery基本选择器的范例"></a>jQuery基本选择器的范例</h3><p>我们使用前面做过的jQuery的简单案例来试一下组合选择器</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery3.png" alt="jquery3"></p>
+<h2 id="jQuery层叠选择器"><a href="#jQuery层叠选择器" class="headerlink" title="jQuery层叠选择器"></a>jQuery层叠选择器</h2><ul>
+<li><p>层叠选择器睡觉哦根据元素的位置关系来获取元素的选择器表达式<br>  选中某一个节点的所有后代节点，后代节点包括子节点、子节点的子节点</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$(“ancestor descendant”)</td>
+<td>后代选择器</td>
+</tr>
+<tr>
+<td>$(“ancestor &gt; descendant”)</td>
+<td>子选择器</td>
+</tr>
+<tr>
+<td>$(“ancestor ~ descendant”)</td>
+<td>兄弟选择器</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="jQuery后代选择器示例1"><a href="#jQuery后代选择器示例1" class="headerlink" title="jQuery后代选择器示例1"></a>jQuery后代选择器示例1</h3><p>选择a标签，这个a标签必须是li标签的后代标签：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery4.png" alt="jquery4"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jsquery5.png" alt="jquery5"></p>
+<h3 id="jQuery后代选择器示例2："><a href="#jQuery后代选择器示例2：" class="headerlink" title="jQuery后代选择器示例2："></a>jQuery后代选择器示例2：</h3><p>即使a标签不是div标签的直接子标签，但是后代选择器依旧能够选中</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery6.png" alt="jquery6"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery7.png" alt="jquery7"></p>
+<h3 id="jQuery后代选择器示例3"><a href="#jQuery后代选择器示例3" class="headerlink" title="jQuery后代选择器示例3"></a>jQuery后代选择器示例3</h3><p>span后的a标签</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery8.png" alt="jquery8"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery9.png" alt="jquery9"></p>
+<h3 id="jQuery子选择器示例1"><a href="#jQuery子选择器示例1" class="headerlink" title="jQuery子选择器示例1"></a>jQuery子选择器示例1</h3><p>必须是直接子节点才会选中；</p>
+<p>例如在这个jQuery简单案例中：a标签必须是li标签的直接子标签才会被选中</p>
+<p>在这里是只有li标签后的a标签被选中然后jquery，span后的a标签不会被选中</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery10.png" alt="jquery10"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery11.png" alt="jquery11"></p>
+<h3 id="jQuery兄弟选择器示例1"><a href="#jQuery兄弟选择器示例1" class="headerlink" title="jQuery兄弟选择器示例1"></a>jQuery兄弟选择器示例1</h3><p>选择p标签，这个p标签需要是span标签的兄弟标签，是平级节点；</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery12.png" alt="jquery12"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery13.png" alt="jquery13"></p>
+<h2 id="jQuery属性选择器"><a href="#jQuery属性选择器" class="headerlink" title="jQuery属性选择器"></a>jQuery属性选择器</h2><ul>
+<li><p>属性选择器是根据元素的属性值来选择元素的选择器表达式</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$(“selector[attribute&#x3D;value]”)</td>
+<td>选中的属性值完全等于具体值得组件</td>
+</tr>
+<tr>
+<td>$(“selector[attribute^&#x3D;’value’]”)</td>
+<td>选中得属性值以某值开头得组件</td>
+</tr>
+<tr>
+<td>$(“selector[attribute$&#x3D;’value’]”)</td>
+<td>选中属性值以某值结尾得组件</td>
+</tr>
+<tr>
+<td>$(“selector[attribute*&#x3D;’value’]”)</td>
+<td>选中属性值包含某值得组件</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>比如当前得需求是：获取超链接地址为”网易”的元素</p>
+<p>属性选择器中，selector是前面讲到的选择器表达式，其他选择器后面跟着[]，[]中的是某个属性的属性值，相当于是再原有选择器的基础上二次筛选</p>
+<h3 id="jQuery属性选择器示例：完全匹配"><a href="#jQuery属性选择器示例：完全匹配" class="headerlink" title="jQuery属性选择器示例：完全匹配"></a>jQuery属性选择器示例：完全匹配</h3><p>完全匹配：a[href&#x3D;”<a target="_blank" rel="noopener" href="http://www.baidu.com"]:是选中a标签，这个a标签的href属性值是"http://www.baidu.com"；">http://www.baidu.com&quot;]:是选中a标签，这个a标签的href属性值是&quot;http://www.baidu.com&quot;；</a></p>
+<p>所以这里只有百度的标签是高亮的</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery14.png" alt="jquery14"></p>
+<h3 id="jQuery属性选择器示例2：开头匹配"><a href="#jQuery属性选择器示例2：开头匹配" class="headerlink" title="jQuery属性选择器示例2：开头匹配"></a>jQuery属性选择器示例2：开头匹配</h3><p>拿到所有邮箱的超链接：a[href^&#x3D;’<a target="_blank" rel="noopener" href="http://mail']">http://mail&#39;]</a></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery15.png" alt="jquery15"></p>
+<h3 id="jQuery属性选择器示例3：结尾匹配"><a href="#jQuery属性选择器示例3：结尾匹配" class="headerlink" title="jQuery属性选择器示例3：结尾匹配"></a>jQuery属性选择器示例3：结尾匹配</h3><p>拿到所有中国名校的超链接：a[href$&#x3D;’edu.cn’]</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery16.png" alt="jquery16"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery17.png" alt="jquery17"></p>
+<h3 id="jQuery属性选择器示例4：包含匹配"><a href="#jQuery属性选择器示例4：包含匹配" class="headerlink" title="jQuery属性选择器示例4：包含匹配"></a>jQuery属性选择器示例4：包含匹配</h3><p>拿到所有包含”edu.cn”字段的标签属性并增加css样式：a[href*&#x3D;’edu.cn’]</p>
+<p><img src="D:\Documents\typora_photo\jquery16.png" alt="jquery16"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery18.png" alt="jquery18"></p>
+<h3 id="jQuery属性选择器说明"><a href="#jQuery属性选择器说明" class="headerlink" title="jQuery属性选择器说明"></a>jQuery属性选择器说明</h3><p>说明1：属性选择器中，属性可以是其他任何属性不止只有上面的a标签可以用，页面中的input属性也是可以用的：input[type&#x3D;’text’];这个意思是选择input标签，且器type属性为text的元素</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery19.png" alt="jquery19"></p>
+<p>说明2：如上input[type&#x3D;’text’];为什么选择左边的那个文本框，而不是选择右边的文本框呢？这是因为，属性选择器明确书写了某个属性的元素：</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery20.png" alt="jquery20"></p>
+<p>说明3：如上input[type&#x3D;”text”];形如这个，其需要用单引号的；</p>
+<p>很显然是因为：$(“input[type&#x3D;”text]”).addClass(“highlight”);所以需要使用单引号</p>
+<h2 id="jQuery位置选择器"><a href="#jQuery位置选择器" class="headerlink" title="jQuery位置选择器"></a>jQuery位置选择器</h2><ul>
+<li><p>位置选择器是指通过位置获取指定的元素，例如”获取第三个元素”</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$(“selector:first”)</td>
+<td>获取第一个元素</td>
+</tr>
+<tr>
+<td>$(“selector:last”)</td>
+<td>获取最后一个元素</td>
+</tr>
+<tr>
+<td>$(“selector:even”)</td>
+<td>获取偶数位置的元素(从0开始)</td>
+</tr>
+<tr>
+<td>$(“selector:odd”)</td>
+<td>获取奇数位置的元素(从0开始)</td>
+</tr>
+<tr>
+<td>$(“selector:eq(n)”)</td>
+<td>获取指定位置的元素(从0凯斯)</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="jQuery位置选择器示例1：获取第一个元素"><a href="#jQuery位置选择器示例1：获取第一个元素" class="headerlink" title="jQuery位置选择器示例1：获取第一个元素"></a>jQuery位置选择器示例1：获取第一个元素</h3><p>获取class&#x3D;”myclass”的第一个元素：.myclass:first</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery21.png" alt="jquery21"></p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery22.png" alt="jquery22"></p>
+<h2 id="jQuery表单选择器"><a href="#jQuery表单选择器" class="headerlink" title="jQuery表单选择器"></a>jQuery表单选择器</h2><ul>
+<li><p>表单选择器是获取表单元素的简化形式，例如：获取所有的文本框</p>
+</li>
+<li><p>之所以叫表单选择器，是因为这个选择器是直接针对表单中的元素进行选择的</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$(“selector:input”)</td>
+<td>所有表单输入的集合元素</td>
+</tr>
+<tr>
+<td>$(“slector:text”)</td>
+<td>获取表单汇总文本框</td>
+</tr>
+<tr>
+<td>$(“selector:password”)</td>
+<td>获取表单中密码框</td>
+</tr>
+<tr>
+<td>$(“welector:submit”)</td>
+<td>获取提交的按钮</td>
+</tr>
+<tr>
+<td>$(“selecrror”)</td>
+<td>获取重置的按钮</td>
+</tr>
+<tr>
+<td>……</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="jQuery表单选择器示例1-获取表单中输入框中的值"><a href="#jQuery表单选择器示例1-获取表单中输入框中的值" class="headerlink" title="jQuery表单选择器示例1:获取表单中输入框中的值"></a>jQuery表单选择器示例1:获取表单中输入框中的值</h3><p>:input是选择页面中的所有输入框中的值</p>
+<p>​                               <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery23.png" alt="jquery23"></p>
+<p>​                                             </p>
+<h3 id="jQuery表单选择器示例2：获取表单汇总文本框"><a href="#jQuery表单选择器示例2：获取表单汇总文本框" class="headerlink" title="jQuery表单选择器示例2：获取表单汇总文本框"></a>jQuery表单选择器示例2：获取表单汇总文本框</h3><p>​                                                                                    <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery24.png" alt="jquery24"></p>
+<p>​                                                             <img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery25.png" alt="jquery25"></p>
+<h3 id="jQuery表单选择器总结"><a href="#jQuery表单选择器总结" class="headerlink" title="jQuery表单选择器总结"></a>jQuery表单选择器总结</h3><p>(1):input选取所有input、textarea、select和button元素-集合元素；</p>
+<p>(2):text选择所有单行文本框，即type&#x3D;text-集合元素；</p>
+<p>(3):password选择所有密码框，即type&#x3D;password-集合元素；</p>
+<p>(4):radio选择所有单选框，即type&#x3D;radio-集合元素；</p>
+<p>(5):checkbox选择所有复选框，即type&#x3D;checkbox-集合元素；</p>
+<p>(6):submit选取所有提交按钮，即type&#x3D;submit-集合元素；</p>
+<p>(7):reset选取所有重置按钮，即type&#x3D;reset-集合元素；</p>
+<p>(8):image选取所有图像按钮，即type&#x3D;image-集合元素；</p>
+<p>(9):button选择所有普通按钮，即button元素-集合元素；</p>
+<p>(10):file选择所有文件按钮，即type&#x3D;file-集合元素；</p>
+<p>(11):hidden选择所有不可见字段，即 type&#x3D;hidden-集合元素；</p>
+<h2 id="标签选择器和表单选择器的区别"><a href="#标签选择器和表单选择器的区别" class="headerlink" title="标签选择器和表单选择器的区别"></a>标签选择器和表单选择器的区别</h2><p>经过测试：如果使用input标签选择器时候，其会选中所有的input标签，不是input的标签不会被选中；即使标签选择器很严谨，也很明确；使用：input表单选择器的时候，会选取所有input、textarea、select和button元素；即其范围会大一些</p>
+<p>所以目前可以暂时认为：（1）标签选择器和表单选择器作用基本类似，但在某些情况下。表单选择器可能范围更大一些；（2）感觉标签选择器更加明确，在实际业务中，当然更倾向标签选择器；</p>
+<h3 id="不同选择器的可以组合使用"><a href="#不同选择器的可以组合使用" class="headerlink" title="不同选择器的可以组合使用"></a>不同选择器的可以组合使用</h3><p>尤其是其他选择器和位置选择器的组合，以应对某些特别的需求</p>
+<h4 id="示例1："><a href="#示例1：" class="headerlink" title="示例1："></a>示例1：</h4><p>如：:input:last先使用表单选择器选中input，然后通过位置选择器二次筛选，选中最后一个</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery26.png" alt="jquery26"></p>
+<h4 id="示例2："><a href="#示例2：" class="headerlink" title="示例2："></a>示例2：</h4><p>li a:last；先使用层叠选择器选中li标签的后代a标签，然后选择最后一个</p>
+<p><img src="https://raw.githubusercontent.com/XFY-Z/img/main/img/jquery27.png" alt="jquery27"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">XFY-Z</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xfy-z.github.io/2022/05/31/jQuery%E9%80%89%E6%8B%A9%E5%99%A8/">https://xfy-z.github.io/2022/05/31/jQuery选择器/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xfy-z.github.io" target="_blank">XFY-Z</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JavaWeb/">JavaWeb</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo11.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/05/24/Ajax工具介绍/" title="Ajax工具介绍"><img class="cover" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo6.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-24</div><div class="title">Ajax工具介绍</div></div></a></div><div><a href="/2022/05/10/JSON简介与语法规则-1/" title="JSON简介与语法规则"><img class="cover" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo7.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-10</div><div class="title">JSON简介与语法规则</div></div></a></div><div><a href="/2022/05/07/JSON简介与语法规则/" title="JSON简介与语法规则"><img class="cover" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo10.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-07</div><div class="title">JSON简介与语法规则</div></div></a></div><div><a href="/2022/05/02/JSP九大内置对象/" title="JSP九大内置对象"><img class="cover" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo8.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-02</div><div class="title">JSP九大内置对象</div></div></a></div><div><a href="/2022/05/24/JS访问JSON并输出/" title="JS访问JSON并输出"><img class="cover" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo6.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-24</div><div class="title">JS访问JSON并输出</div></div></a></div><div><a href="/2022/04/26/Servlet之cookie/" title="Servlet之cookie"><img class="cover" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo6.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-26</div><div class="title">Servlet之cookie</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">XFY-Z</div><div class="author-info__description">一个专注于后端学习的博客</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/XFY-Z" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1983107554@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#jQuery%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">jQuery选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#web%E5%BC%80%E5%8F%91%E7%9A%84%E4%B8%A4%E4%B8%AA%E8%A6%81%E7%B4%A0"><span class="toc-number">1.1.</span> <span class="toc-text">web开发的两个要素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery%E9%80%89%E6%8B%A9%E5%99%A8-1"><span class="toc-number">1.2.</span> <span class="toc-text">jQuery选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.3.</span> <span class="toc-text">jQuery基本选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E8%8C%83%E4%BE%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">jQuery基本选择器的范例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery%E5%B1%82%E5%8F%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.4.</span> <span class="toc-text">jQuery层叠选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B1"><span class="toc-number">1.4.1.</span> <span class="toc-text">jQuery后代选择器示例1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B2%EF%BC%9A"><span class="toc-number">1.4.2.</span> <span class="toc-text">jQuery后代选择器示例2：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B3"><span class="toc-number">1.4.3.</span> <span class="toc-text">jQuery后代选择器示例3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%AD%90%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B1"><span class="toc-number">1.4.4.</span> <span class="toc-text">jQuery子选择器示例1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%85%84%E5%BC%9F%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B1"><span class="toc-number">1.4.5.</span> <span class="toc-text">jQuery兄弟选择器示例1</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.5.</span> <span class="toc-text">jQuery属性选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B%EF%BC%9A%E5%AE%8C%E5%85%A8%E5%8C%B9%E9%85%8D"><span class="toc-number">1.5.1.</span> <span class="toc-text">jQuery属性选择器示例：完全匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B2%EF%BC%9A%E5%BC%80%E5%A4%B4%E5%8C%B9%E9%85%8D"><span class="toc-number">1.5.2.</span> <span class="toc-text">jQuery属性选择器示例2：开头匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B3%EF%BC%9A%E7%BB%93%E5%B0%BE%E5%8C%B9%E9%85%8D"><span class="toc-number">1.5.3.</span> <span class="toc-text">jQuery属性选择器示例3：结尾匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B4%EF%BC%9A%E5%8C%85%E5%90%AB%E5%8C%B9%E9%85%8D"><span class="toc-number">1.5.4.</span> <span class="toc-text">jQuery属性选择器示例4：包含匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">1.5.5.</span> <span class="toc-text">jQuery属性选择器说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.6.</span> <span class="toc-text">jQuery位置选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B1%EF%BC%9A%E8%8E%B7%E5%8F%96%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0"><span class="toc-number">1.6.1.</span> <span class="toc-text">jQuery位置选择器示例1：获取第一个元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery%E8%A1%A8%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.7.</span> <span class="toc-text">jQuery表单选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E8%A1%A8%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B1-%E8%8E%B7%E5%8F%96%E8%A1%A8%E5%8D%95%E4%B8%AD%E8%BE%93%E5%85%A5%E6%A1%86%E4%B8%AD%E7%9A%84%E5%80%BC"><span class="toc-number">1.7.1.</span> <span class="toc-text">jQuery表单选择器示例1:获取表单中输入框中的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E8%A1%A8%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B2%EF%BC%9A%E8%8E%B7%E5%8F%96%E8%A1%A8%E5%8D%95%E6%B1%87%E6%80%BB%E6%96%87%E6%9C%AC%E6%A1%86"><span class="toc-number">1.7.2.</span> <span class="toc-text">jQuery表单选择器示例2：获取表单汇总文本框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E8%A1%A8%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8%E6%80%BB%E7%BB%93"><span class="toc-number">1.7.3.</span> <span class="toc-text">jQuery表单选择器总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E8%A1%A8%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.8.</span> <span class="toc-text">标签选择器和表单选择器的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E5%8F%AF%E4%BB%A5%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8"><span class="toc-number">1.8.1.</span> <span class="toc-text">不同选择器的可以组合使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B1%EF%BC%9A"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">示例1：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B2%EF%BC%9A"><span class="toc-number">1.8.1.2.</span> <span class="toc-text">示例2：</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/%E7%9B%91%E5%90%AC%E5%99%A8%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E8%AF%B7%E6%B1%82%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/" title="监听器案例"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo11.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="监听器案例"/></a><div class="content"><a class="title" href="/2022/12/11/%E7%9B%91%E5%90%AC%E5%99%A8%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E8%AF%B7%E6%B1%82%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/" title="监听器案例">监听器案例</a><time datetime="2022-12-11T05:47:54.300Z" title="发表于 2022-12-11 13:47:54">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/09/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" title="瑞吉外卖项目总结"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo12.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="瑞吉外卖项目总结"/></a><div class="content"><a class="title" href="/2022/12/09/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" title="瑞吉外卖项目总结">瑞吉外卖项目总结</a><time datetime="2022-12-09T13:05:13.251Z" title="发表于 2022-12-09 21:05:13">2022-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Set%E6%8E%A5%E5%8F%A3/" title="Java中的Set接口"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java中的Set接口"/></a><div class="content"><a class="title" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Set%E6%8E%A5%E5%8F%A3/" title="Java中的Set接口">Java中的Set接口</a><time datetime="2022-07-17T15:14:40.000Z" title="发表于 2022-07-17 23:14:40">2022-07-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84List%E6%8E%A5%E5%8F%A3/" title="Java中的List接口"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java中的List接口"/></a><div class="content"><a class="title" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84List%E6%8E%A5%E5%8F%A3/" title="Java中的List接口">Java中的List接口</a><time datetime="2022-07-17T15:14:30.000Z" title="发表于 2022-07-17 23:14:30">2022-07-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Collection%E6%8E%A5%E5%8F%A3/" title="Java中的Collection接口"><img src="https://raw.githubusercontent.com/XFY-Z/img/main/uPic/photo5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java中的Collection接口"/></a><div class="content"><a class="title" href="/2022/07/17/Java%E4%B8%AD%E7%9A%84Collection%E6%8E%A5%E5%8F%A3/" title="Java中的Collection接口">Java中的Collection接口</a><time datetime="2022-07-17T15:14:19.000Z" title="发表于 2022-07-17 23:14:19">2022-07-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By XFY-Z</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://my-twikoo-sigma.vercel.app',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://my-twikoo-sigma.vercel.app',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
